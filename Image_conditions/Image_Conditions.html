@@ -34,23 +34,37 @@
 <h2>Bad example: Image element with empty alt (with space)</h2>
 <img src="Image conditions\Accessibility.png" alt=" " width="250" height="150">
 
-<h2>Good example: Image element with aria-label</h2>
+<h2>Good example: Image element with aria-label and empty alt</h2>
 <img src="Image conditions\Accessibility.png" alt="" aria-label="Image with 150 height and 250 width" width="250" height="150">
 
-<h2>Bad example: Image element with aria-label</h2>
+<h2>Good example: Image element with aria-label and empty alt with space</h2>
+<img src="Image conditions\Accessibility.png" alt=" " aria-label="Image with 150 height and 250 width" width="250" height="150">
+
+<h2>Bad example: Image element with empty aria-label and empty alt</h2>
 <img src="Image conditions\Accessibility.png" alt="" aria-label="" width="250" height="150">
+
+<h2>Bad example: Image element with empty aria-label and empty alt with space</h2>
+<img src="Image conditions\Accessibility.png" alt=" " aria-label="" width="250" height="150">
 
 <h2>Good example: Image element with aria-labelledby</h2>
 <p id="goodarialabelledby">Image with 150 height and 250 width</p>
 <img src="Image conditions\Accessibility.png" alt="" aria-labelledby="goodarialabelledby" width="250" height="150">
 
-<h2>Bad example: Image element with aria-labelledby (no value)</h2>
+<h2>Bad example: Image element with aria-labelledby (no value) and empty alt</h2>
 <p id="badarialabelledby">Image with 150 height and 250 width</p>
 <img src="Image conditions\Accessibility.png" alt="" aria-labelledby="" width="250" height="150">
 
-<h2>Bad example: Image element with aria-labelledby (Incorrect value)</h2>
+<h2>Bad example: Image element with aria-labelledby (no value) and empty alt with space</h2>
+<p id="badarialabelledby">Image with 150 height and 250 width</p>
+<img src="Image conditions\Accessibility.png" alt="" aria-labelledby="" width="250" height="150">
+
+<h2>Bad example: Image element with aria-labelledby (Incorrect value) and emty alt</h2>
 <p id="badarialabelledby">Image with 150 height and 250 width</p>
 <img src="Image conditions\Accessibility.png" alt="" aria-labelledby="badlabelledby" width="250" height="150">
+
+<h2>Bad example: Image element with aria-labelledby (Incorrect value) and empty alt with space</h2>
+<p id="badarialabelledby">Image with 150 height and 250 width</p>
+<img src="Image conditions\Accessibility.png" alt=" " aria-labelledby="badlabelledby" width="250" height="150">
 
 <h2>Good example: Image element with aria-describedby</h2>
 <p id="goodariadescribedby">Image with 150 height and 250 width</p>
@@ -60,9 +74,13 @@
 <p id="badariadescribedby">Image with 150 height and 250 width</p>
 <img src="Image conditions\Accessibility.png" alt="" aria-describedby="" width="250" height="150">
 
-<h2>Bad example: Image element with aria-describedby (Incorrect value)</h2>
+<h2>Bad example: Image element with aria-describedby (no value) and empty alt</h2>
 <p id="badariadescribedby">Image with 150 height and 250 width</p>
-<img src="Image conditions\Accessibility.png" alt="" aria-describedby="baddescribedby" width="250" height="150">
+<img src="Image conditions\Accessibility.png" alt="" aria-describedby="" width="250" height="150">
+
+<h2>Bad example: Image element with aria-describedby (Incorrect value) and empty alt with space</h2>
+<p id="badariadescribedby">Image with 150 height and 250 width</p>
+<img src="Image conditions\Accessibility.png" alt=" " aria-describedby="baddescribedby" width="250" height="150">
 
 </body>
 </html>
