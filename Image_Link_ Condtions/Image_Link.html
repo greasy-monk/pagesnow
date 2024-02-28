@@ -13,35 +13,35 @@
 
 <h2>Good example: Image link with aria-hidden</h2>
  <a href="https://w3.org" aria-label="W3C Website" aria-hidden="false">
-	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>
 </a>
 
 <h2>Bad example: Image link with aria-hidden</h2>
  <a href="https://w3.org" aria-label="W3C Website" aria-hidden="true">
-	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>
 </a>
 
 <h2>Good example: Image link with tabindex</h2>
  <a href="https://w3.org" aria-label="W3C Website">
-	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>
 </a>
 
 <h2>Bad example: Image link with tabindex</h2>
  <a href="https://w3.org" aria-label="W3C Website" tabindex=-1">
-	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>
 </a>
 
 <h2>Bad example: Image link with tabindex and aria-hidden</h2>
  <a href="https://w3.org" aria-label="W3C Website" tabindex=-1" aria-hidden="true">
-	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>
 </a>
@@ -201,6 +201,11 @@
 	<img src="Image_link.png" alt=" " width="250" height="150">
 </a>
 
+<h2>Bad example: Image link with &lt;img&gt; alt and aria-label</h2>
+ <a href="https://w3.org" aria-label="W3C Website from anchor">
+	<img src="Image_link.png" alt="W3C Website from image" width="250" height="150">
+</a>
+
 <h2>Good example: Image link with &lt;img&gt; aria-labelledby and alt without space</h2>
  <a href="https://w3.org">
 	<img src="Image_link.png" alt="" aria-labelledby="goodarialabelledbyimagelink" width="250" height="150">
@@ -237,6 +242,12 @@
 </a>
 <p id="arialabelledbyimagelinkincorrectspace">W3C Website</p>
 
+<h2>Bad example: Image link with &lt;img&gt; alt and aria-labelledby</h2>
+ <a href="https://w3.org" aria-labelledby="arialabelledbyimagelinkincorrectspaceimagelink">
+	<img src="Image_link.png" alt="W3C Website from image" width="250" height="150">
+</a>
+<p id="arialabelledbyimagelinkincorrectspaceimagelink">W3C Website from anchor</p>
+
 <h2>Good example: Image link with &lt;img&gt; aria-describedby and alt without space</h2>
  <a href="https://w3.org" >
 	<img src="Image_link.png" alt="" aria-describedby="goodarialadescribedbyimagelinkwithputalt" width="250" height="150">
@@ -272,6 +283,12 @@
 	<img src="Image_link.png" alt=" " aria-describedby="describedbyimagelink" width="250" height="150">
 </a>
 <p id="goodarialadescribedbyimagelink">W3C Website</p>
+
+<h2>Bad example: Image link with &lt;img&gt; alt and aria-describedby</h2>
+ <a href="https://w3.org" aria-describedby="describedlinkincorrectspaceimagelink">
+	<img src="Image_link.png" alt="W3C Website from image" width="250" height="150">
+</a>
+<p id="describedlinkincorrectspaceimagelink">W3C Website from anchor</p>
 
 <h2>Good example: Image link with &lt;svg&gt; aria-hidden</h2>
  <a href="https://w3.org" >
@@ -326,22 +343,30 @@
 <h2>Good example: Image link with &lt;svg&gt; (text)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">W3C</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
 </svg>
 </a>
 
 <h2>Bad example: Image link with &lt;svg&gt; (text)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100">
+<text x="50" y="60" font-size="30" text-anchor="middle" fill="black"></text>
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
-  <text x="50" y="60" font-size="30" text-anchor="middle" fill="black"></text>
 </svg>
 </a>
 
 <h2>Bad example: Image link with &lt;svg&gt; text and aria-label</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-label="">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+  <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
+</svg>
+</a>
+
+<h2>Bad example: Image link with &lt;svg&gt; text and aria-label</h2>
+<a href="https://w3.org" aria-label="SVG from anchor">
+<svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
@@ -388,6 +413,15 @@
 </svg>
 </a>
 
+<h2>Bad example: Image link with &lt;svg&gt; title and aria-label</h2>
+<a href="https://w3.org" aria-label="W3C website from anchor">
+<svg width="100" height="100">
+<title>W3C Website from title</title>
+  <rect width="100" height="100"
+  style="fill:red;stroke:black;stroke-width:5;" />
+</svg>
+</a>
+
 <h2>Bad example: Image link with &lt;svg&gt; (empty title)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100">
@@ -423,6 +457,16 @@
 </svg>
 </a>
 
+<h2>Bad example: Image link with &lt;svg&gt; title and aria-labelledby</h2>
+<a href="https://w3.org" aria-labelledby="testtesttest">
+<svg width="100" height="100">
+<title id="zsaq">W3C Website from title</title>
+  <rect width="100" height="100"
+  style="fill:red;stroke:black;stroke-width:5;" />
+</svg>
+</a>
+<p id="testtesttest">W3C website from anchor</>
+
 <h2>Bad example: Image link with &lt;svg&gt; title and aria-labelledby (Incorrect value)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-labelledby="mko">
@@ -449,6 +493,16 @@
   style="fill:red;stroke:black;stroke-width:5;" />
 </svg>
 </a>
+
+<h2>Bad example: Image link with &lt;svg&gt; title and aria-describedby</h2>
+<a href="https://w3.org" aria-describedby="wesd">
+<svg width="100" height="100">
+<title id="redjhkj">W3C website from title</title>
+  <rect width="100" height="100"
+  style="fill:red;stroke:black;stroke-width:5;" />
+</svg>
+</a>
+<p id="wesd">W3C website from anchor</p>
 
 <h2>Good example: Image link with &lt;svg&gt; (title is first element)</h2>
 <a href="https://w3.org">
@@ -644,6 +698,11 @@
 <i style="font-size:48px;" class="glyphicon glyphicon-user" role="img" aria-label=""></i>
 </a>
 
+<h2>Bad Example: Image link with &lt;i&gt; aria-label</h2>
+ <a href="https://w3.org" aria-label="user ffrom anchor">	
+<i style="font-size:48px;" class="glyphicon glyphicon-user" role="img">User from icon</i>
+</a>
+
 <h2>Good Example: Image link with &lt;i&gt; aria-labelledby</h2>
  <a href="https://w3.org">	
 <i style="font-size:48px;" class="glyphicon glyphicon-envelope" role="img" aria-labelledby="Img1"></i>
@@ -661,6 +720,12 @@
 <i style="font-size:48px;" class="glyphicon glyphicon-envelope" role="img" aria-labelledby=""></i>
 </a>
 <p id="badarialabelledbyi">W3C Website</p>
+
+<h2>Bad Example: Image link with &lt;i&gt; aria-labelledby</h2>
+ <a href="https://w3.org"aria-labelledby="badarialabelledbyi">	
+<i style="font-size:48px;" class="glyphicon glyphicon-envelope" role="img">W3C Website from anchor from icon</i>
+</a>
+<p id="badarialabelledbyi">W3C Website from anchor</p>
 
 </body>
 </html>
