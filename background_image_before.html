@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.test::before {
+  content: '🔗';
+}
+
+.local-link::before {
+  content: url('../../media/examples/firefox-logo.svg');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1>Demo of the ::before selector</h1>
+
+<div>
+  Learning resources for web developers can be found all over the internet. Try out
+  <a href="https://web.dev/"><span class="test">web.dev</span></a>,
+
+<a class="test" href="https://www.w3schools.com/">w3schools.com</a> or our
+
+  <a href="https://developer.mozilla.org/" class="local-link"><div class="test">MDN web docs</a>.
+</div>
+
+</body>
+</html>
