@@ -33,9 +33,15 @@
 
 <h2>Good Example: Image icon with aria-labelledby attribute</h2>
 <i class="glyphicon glyphicon-envelope" role="img" aria-labelledby="Img1" id="a4"></i>
+<p id="Img1">Email</p>
 
-<h2>Bad Example: Image icon with aria-labelledby attribute</h2>
+<h2>Bad Example: Image icon with aria-labelledby no value</h2>
+<i class="glyphicon glyphicon-envelope" role="img" aria-labelledby="" id="a45"></i>
+<p id="asdjg">Email</p>
+
+<h2>Bad Example: Image icon with aria-labelledby incorrect value</h2>
 <i class="glyphicon glyphicon-envelope" role="img" aria-labelledby="Img3" id="a45"></i>
+<p id="asd">Email</p>
 
 </body>
 </html>
