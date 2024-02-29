@@ -1,0 +1,25 @@
+.css_background_image{
+	width: 50%;
+	height: 50%;
+	background-image : url("https://interactive-examples.mdn.mozilla.net/media/examples/lizard.png");
+	background-repeat: no-repeat;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+
+.css_background_image_in_html::before {
+     content: url("C:/Users/HrushikeshPatil/Desktop/My Website/Images/right.png"); 
+     background-size: 10px 20px;
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     margin-right: 5px;
+}
