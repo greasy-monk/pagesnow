@@ -46,7 +46,7 @@
 <h2>Bad example: Image element with empty aria-label and empty alt with space</h2>
 <img src="Accessibility.png" alt=" " aria-label="" width="250" height="150">
 
-<h2>Good example: Image element with aria-labelledby</h2>
+<h2>Good example: Image element with empty alt and aria-labelledby</h2>
 <p id="goodarialabelledby">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt="" aria-labelledby="goodarialabelledby" width="250" height="150">
 
@@ -56,7 +56,7 @@
 
 <h2>Bad example: Image element with aria-labelledby (no value) and empty alt with space</h2>
 <p id="badarialabelledby">Image with 150 height and 250 width</p>
-<img src="Accessibility.png" alt="" aria-labelledby="" width="250" height="150">
+<img src="Accessibility.png" alt=" " aria-labelledby="" width="250" height="150">
 
 <h2>Bad example: Image element with aria-labelledby (Incorrect value) and emty alt</h2>
 <p id="badarialabelledby">Image with 150 height and 250 width</p>
@@ -66,7 +66,7 @@
 <p id="badarialabelledby">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt=" " aria-labelledby="badlabelledby" width="250" height="150">
 
-<h2>Good example: Image element with aria-describedby</h2>
+<h2>Good example: Image element with  empty alt and aria-describedby</h2>
 <p id="goodariadescribedby">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt="" aria-describedby="goodariadescribedby" width="250" height="150">
 
@@ -74,17 +74,19 @@
 <p id="badariadescribedby">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt="" aria-describedby="" width="250" height="150">
 
-<h2>Bad example: Image element with aria-describedby (no value) and empty alt with sapce</h2>
+<h2>Bad example: Image element with aria-describedby (no value) and empty alt with space</h2>
 <p id="badariadescribedbysapce">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt=" " aria-describedby="" width="250" height="150">
 
-<h2>Bad example: Image element with aria-describedby Incorrect value and empty alt without space</h2>
+<h2>Bad example: Image element with aria-describedby (Incorrect value) and empty alt</h2>
 <p id="badariadescribedbyincorrcetvaluespace">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt="" aria-describedby="baddescribedby" width="250" height="150">
 
-<h2>Bad example: Image element with aria-describedby Incorrect value and empty alt without space</h2>
+<h2>Bad example: Image element with aria-describedby (Incorrect value) and empty alt with space</h2>
 <p id="badariadescribedbyincorrcetspace">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt=" " aria-describedby="baddescribedby" width="250" height="150">
+
+
 
 </body>
 </html>
