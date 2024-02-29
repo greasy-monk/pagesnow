@@ -13,11 +13,17 @@
 <h2>Bad example: Image element with aria-hidden attribute</h2>
 <img aria-hidden="true" src="Accessibility.png" alt="Image with 150 height and 250 width" width="250" height="150">
 
+<h2>Bad example: Image element with aria-hidden attribute and role="none"</h2>
+<img aria-hidden="true" role="none" src="Accessibility.png" alt="Image with 150 height and 250 width" width="250" height="150">
+
 <h2>Good example: Image element with role via ARIA (none)</h2>
 <img src="Accessibility.png" alt="Image with 150 height and 250 width" width="250" height="150">
 
 <h2>Bad example: Image element with role via ARIA (none)</h2>
 <img role="none" src="Accessibility.png" alt="Image with 150 height and 250 width" width="250" height="150">
+
+<h2>Bad example: Image element with aria-hidden attribute and role="presentation"</h2>
+<img aria-hidden="true" role="presentation" src="Accessibility.png" alt="Image with 150 height and 250 width" width="250" height="150">
 
 <h2>Good example: Image element with role via ARIA (presentation)</h2>
 <img src="Accessibility.png" alt="Image with 150 height and 250 width" width="250" height="150">
@@ -40,15 +46,28 @@
 <h2>Good example: Image element with aria-label and empty alt with space</h2>
 <img src="Accessibility.png" alt=" " aria-label="Image with 150 height and 250 width" width="250" height="150">
 
+<h2>Bad example: Image element with aria-label and empty alt</h2>
+<img src="Accessibility.png" alt="Image with 150 height and 250 width from alt" aria-label="Image with 150 height and 250 width from aria label" width="250" height="150">
+
 <h2>Bad example: Image element with empty aria-label and empty alt</h2>
 <img src="Accessibility.png" alt="" aria-label="" width="250" height="150">
 
 <h2>Bad example: Image element with empty aria-label and empty alt with space</h2>
 <img src="Accessibility.png" alt=" " aria-label="" width="250" height="150">
 
+<h2>Bad example: Image element with aria-label and no alt</h2>
+<img src="Accessibility.png" aria-label="Image with 150 height and 250 width" width="250" height="150">
+
+<h2>Bad example: Image element with empty aria-label and no alt</h2>
+<img src="Accessibility.png" aria-label="" width="250" height="150">
+
 <h2>Good example: Image element with empty alt and aria-labelledby</h2>
 <p id="goodarialabelledby">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt="" aria-labelledby="goodarialabelledby" width="250" height="150">
+
+<h2>Bad example: Image element with empty alt and aria-labelledby</h2>
+<p id="goodarialabelledby">Image with 150 height and 250 width from aria labelledby</p>
+<img src="Accessibility.png" alt="Image with 150 height and 250 width from alt" aria-labelledby="goodarialabelledby" width="250" height="150">
 
 <h2>Bad example: Image element with aria-labelledby (no value) and empty alt</h2>
 <p id="badarialabelledby">Image with 150 height and 250 width</p>
@@ -85,7 +104,6 @@
 <h2>Bad example: Image element with aria-describedby (Incorrect value) and empty alt with space</h2>
 <p id="badariadescribedbyincorrcetspace">Image with 150 height and 250 width</p>
 <img src="Accessibility.png" alt=" " aria-describedby="baddescribedby" width="250" height="150">
-
 
 
 </body>
