@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head><title>
+        Audio only Condition
+    </title></head>
+<body>
+
+<h1> Audio only Condition</h1>
+
+<h2>Good example: Audio-only element with media alternative for text</h2>
+    <audio controls>
+        <source src="audio.m4a" type="audio/ogg">
+    </audio>
+
+	<h3>Text Alternate for audio</h3>
+<div class="content">
+  <p>women- what did you do yesterday<br>
+        man- yesterday, well... I woke up early<br>
+        because I like to exercise before work<br>
+        man- I left home around 5am and walked to the gym.<br>
+	    Once I arrived at the gym I stretched and did some cardio too.</p>
+</div>
+
+<h2>Bad example: Audio-only element with incorrect media alternative for text</h2>
+<audio controls>
+    <source src="audio.m4a" type="audio/ogg">
+</audio>
+
+<h3>Text Alternate for audio</h3>
+<div class="content2">
+    <p>women- hi, How are you<br>
+    man- Fine, and what about you</p>
+</div>
+
+<h2>Bad example: Audio-only element without media alternative for text</h2>
+<audio controls>
+    <source src="audio.m4a" type="audio/ogg">
+</audio>
+
+<h3>Text Alternate for audio</h3>
+<div class="content3">
+</div>
+
+<h2>Good example: Audio-only element with transcript</h2>
+<audio controls>
+        <source src="audio.m4a" type="audio/ogg">
+</audio>
+
+<div id="transcript">
+<h3>Transcript</h3>
+        <p>women- what did you do yesterday<br>
+        man- yesterday, well... I woke up early<br>
+        (third person is coughing)<br>
+        because I like to exercise before work<br>
+        (some people communicating in background)<br>
+        man- I left home around 5am and walked to the gym.<br>
+        (some people communicating in background)<br>
+	    Once I arrived at the gym I stretched and did some cardio too.</p>
+</div>
+
+<h2>Bad example: Audio-only element with incorrect transcript</h2>
+<audio controls>
+        <source src="audio.m4a" type="audio/ogg">
+</audio>
+
+<div id="transcript">
+<h3>Transcript</h3>
+        <p>women- hi, How are you<br>
+        man- Fine, and what about you</p>
+    </div>
+
+<h2>Bad example: Audio-only element without transcript</h2>
+<audio controls>
+        <source src="audio.m4a" type="audio/ogg">
+</audio>
+    
+</body>
+</html>
