@@ -14,23 +14,8 @@
 
 <br><br><b>====================Conditions on &lt;button&gt; element================================</b><br><br>
 
-<h2>Good example: Image button element with aria-hidden</h2>
-<button aria-hidden="false">
-  <img src="search_image_button.png" alt="Search">
-</button>
-
-<h2>Bad example: Image button element with aria-hidden</h2>
-<button aria-hidden="true">
-  <img src="search_image_button.png" alt="Search">
-</button>
-
-<h2>Good example: Image button element with tabindex</h2>
+<h2>Good example: Image button element with aria-hidden and tabindex</h2>
 <button aria-hidden="false" tabindex="0">
-  <img src="search_image_button.png" alt="Search">
-</button>
-
-<h2>Bad example: Image button element with tabindex</h2>
-<button tabindex="-1">
   <img src="search_image_button.png" alt="Search">
 </button>
 
@@ -1603,6 +1588,14 @@
 <i class="glyphicon glyphicon-envelope" role="img" id="a45"></i>
 </button>
 <p id="asdmjsddsdkl">Email</p>
+
+
+
+<br><br><b>==================== Conditions on &lt;input type="image"&gt; elements============================</b><br><br>
+
+<h2>Good example: Image button element with aria-hidden and tabindex</h2>
+<input type="image" src="tree.jpg" alt="tree" aria-hidden="false" tabindex="0">
+
 
 </body>
 </html>

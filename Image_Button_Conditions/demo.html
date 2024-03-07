@@ -1,0 +1,22 @@
+<h2>Good example: Image button element with aria-hidden and tabindex</h2>
+<input type="image" src="tree.jpeg" alt="tree" aria-hidden="false" tabindex="0">
+
+<h2>Good example: Image button element with aria-hidden and tabindex</h2>
+<button aria-hidden="false" tabindex="0">
+  <img src="search_image_button.png" alt="Search">
+</button>
+
+<h2>Bad example: Image button element with aria-hidden and tabindex</h2>
+<button aria-hidden="false" tabindex="-1">
+  <img src="search_image_button.png" alt="Search">
+</button>
+
+<h2>Bad example: Image button element with aria-hidden and tabindex</h2>
+<button aria-hidden="true" tabindex="0">
+  <img src="search_image_button.png" alt="Search">
+</button>
+
+<h2>Bad example: Image button element with aria-hidden and tabindex</h2>
+<button aria-hidden="true" tabindex="-1">
+  <img src="search_image_button.png" alt="Search from alt">
+</button>
