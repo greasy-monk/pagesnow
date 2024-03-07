@@ -112,7 +112,6 @@
 <img src="sun_image_button.png" alt="Image with 150 height and 250 width from alt" aria-labelledby="goodarialabelledby" width="250" height="150">
 </button>
 
-
 <h2>Bad example: Image element with aria-labelledby (Incorrect value) and emty alt (without space)</h2>
 <p id="badarialabelledby23s">Image with 150 height and 250 width</p>
 <button>
@@ -141,49 +140,49 @@
 <br><br><b>==================== Conditions on &lt;img&gt; and &lt;button&gt; elements============================</b><br><br>
 
 <h2>Bad example: Image button element with aria-label, title on button and alt</h2>
-<button title="search from title" aria-label="Search from aria label">
-  <img src="search_image_button.png" alt="search from alt">
+<button title="Red among from title" aria-label="Red among from aria label">
+  <img src="redamong.png" alt="search from alt">
 </button>
 
 <h2>Bad example: Image button element with empty aria-label, empty title on button and empty alt (without space)</h2>
 <button title="" aria-label="">
-  <img src="search_image_button.png" alt="">
+  <img src="redamong.png" alt="">
 </button>
 
 <h2>Bad example: Image button element with aria-label, title on button and empty alt (without space)</h2>
-<button title="Search from title" aria-label="Search from aria label">
-  <img src="search_image_button.png" alt="">
+<button title="Red among from title" aria-label="Red among from aria label">
+  <img src="redamong.png" alt="">
 </button>
 
 <h2>Good example: Image button element with aria-labelledby, no title on button and empty alt (without space)</h2>
 <button aria-labelledby="search123">
-  <img src="search_image_button.png" alt="">
+  <img src="redamong.png" alt="">
 </button>
-<p id="search123">Seach from aria labelledby</p>
+<p id="search123">Red among from aria labelledby</p>
 
 <h2>Bad example: Image button element with aria-labelledby (incorrect value), empty title on button and empty alt (without space)</h2>
 <button title="" aria-labelledby="1234">
-  <img src="search_image_button.png" alt="">
+  <img src="redamong.png" alt="">
 </button>
-<p id="asdqwe">Search from aria labelledby</p>
+<p id="asdqwe">Red among from aria labelledby</p>
 
 <h2>Bad example: Image button element with aria-labelledby (incorrect value), empty title on button and alt</h2>
 <button title="" aria-labelledby="testmnb">
-  <img src="search_image_button.png" alt="search from alt">
+  <img src="redamong.png" alt="Red among from alt">
 </button>
-<p id="testmnlkhas">Search from aria labelledby</p>
+<p id="testmnlkhas">Red among from aria labelledby</p>
 
 <h2>Bad example: Image button element with aria-labelledby, title on button and alt</h2>
-<button title="Search from title" aria-labelledby="sdfsfdplmokn">
-  <img src="search_image_button.png" alt="search from alt">
+<button title="Red among from title" aria-labelledby="sdfsfdplmokn">
+  <img src="redamong.png" alt="Red among from alt">
 </button>
-<p id="sdfsfdplmokn">Search from aria labelledby</p>
+<p id="sdfsfdplmokn">Red among from aria labelledby</p>
 
 <h2>Bad example: Image button element with aria-labelledby (incorrect value), title on button and alt</h2>
-<button title="Search from title" aria-labelledby="pouyew">
-  <img src="search_image_button.png" alt="search from alt">
+<button title="Red among from title" aria-labelledby="pouyew">
+  <img src="redamong.png" alt="Red among from alt">
 </button>
-<p id="plmokn">Search from aria labelledby</p>
+<p id="plmokn">Red among from aria labelledby</p>
 
 
 <br><br><b>==================== Conditions on &lt;svg&gt; element============================<b><br><br>
@@ -232,7 +231,6 @@
 <h2>Bad example: SVG element with text and empty aria-label on svg</h2>
 <button>
 <svg width="100" height="100" aria-label="">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -240,7 +238,6 @@
 <h2>Bad example: SVG element with text and aria-labelledby (Incorrect value) on svg</h2>
 <button>
 <svg width="100" height="100" aria-labelledby="testing123">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text id="sdfsutfes" x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -248,7 +245,6 @@
 <h2>Bad example: SVG element with text and aria-describedby (Incorrect value) on svg</h2>
 <button>
 <svg width="100" height="100" aria-describedby="test678">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text id="sdfs23fghf" x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -280,7 +276,7 @@
 </svg>
 </button>
 
-<h2>Bad example: SVG element with title and aria-describedby (Incorrect value) svg</h2>
+<h2>Bad example: SVG element with title and aria-describedby (Incorrect value) on svg</h2>
 <button>
 <svg width="100" height="100" aria-describedby="wesd">
 <title id="redjhkj">Red rectangle with black border</title>
@@ -291,69 +287,65 @@
 
 <h2>Bad example: SVG element with title is not first element</h2>
 <button>
-<svg width="100" height="100">
-<rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+<polygon points="38,19 64,33 65,66 38,81 11,66 11,33" style="fill:pink;stroke:purple;stroke-width:3" />
   <title>Blue rectangle with black border</title>
 </svg>
 </button>
 
 <h2>Good example: SVG element with role=img, aria-label on svg</h2>
 <button>
-<svg width="100" height="100" role="img" aria-label="Green circle with black border">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-label="Orange star with purple border">
+    <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
 
 <h2>Good example: SVG element with role=graphics-symbol, aria-label on svg</h2>
 <button>
-<svg width="100" height="100" role="graphics-symbol" aria-label="Green circle with black border">
-  <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="graphics-symbol" aria-label="Orange star with purple border">
+    <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
 
 <h2>Good example: SVG element with role=img, aria-labelledby on svg</h2>
 <button>
-<svg width="100" height="100" role="img" aria-labelledby="goodarialabelledby">
-   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-labelledby="goodarialabelledby">
+     <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
-<p id="goodarialabelledby">Green circle with black border</p>
+<p id="goodarialabelledby">Orange star with purple border</p>
 
 <h2>Bad example: SVG element with no role=img and aria-labelledby on svg</h2>
 <button>
-<svg width="100" height="100" aria-labelledby="nmvberyu45">
- <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" aria-labelledby="nmvberyu45">
+   <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
-<p id="nmvberyu45">Green circle with black border</p> 
+<p id="nmvberyu45">Orange star with purple border</p> 
 
 <h2>Bad example: SVG element with role=img, aria-labelledby (Incorrect value) on svg</h2>
 <button>
-<svg width="100" height="100" role="img" aria-labelledby="abc">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-labelledby="abc">
+    <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
-<p id="greencircle">Green circle with black border</p>
+<p id="greencircle">Orange star with purple border</p>
 
 <h2>Good example: SVG element with role=img, aria-describedby on svg</h2>
 <button>
-<svg width="100" height="100" role="img" aria-describedby="exampleelement">
-    <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-describedby="exampleelement">
+      <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
-<p id="exampleelement">Red rectangle with black border</p>
+<p id="exampleelement">Orange star with purple border</p>
 
 <h2>Bad example: SVG element with role=img, aria-describedby (Incorrect value) on svg</h2>
 <button>
-<svg width="100" height="100" role="img" aria-describedby="dddd">
-    <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-describedby="dddd">
+      <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:orange;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
-<p id="imagelinkbadexample">Red rectangle with black border</p>
-
+<p id="imagelinkbadexample">Orange star with purple border</p>
 
 <br><br><b>==================== Conditions on &lt;svg&gt; and &lt;button&gt; elements============================</b><br><br>
 
@@ -361,16 +353,16 @@
 <h2>Bad example: SVG element with aria-hidden, role=none on button</h2>
 <button  role="none" aria-hidden="true">
 <svg width="100" height="100">
-<title>green circle with black border</title>
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title>Blue star with purple border</title>
+ <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:blue;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
 
 <h2>Bad example: SVG element with aria-hidden=true and role=presentation on button</h2>
 <button  role="presentation" aria-hidden="true">
 <svg width="100" height="100">
-<title>green circle with black border</title>
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title>Blue star with purple border</title>
+  <polygon points="50,5 20,99 95,39 5,39 80,99" style="fill:blue;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
 </svg>
 </button>
 
@@ -379,7 +371,7 @@
 <svg width="100" height="100">
 <title>Red rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:pink;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 
@@ -388,7 +380,7 @@
 <svg width="100" height="100">
 <title id="zsaq">Red rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:pink;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hhggfftt">SVG with title and aria-labelledby</p>
@@ -398,7 +390,7 @@
 <svg width="100" height="100">
 <title id="zsaq">Red rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:pink;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hdsdhggfftthkkokokp">SVG with title and aria-labelledby</p>
@@ -408,7 +400,7 @@
 <svg width="100" height="100">
 <title id="rectqwer">Red rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:pink;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hdsdhdescribedasas">SVG with title and aria-describedby</p>
@@ -418,64 +410,14 @@
 <svg width="100" height="100">
 <title id="redjhkj">Red rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:pink;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hdsdhdefgffgdfvdw">SVG with title and aria-describedby</p>
 
-<h2>Bad example: SVG element with role=img on svg and aria-label on button</h2>
-<button aria-label="Green circle with black border from button">
-<svg width="100" height="100" role="img" >
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
-</svg>
-</button>
-
-<h2>Bad example: SVG element with role=graphics-symbol on svg and aria-label on button</h2>
-<button aria-label="Green circle with black border form button">
-<svg width="100" height="100" role="graphics-symbol">
-  <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
-</svg>
-</button>
-
-<h2>Good example: SVG element with role=img on svg and aria-labelledby on button</h2>
-<button aria-labelledby="goodarialabelledpprrbbiisd">
-<svg width="100" height="100" role="img">
-   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
-</svg>
-</button>
-<p id="goodarialabelledpprrbbiisd">Green circle with black border from aria-labelledby</p>
-
-<h2>Bad example: SVG element with role=img on svg and aria-labelledby (Incorrect value) on button</h2>
-<button aria-labelledby="gfdfhg">
-<svg width="100" height="100" role="img">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
-</svg>
-</button>
-<p id="greencirclejhgjhgjhghj">Green circle with black border</p>
-
-<h2>Bad example: SVG element with role=img on svg and aria-describedby on button</h2>
-<button aria-describedby="desctesting">
-<svg width="100" height="100" role="img">
-    <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
-</svg>
-</button>
-<p id="desctesting">Red rectangle with black border</p>
-
-<h2>Bad example: SVG element with role=img on svg and aria-describedby (Incorrect value) on button</h2>
-<button aria-describedby="dsfsddd">
-<svg width="100" height="100" role="img">
-    <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
-</svg>
-</button>
-<p id="ddssppoaa5786">Red rectangle with black border</p>
-
 <h2>Bad example: SVG element with text and aria-labelledby on button</h2>
 <button aria-labelledby="bbnnmmkk">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -484,7 +426,6 @@
 <h2>Bad example: SVG element with text and aria-labelledby (incorrect value) on button</h2>
 <button aria-labelledby="aplijv">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -493,7 +434,6 @@
 <h2>Bad example: SVG element with text and aria-label, title attribute on button</h2>
 <button aria-label="SVG from aria label" title="SVG from title">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -501,7 +441,6 @@
 <h2>Bad example: SVG element with text and empty aria-label, empty title attribute on button</h2>
 <button aria-label="" title="">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -509,7 +448,6 @@
 <h2>Bad example: SVG element with text and aria-labelledby, title attribute on button</h2>
 <button aria-labelledby="45454fcbfv" title="SVG from title">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -518,7 +456,6 @@
 <h2>Bad example: SVG element with text and title attribute, incorrect aria-labelledby on button</h2>
 <button aria-labelledby="aplijvx" title="SVG from title">
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
   <text x="50" y="60" font-size="30" text-anchor="middle" fill="black">SVG</text>
 </svg>
 </button>
@@ -527,18 +464,18 @@
 <h2>Bad example: SVG element with title and title attribute, aria-label on button</h2>
 <button aria-label="accessible name from button" title="SVG from title">
 <svg width="100" height="100">
-<title>Red rectangle with black border</title>
+<title>teal rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:teal;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 
 <h2>Bad example: SVG element with title and aria-labelledby, title attribute on button</h2>
-<button aria-labelledby="hhoiuyyyt" title="Red rectangle with black border from title">
+<button aria-labelledby="hhoiuyyyt" title="teal rectangle with black border from title">
 <svg width="100" height="100">
-<title id="zsaq">Red rectangle with black border</title>
+<title id="zsaq">teal rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:teal;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hhoiuyyyt">SVG with title and aria-labelledby</p>
@@ -546,9 +483,9 @@
 <h2>Bad example: SVG element with title and title attribute, aria-labelledby (Incorrect value) on button</h2>
 <button aria-labelledby="poxkjkhsdzd" title="SVG from title">
 <svg width="100" height="100">
-<title id="zsaq">Red rectangle with black border</title>
+<title id="zsaq">teal rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:teal;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hdsdhggfftthkkokf67567okp">SVG with title and aria-labelledby</p>
@@ -556,9 +493,9 @@
 <h2>Bad example: SVG element with title and title attribute, aria-describedby on button</h2>
 <button aria-describedby="hdsdhdescribeda6775" title="SVG from title">
 <svg width="100" height="100">
-<title id="rectqwer">Red rectangle with black border</title>
+<title id="rectqwer">teal rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:teal;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hdsdhdescribeda6775">SVG with title and aria-describedby</p>
@@ -566,9 +503,9 @@
 <h2>Bad example: SVG element with title and title attribute aria-describedby (Incorrect value) on button</h2>
 <button aria-describedby="ghxxsxpoiu" title="SVG from title">
 <svg width="100" height="100">
-<title id="redjhkj">Red rectangle with black border</title>
+<title id="redjhkj">teal rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:teal;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hdsdhdefgffgdfvdw23456">SVG with title and aria-describedby</p>
@@ -576,68 +513,111 @@
 <h2>Bad example: SVG element with title and empty title attribute, aria-describedby (no value) on button</h2>
 <button aria-describedby="" title="">
 <svg width="100" height="100" >
-<title id="rectqwer">Red rectangle with black border</title>
+<title id="rectqwer">teal rectangle with black border</title>
   <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  style="fill:teal;stroke:black;stroke-width:5;" />
 </svg>
 </button>
 <p id="hpouyyyusscu">SVG with title and aria-describedby</p>
 
-<h2>Bad example: SVG element with role=img on svg and aria-label, title attribute on button</h2>
-<button aria-label="Green circle with black border from button" title="SVG from title">
+<h2>Bad example: SVG element with role=img on svg and aria-label on button</h2>
+<button aria-label="Yellow ellipse with green border">
 <svg width="100" height="100" role="img" >
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
+</svg>
+</button>
+
+<h2>Bad example: SVG element with role=graphics-symbol on svg and aria-label on button</h2>
+<button aria-label="Yellow ellipse with green border">
+<svg width="100" height="100" role="graphics-symbol">
+  <ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
+</svg>
+</button>
+
+<h2>Good example: SVG element with role=img on svg and aria-labelledby on button</h2>
+<button aria-labelledby="goodarialabelledpprrbbiisd">
+<svg width="100" height="100" role="img">
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
+</svg>
+</button>
+<p id="goodarialabelledpprrbbiisd">Yellow ellipse with green border</p>
+
+<h2>Bad example: SVG element with role=img on svg and aria-labelledby (Incorrect value) on button</h2>
+<button aria-labelledby="gfdfhg">
+<svg width="100" height="100" role="img">
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
+</svg>
+</button>
+<p id="greencirclejhgjhgjhghj">Yellow ellipse with green border</p>
+
+<h2>Bad example: SVG element with role=img on svg and aria-describedby on button</h2>
+<button aria-describedby="desctesting">
+<svg width="100" height="100" role="img">
+    <ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
+</svg>
+</button>
+<p id="desctesting">Yellow ellipse with green border</p>
+
+<h2>Bad example: SVG element with role=img on svg and aria-describedby (Incorrect value) on button</h2>
+<button aria-describedby="dsfsddd">
+<svg width="100" height="100" role="img">
+   <ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
+</svg>
+</button>
+<p id="ddssppoaa5786">Yellow ellipse with green border</p>
+
+<h2>Bad example: SVG element with role=img on svg and aria-label, title attribute on button</h2>
+<button aria-label="Yellow ellipse with green border from button" title="SVG from title">
+<svg width="100" height="100" role="img" >
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
 
 <h2>Bad example: SVG element with role=graphics-symbol on svg and title attribute, aria-label on button</h2>
-<button aria-label="Green circle with black border form aria label" title="SVG from title">
+<button aria-label="Yellow ellipse with green border form aria label" title="SVG from title">
 <svg width="100" height="100" role="graphics-symbol">
-  <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+  <ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
 
 <h2>Bad example: SVG element with role=img on svg and empty title attribute, empty aria-label on button</h2>
 <button aria-label="" title="">
 <svg width="100" height="100" role="img">
-  <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
 
 <h2>Bad example: SVG element with role=img on svg and aria-labelledby, title attribute on button</h2>
 <button aria-labelledby="goodarialabelledpprrbbiisd4356" title="SVg from title">
 <svg width="100" height="100" role="img">
-   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+ <ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
-<p id="goodarialabelledpprrbbiisd4356">Green circle with black border from aria-labelledby</p>
+<p id="goodarialabelledpprrbbiisd4356">Yellow ellipse with green border from aria-labelledby</p>
 
 <h2>Bad example: SVG element with role=img on svg and aria-labelledby (Incorrect value), title attribute on button</h2>
 <button aria-labelledby="gfdfhgvhjkxk009" title="SVG from title">
 <svg width="100" height="100" role="img">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
-<p id="greencircleeerruaar456">Green circle with black border</p>
+<p id="greencircleeerruaar456">Yellow ellipse with green border</p>
 
 <h2>Bad example: SVG element with role=img on svg and aria-describedby (Incorrect value), title attribute on button</h2>
 <button aria-describedby="ddgfhsfsddd" title="svg form title">
 <svg width="100" height="100" role="img">
-    <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+<ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
-<p id="ddssppoaa5786xvhfg">Red rectangle with black border</p>
+<p id="ddssppoaa5786xvhfg">Yellow ellipse with green border</p>
 
 <h2>Bad example: SVG element with role=img on svg and aria-describedby (no value), empty title attribute on button</h2>
 <button aria-describedby="" title="">
 <svg width="100" height="100" role="img">
-    <rect width="100" height="100"
-  style="fill:red;stroke:black;stroke-width:5;" />
+    <ellipse cx="50" cy="55" rx="45" ry="20" style="fill:yellow;stroke:green;stroke-width:3" />
 </svg>
 </button>
-<p id="imagelinooshs77sfdv8">Red rectangle with black border</p>
+<p id="imagelinooshs77sfdv8">Yellow ellipse with green border</p>
 
 
 <br><br><b>==================== Conditions on &lt;i&gt; element============================</b><br><br>
@@ -692,67 +672,6 @@
 <p id="asd">Email</p>
 
 
-<br><br><b>==================== Conditions on &lt;input type="image"&gt; elements============================</b><br><br>
-
-
-<h2>Good example: Image button element with aria-hidden and tabindex</h2>
-<input type="image" src="tree.jpg" alt="tree" aria-hidden="false" tabindex="0" width="250" height="250">
- 
-<h2>Bad example: Image button element with aria-hidden and tabindex</h2>
-<input type="image" src="tree.jpg" alt="tree" aria-hidden="false" tabindex="-1" width="250" height="250">
-
-<h2>Bad example: Image button element with aria-hidden and tabindex</h2>
-<input type="image" src="tree.jpg" alt="tree" aria-hidden="true" tabindex="0" width="250" height="250">
-
-<h2>Bad example: Image button element with aria-hidden and tabindex</h2>
-<input type="image" src="tree.jpg" alt="tree" aria-hidden="true" tabindex="-1" width="250" height="250">
-
-<h2>Good example: Image button element with empty alt</h2>
-<input type="image" src="tree.jpg" alt="tree from alt" width="250" height="250">
-
-<h2>Bad example: Image button element with empty alt (without space), empty aria-label</h2>
-<input type="image" src="tree.jpg" alt="" aria-label="" width="250" height="250">
-
-<h2>Bad example: Image button element with empty alt (without space), aria-label</h2>
-<input type="image" src="tree.jpg" alt="" aria-label="tree from aria-label" width="250" height="250">
-
-<h2>Bad example: Image button element with empty alt (without space), aria-labelledby</h2>
-<input type="image" src="tree.jpg" alt="" aria-labelledby="afgbj87" width="250" height="250">
-<p id="afgbj87">tree from aria labelledby</p>
-
-<h2>Bad example: Image button element with empty alt (without space), aria-labelledby (no value)</h2>
-<input type="image" src="tree.jpg" alt="" aria-labelledby="" width="250" height="250">
-<p id="afgbj87dhf">tree from aria labelledby</p>
-
-<h2>Bad example: Image button element with empty alt (without space), aria-labelledby (incorrect value)</h2>
-<input type="image" src="tree.jpg" alt="" aria-labelledby="asvzfgbj87" width="250" height="250">
-<p id="afgbj87fsgdhn">tree from aria labelledby</p>
-
-<h2>Bad example: Image button element with empty alt (with space), empty aria-label</h2>
-<input type="image" src="tree.jpg" alt=" " aria-label="" width="250" height="250">
-
-<h2>Bad example: Image button element with empty alt (with space), aria-label</h2>
-<input type="image" src="tree.jpg" alt=" " aria-label="tree from aria label" width="250" height="250">
-
-<h2>Bad example: Image button element with empty alt (with space), aria-labelledby</h2>
-<input type="image" src="tree.jpg" alt=" " aria-labelledby="afgbjdfgh456" width="250" height="250">
-<p id="afgbjdfgh456">tree from aria labelledby</p>
-
-<h2>Bad example: Image button element with empty alt (with space), aria-labelledby (no value)</h2>
-<input type="image" src="tree.jpg" alt=" " aria-labelledby="" width="250" height="250">
-<p id="afgbj87fsgdhn">tree from aria labelledby</p>
-
-<h2>Bad example: Image button element with empty alt (with space), aria-labelledby (incorrect value)</h2>
-<input type="image" src="tree.jpg" alt=" " aria-labelledby="3reft" width="250" height="250">
-<p id="afgbj87fsgdhnfsgd">tree from aria labelledby</p>
-
-<h2>Good example: Image button element with title</h2>
-<input type="image" src="tree.jpg" title="tree from title" width="250" height="250">
-
-<h2>Bad example: Image button element with empty title</h2>
-<input type="image" src="tree.jpg" title="" width="250" height="250">
-
-
 <br><br><b>==================== Conditions on &lt;i&gt; and &lt;button&gt; elements============================</b><br><br>
 
 <h2>Bad Example: Image button role=img on icon and title on button</h2>
@@ -792,6 +711,68 @@
 <i class="glyphicon glyphicon-envelope" role="img" id="a45"></i>
 </button>
 <p id="asdmjsddsdkl">Email</p>
+
+
+
+<br><br><b>==================== Conditions on &lt;input type="image"&gt; elements============================</b><br><br>
+
+
+<h2>Good example: input type="image" element with aria-hidden and tabindex</h2>
+<input type="image" src="tree.jpg" alt="tree" aria-hidden="false" tabindex="0" width="150" height="150">
+ 
+<h2>Bad example: input type="image" element with aria-hidden and tabindex</h2>
+<input type="image" src="tree.jpg" alt="tree" aria-hidden="false" tabindex="-1" width="150" height="150">
+
+<h2>Bad example: input type="image" element with aria-hidden and tabindex</h2>
+<input type="image" src="tree.jpg" alt="tree" aria-hidden="true" tabindex="0" width="150" height="150">
+
+<h2>Bad example: input type="image" element with aria-hidden and tabindex</h2>
+<input type="image" src="tree.jpg" alt="tree" aria-hidden="true" tabindex="-1" width="150" height="150">
+
+<h2>Good example: input type="image" element with empty alt</h2>
+<input type="image" src="tree.jpg" alt="tree from alt" width="150" height="150">
+
+<h2>Bad example: input type="image" element with empty alt (without space), empty aria-label</h2>
+<input type="image" src="tree.jpg" alt="" aria-label="" width="150" height="150">
+
+<h2>Bad example: input type="image" element with empty alt (without space), aria-label</h2>
+<input type="image" src="tree.jpg" alt="" aria-label="tree from aria-label" width="150" height="150">
+
+<h2>Bad example: input type="image" element with empty alt (without space), aria-labelledby</h2>
+<input type="image" src="tree.jpg" alt="" aria-labelledby="afgbj87" width="150" height="150">
+<p id="afgbj87">tree from aria labelledby</p>
+
+<h2>Bad example: input type="image" element with empty alt (without space), aria-labelledby (no value)</h2>
+<input type="image" src="tree.jpg" alt="" aria-labelledby="" width="150" height="150">
+<p id="afgbj87dhf">tree from aria labelledby</p>
+
+<h2>Bad example: input type="image" element with empty alt (without space), aria-labelledby (incorrect value)</h2>
+<input type="image" src="tree.jpg" alt="" aria-labelledby="asvzfgbj87" width="150" height="150">
+<p id="afgbj87fsgdhn">tree from aria labelledby</p>
+
+<h2>Bad example: input type="image" element with empty alt (with space), empty aria-label</h2>
+<input type="image" src="tree.jpg" alt=" " aria-label="" width="150" height="150">
+
+<h2>Bad example: input type="image" element with empty alt (with space), aria-label</h2>
+<input type="image" src="tree.jpg" alt=" " aria-label="tree from aria label" width="150" height="150">
+
+<h2>Bad example: input type="image" element with empty alt (with space), aria-labelledby</h2>
+<input type="image" src="tree.jpg" alt=" " aria-labelledby="afgbjdfgh456" width="150" height="150">
+<p id="afgbjdfgh456">tree from aria labelledby</p>
+
+<h2>Bad example: input type="image" element with empty alt (with space), aria-labelledby (no value)</h2>
+<input type="image" src="tree.jpg" alt=" " aria-labelledby="" width="150" height="150">
+<p id="afgbj87fsgdhn">tree from aria labelledby</p>
+
+<h2>Bad example: input type="image" element with empty alt (with space), aria-labelledby (incorrect value)</h2>
+<input type="image" src="tree.jpg" alt=" " aria-labelledby="3reft" width="150" height="150">
+<p id="afgbj87fsgdhnfsgd">tree from aria labelledby</p>
+
+<h2>Good example: input type="image" element with title</h2>
+<input type="image" src="tree.jpg" title="tree from title" width="150" height="150">
+
+<h2>Bad example: input type="image" element with empty title</h2>
+<input type="image" src="tree.jpg" title="" width="150" height="150">
 
 </body>
 </html>
