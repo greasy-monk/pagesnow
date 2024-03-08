@@ -230,13 +230,13 @@
 </a>
 <p id="arialabelledbyimagelinkwithaltspace">W3C Website</p>
 
-<h2>Bad example: Image link with &lt;img&gt; (aria-labelledby with incorrect value)</h2>
+<h2>Bad example: Image link with &lt;img&gt; alt without space, (aria-labelledby with incorrect value)</h2>
  <a href="https://w3.org" >
 	<img src="Image_link.png" alt=""  aria-labelledby="labelledbyimagelink" width="250" height="150">
 </a>
 <p id="badarialabelledbyimagelinkincorrect">W3C Website</p>
 
-<h2>Bad example: Image link with &lt;img&gt; (aria-labelledby with incorrect value)</h2>
+<h2>Bad example: Image link with &lt;img&gt; alt with space (aria-labelledby with incorrect value)</h2>
  <a href="https://w3.org" >
 	<img src="Image_link.png" alt=" "  aria-labelledby="labelledbyimagelink" width="250" height="150">
 </a>
@@ -372,7 +372,7 @@
 </svg>
 </a>
 
-<h2>Bad example: Bad example: Image link with &lt;svg&gt; text and aria-labelledby (no value)</h2>
+<h2>Bad example: Image link with &lt;svg&gt; text and aria-labelledby (no value)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-labelledby="">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
@@ -380,7 +380,7 @@
 </svg>
 </a>
 
-<h2>Bad example: Bad example: Image link with &lt;svg&gt; and aria-labelledby (Incorrect value)</h2>
+<h2>Bad example: Image link with &lt;svg&gt; and aria-labelledby (Incorrect value)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-labelledby="testing123">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
@@ -388,7 +388,7 @@
 </svg>
 </a>
 
-<h2>Bad example: Bad example: Image link with &lt;svg&gt; text and aria-describedby (no value)</h2>
+<h2>Bad example: Image link with &lt;svg&gt; text and aria-describedby (no value)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-describedby="">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
@@ -396,7 +396,7 @@
 </svg>
 </a>
 
-<h2>Bad example: Bad example: Image link with &lt;svg&gt; text and aria-describedby (Incorrect value)</h2>
+<h2>Bad example: Image link with &lt;svg&gt; text and aria-describedby (Incorrect value)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-describedby="test678">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
@@ -439,7 +439,7 @@
 </svg>
 </a>
 
-<h2>Bad example: Image link with &lt;svg&gt; title and aria-label</h2>
+<h2>Bad example: Image link with &lt;svg&gt; title and empty aria-label</h2>
 <a href="https://w3.org">
 <svg width="100" height="100" aria-label="">
 <title>Red rectangle with black border</title>
@@ -576,7 +576,7 @@
 </svg>
 </a>
 
-<h2>Bad example: mage link with &lt;svg&gt; no role (img)</h2>
+<h2>Good example: Image link with &lt;svg&gt; no role (img)</h2>
 <a href="https://w3.org">
 <svg width="100" height="100">
 <title>Green circle with black border</title>
@@ -670,7 +670,7 @@
 
 <h2>Good Example: Image link with &lt;i&gt; aria-hidden</h2>
  <a href="https://w3.org">	
-<i style="font-size:48px;" class="glyphicon glyphicon-cloud" aria-hidden="false"></i>
+<i style="font-size:48px;" class="glyphicon glyphicon-cloud" aria-hidden="false" aria-label="W3C website"></i>
 </a>
 
 <h2>Bad Example: Image link with &lt;i&gt; aria-hidden</h2>
@@ -680,11 +680,11 @@
 
 <h2>Good Example: Image link with &lt;i&gt; role (img)</h2>
  <a href="https://w3.org">	
-<i style="font-size:48px;" class="glyphicon glyphicon-remove" role="img"></i>
+<i style="font-size:48px;" class="glyphicon glyphicon-remove" role="img" aria-label="W3C website"></i>
 </a>
 
 <h2>Bad Example: Image link with &lt;i&gt; role (img)</h2>
- <a href="https://w3.org">	
+ <a href="https://w3.org">
 <i style="font-size:48px;" class="glyphicon glyphicon-remove"></i>
 </a>
 
