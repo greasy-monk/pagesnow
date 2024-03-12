@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head><title>
+        Heading Condition
+    </title></head>
+<body>
+    <h1> Heading Condition</h1>
+
+
+    <h2>Bad example: heading with role and without aria-level attribute</h2>
+    <div role="heading"> Dell </div>
+
+    <h2>Bad example: heading with aria-level and without role attribute</h2>
+    <div aria-level="1"> Goregaon </div>
+
+    <h1>Bad example: heading with h1 element with role and aria-level attribute</h1>
+    <h1 role="heading" aria-level="2"> BarrierBreak </h1>
+    
+
+    <h2>Bad example: heading element with aria-hidden attribute</h2>
+    <h2 aria-hidden="true"> Dell </h2>
+
+    <h2>Bad example: heading element with role="none" attribute</h2>
+    <h2 role="none"> Goregaon </h2>
+
+    <h2>Bad example: heading element with role="presentation" attribute</h2>
+    <h2 role="presentation"> Goregaon </h2>
+
+
+
+    <h2>Bad example: Multiple h1 heading on page through native</h2>
+    <div>
+        <h1> BarrierBreak </h1>
+        <h1> Goregaon </h1>
+    </div>
+
+    <h2>Bad example: Multiple h1 heading on page through role and aria-level </h2>
+    <div>
+        <div role="heading" aria-level="1"> BarrierBreak </div>
+        <div role="heading" aria-level="1"> Goregaon </div>
+    </div>
+
+
+    <h2>Good example: heading with text inside, heading with sequence , with aria-hidden and one h1 on page through native</h2>
+    <div>
+        <h1 aria-hidden="false"> BarrierBreak </h1>
+        <h2 aria-hidden="false"> Accessibility </h2>
+        <h3 aria-hidden="false"> Goregaon </h3>
+    </div>
+
+    <h2>Good example: heading with role and aria-level, heading with text inside, heading sequence and one h1 on page through role and aria-level attribute</h2>
+    <div>
+        <div role="heading" aria-level="1"> BarrierBreak </div>
+        <div role="heading" aria-level="2"> Accessibility </div>
+        <div role="heading" aria-level="3"> Goregaon </div>
+    </div>
+
+    <h2>Bad example: heading with incorrect sequence through native</h2>
+    <div>
+        <h1> BarrierBreak </h1>
+        <h3> Accessibility </h3>
+        <h2> Goregaon </h2>
+    </div>
+
+    <h2>bad example: heading with incorrect sequence through role and aria-level attribute</h2>
+    <div>
+        <div role="heading" aria-level="1"> BarrierBreak </div>
+        <div role="heading" aria-level="3"> Accessibility </div>
+        <div role="heading" aria-level="2"> Goregaon </div>
+    </div>
+    
+
+    <h2>Bad example: heading element with empty text </h2>
+    <h1></h1>
+
+    <h2>Bad example: heading through role and aria-level attribute and with empty text </h2>
+    <div role="heading" aria-level="1"></div>
+
+
+    <h2>Bad example: Probable heading with font size 16px and font style Bold, Italic and with aria-hidden and role attribute </h2>
+    <p style="font-size: 16px; font-weight: bold; font-style: italic; " aria-hidden="true" role="presentation"> Accessibility </p>
+    <span style="font-size: 18px; font-style: italic;" > Goregaon </span>
+    <div style="font-size: 16px; font-weight: bold;"> BarrierBreak </div>
+
+
+</body>
+</html>
