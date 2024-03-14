@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Video Only Conditions</title>
+    </head>
+    <body>
+
+    <h1> Video  only Condition</h1>
+
+    <h2>Good example: Video-only element with media alternative for text</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    <h3>Text Alternate for Video</h3>
+    <div>
+        <p>The rabbit is looking to the flying Butterfly in the sky and suddenly an <br>
+            apple falls on it and the Butterfly dies. And the rabbit gets shocked</p>
+    </div>
+
+    <h2>Bad example: Video-only element with incorrect media alternative for text</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    <h3>Text Alternate for Video</h3>
+    <div>
+        <p>The crocodile is walking along with lion</p>
+    </div>
+
+    <h2>Bad example: Video-only element without media alternative for text</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <h3>Text Alternate for video</h3>
+    <div>
+    
+    </div>
+
+
+    <h2>Good example: Video-only element with audio</h2>
+    <video width="320" height="240" controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+
+    <h2>Bad example: Video-only element without audio</h2>
+    <video width="320" height="240" controls>
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+
+
+    <h2>Good example: Video-only element with transcript</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div>
+        <h3>Transcript</h3>
+        <p>(In background the music is playing)<br>
+            The rabbit is looking to the flying Butterfly in the sky and suddenly an <br>
+            apple falls on it and the Butterfly dies. And the rabbit gets shocked</p>
+    </div>
+
+    <h2>Bad example: Video-only element with incorrect transcript</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div>
+        <h3>Transcript</h3>
+        <p>The crocodile is walking along with lion</p>
+    </div>
+
+    <h2>Bad example: Video-only element without transcript</h2>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    </body>
+</html>
