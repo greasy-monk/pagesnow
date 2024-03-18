@@ -292,6 +292,8 @@
 </a>
 <p id="describedlinkincorrectspaceimagelink">W3C Website from anchor</p>
 
+<!-- Need to test below conditions-->
+
 <h2>Good example: Image link with svg aria-hidden</h2>
  <a href="https://w3.org" >
 <svg width="100" height="100" aria-hidden="false">
@@ -670,14 +672,16 @@
 </a>
 <p id="imagelinkbadexample">Red rectangle with black border</p>
 
+<!-- Need to test above conditions-->
+
 <h2>Good Example: Image link with i aria-hidden</h2>
  <a href="https://w3.org">	
-<i style="font-size:48px;" class="glyphicon glyphicon-cloud" aria-hidden="false" aria-label="W3C website"></i>
+<i style="font-size:48px;" class="glyphicon glyphicon-cloud" aria-hidden="false" role="img" aria-label="W3C website"></i>
 </a>
 
 <h2>Bad Example: Image link with i aria-hidden</h2>
  <a href="https://w3.org">	
-<i style="font-size:48px;" class="glyphicon glyphicon-cloud" aria-hidden="true" aria-label="W3C website"></i>
+<i style="font-size:48px;" class="glyphicon glyphicon-cloud" aria-hidden="true" role="img" aria-label="W3C website"></i>
 </a>
 
 <h2>Good Example: Image link with i role (img)</h2>
@@ -685,9 +689,9 @@
 <i style="font-size:48px;" class="glyphicon glyphicon-remove" role="img" aria-label="W3C website"></i>
 </a>
 
-<h2>Bad Example: Image link with i role (img)</h2>
+<h2>Bad Example: Image link without i role (img)</h2>
  <a href="https://w3.org">
-<i style="font-size:48px;" class="glyphicon glyphicon-remove"></i>
+<i style="font-size:48px;" class="glyphicon glyphicon-remove" aria-label="W3C website"></i>
 </a>
 
 <h2>Good Example: Image link with i aria-label</h2>
