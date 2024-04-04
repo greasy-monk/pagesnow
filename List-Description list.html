@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Description list</h1>
+    <h2>Good Example: dt and dl tag used without dl </h2>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+      </dl>
+
+    <h2>Bad Example: dt and dl tag used without dl</h2>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+
+    <h2>Bad Example: Description list with aria-hidden="true" </h2>
+        <dl aria-hidden="true">
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+          </dl>
+
+          <h2>Bad Example: Description list with role="none" </h2>
+          <dl role="none">
+              <dt>Coffee</dt>
+              <dd>Black hot drink</dd>
+              <dt>Milk</dt>
+              <dd>White cold drink</dd>
+            </dl>
+
+            <h2>Bad Example: Description list with role=“presentation” </h2>
+            <dl role=“presentation”>
+                <dt>Coffee</dt>
+                <dd>Black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>White cold drink</dd>
+              </dl>
+
+              <h2>Bad Example: First child element of dl is not dt </h2>
+              <dl>
+                  <dd>Black hot drink</dd>
+                  <dt>Milk</dt>
+                  <dd>White cold drink</dd>
+                </dl>
+
+        
+
+</body>
+</html>
