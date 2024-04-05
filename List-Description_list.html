@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Description list</h1>
+    <h2>Good Example: dt and dl tag used without dl </h2>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+      </dl>
+
+    <h2>Bad Example: dt and dl tag used without dl</h2>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+
+    <h2>Bad Example: Description list with aria-hidden="true" </h2>
+        <dl aria-hidden="true">
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+          </dl>
+
+          <h2>Bad Example: Description list with role="none" </h2>
+          <dl role="none">
+              <dt>Coffee</dt>
+              <dd>Black hot drink</dd>
+              <dt>Milk</dt>
+              <dd>White cold drink</dd>
+            </dl>
+
+            <h2>Bad Example: Description list with role=“presentation” </h2>
+            <dl role=“presentation”>
+                <dt>Coffee</dt>
+                <dd>Black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>White cold drink</dd>
+              </dl>
+
+              <h2>Bad Example: First child element of dl is not dt </h2>
+              <dl>
+                  <dd>Black hot drink</dd>
+                  <dt>Milk</dt>
+                  <dd>White cold drink</dd>
+                </dl>
+
+                <h2>Bad Example: dl containing atleast one  child element as dt </h2>
+                <dl>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                  </dl>
+
+                  <h2>Bad Example: dl containing atleast one  child element as dd </h2>
+                  <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                  </dl>
+
+                  <h2>Bad Example: dl has direct child element as li </h2>
+                  <dl>
+                      <li>Coffee</li>
+                      <li>Black hotlirink<li>
+                    </dl>
+
+
+
+               <h2>Bad Example: Empty description term dt or description details dd within dl </h2>
+                <dl>
+                <dt></dt>
+                <dd></dd>
+                 <dt>Milk</dt>
+                 <dd>White cold drink</dd>
+                </dl>
+
+                <h2>Bad Example: dl contains element with role=”list” </h2>
+                <dl>
+                    <div role="list">
+                      <span role="listitem">Apple</span>
+                      <span role="listitem">Kiwi</span></div>
+                  </dl>
+
+
+   <h2>Good Example: dl consists of ul as child element </h2>
+    <dl>
+      <ul>
+        <li>Coffee</li>
+        <li>Black hot drink</li>
+        <li>Milk</li>
+        <li>White cold drink</li>
+      </ul>
+      </dl>
+
+      <h2>Good Example: dl consists of ol as child element </h2>
+      <dl>
+        <ol>
+          <li>Coffee</li>
+          <li>Black hot drink</li>
+          <li>Milk</li>
+           <li>White cold drink</li>
+        </ol>
+        </dl>
+        
+
+</body>
+</html>
