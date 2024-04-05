@@ -45,7 +45,21 @@
                 <dd>White cold drink</dd>
               </dl>
 
-              <h2>Bad Example: First child element of dl is not dt </h2>
+              <h2>Bad Example: dl containing text has atleast one  child element as dt </h2>
+              <dl>
+                <dt></dt>
+                <dt></dt>
+                </dl>
+
+                <h2>Bad Example: dl containing text has atleast one child element as dd </h2>
+                <dl>
+                  <dt></dt>
+                  <dd></dd>
+                  <dt></dt>
+                  <dd></dd>
+                  </dl>
+
+              <h2>Bad Example: First child element of dl is dt </h2>
               <dl>
                   <dd>Black hot drink</dd>
                   <dt>Milk</dt>
