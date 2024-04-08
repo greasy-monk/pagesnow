@@ -43,20 +43,18 @@
                 <dd>Black hot drink</dd>
                 <dt>Milk</dt>
                 <dd>White cold drink</dd>
-              </dl>
+            </dl>
 
               <h2>Bad Example: dl containing text has atleast one  child element as dt </h2>
               <dl>
-                <dt></dt>
-                <dt></dt>
-                </dl>
+                <dd>Apple</dd>
+                <dd>Kiwi</dd>
+              </dl>
 
                 <h2>Bad Example: dl containing text has atleast one child element as dd </h2>
                 <dl>
-                  <dt></dt>
-                  <dd></dd>
-                  <dt></dt>
-                  <dd></dd>
+                  <dt>Apple</dt>
+                  <dt>Kiwi</dt>
                   </dl>
 
               <h2>Bad Example: First child element of dl is dt </h2>
@@ -65,21 +63,6 @@
                   <dt>Milk</dt>
                   <dd>White cold drink</dd>
                 </dl>
-
-                <h2>Bad Example: dl containing atleast one  child element as dt </h2>
-                <dl>
-                    <dd>Black hot drink</dd>
-                    <dt>Milk</dt>
-                    <dd>White cold drink</dd>
-                  </dl>
-
-                  <h2>Bad Example: dl containing atleast one  child element as dd </h2>
-                  <dl>
-                    <dt>Coffee</dt>
-                    <dd>Black hot drink</dd>
-                    <dt>Milk</dt>
-                    <dd>White cold drink</dd>
-                  </dl>
 
                   <h2>Bad Example: dl has direct child element as li </h2>
                   <dl>
@@ -105,7 +88,7 @@
                   </dl>
 
 
-   <h2>Good Example: dl consists of ul as child element </h2>
+   <h2>Bad Example: dl consists of ul as child element </h2>
     <dl>
       <ul>
         <li>Coffee</li>
@@ -115,7 +98,7 @@
       </ul>
       </dl>
 
-      <h2>Good Example: dl consists of ol as child element </h2>
+      <h2>Bad Example: dl consists of ol as child element </h2>
       <dl>
         <ol>
           <li>Coffee</li>
