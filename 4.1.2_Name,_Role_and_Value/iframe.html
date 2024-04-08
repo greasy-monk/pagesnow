@@ -7,16 +7,12 @@
 
 <h1>The iframe element Conditions</h1>
 
-<h2>Good example: iframe element with aria-hidden and tabindex</h2>
-<iframe src="https://www.barrierbreak.com/" title="Home - BarrierBreak" aria-hidden="false" tabindex="0">
+<h2>Good example: iframe element with title</h2>
+<iframe src="https://www.barrierbreak.com/" title="Home - BarrierBreak">
 </iframe>
 
-<h2>Bad example: iframe element with aria-hidden and tabindex</h2>
-<iframe src="https://www.barrierbreak.com/" title="Home - BarrierBreak" aria-hidden="true" tabindex="0">
-</iframe>
-
-<h2>Bad example: iframe element with aria-hidden and tabindex</h2>
-<iframe src="https://www.barrierbreak.com/" title="Home - BarrierBreak" aria-hidden="false" tabindex="-1">
+<h2>Bad example: iframe element with aria-hidden</h2>
+<iframe src="https://www.barrierbreak.com/" title="Home - BarrierBreak" aria-hidden="true">
 </iframe>
 
 <h2>Bad example: iframe element with aria-hidden and tabindex</h2>
@@ -31,10 +27,6 @@
 <iframe src="https://247accessibledocuments.com/" title="Home - 247 Accessible Documents" aria-hidden="true" role="presentation">
 </iframe>
 
-<h2>Good example: iframe element with title</h2>
-<iframe src="https://newzhook.com/inclusive/" title="Inclusive: India Digital First - Newz Hook">
-</iframe>
-
 <h2>Bad example: iframe element with empty title (no space)</h2>
 <iframe src="https://newzhook.com/inclusive/" title="">
 </iframe>
@@ -43,7 +35,7 @@
 <iframe src="https://newzhook.com/inclusive/" title=" ">
 </iframe>
 
-<h2>Good example: iframe element with empty title (no space) and aria-label</h2>
+<h2>Good example: iframe element with empty title and aria-label</h2>
 <iframe src="https://hotela11y.com/" title="" aria-label="Homepage - HotelA11y">
 </iframe>
 
@@ -51,7 +43,7 @@
 <iframe src="https://hotela11y.com/" title="Homepage - HotelA11y from title" aria-label="Homepage - HotelA11y from aria label">
 </iframe>
 
-<h2>Bad example: iframe element with empty title (no space) and empty aria-label</h2>
+<h2>Bad example: iframe element with empty title and empty aria-label</h2>
 <iframe src="https://hotela11y.com/" title="" aria-label="">
 </iframe>
 
@@ -65,12 +57,12 @@
 </iframe>
 <p id="qwtyomnh">Blog - BarrierBreak</p>
 
-<h2>Bad example: iframe element with empty title (no space), aria-labelledby (incorrect value)</h2>
+<h2>Bad example: iframe element with empty title, aria-labelledby (incorrect value)</h2>
 <iframe src="https://www.barrierbreak.com/blog/" title="" aria-labelledby="bbincorrcetid">
 </iframe>
 <p id="bb">Blog - BarrierBreak</p>
 
-<h2>Bad example: iframe element with empty title (no space), aria-labelledby (no value)</h2>
+<h2>Bad example: iframe element with empty title, aria-labelledby (no value)</h2>
 <iframe src="https://www.barrierbreak.com/blog/" title="" aria-labelledby="">
 </iframe>
 <p id="pobhimnv">Blog - BarrierBreak</p>
