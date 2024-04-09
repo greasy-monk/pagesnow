@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native List</title>
+  
+</head>
+<body>
+  <p>List with correct implementation</p>
+        <ul>
+            <li>test01</li>
+            <li>test02</li>
+            <li>test03</li>
+        </ul>
+
+    <p>List with aria-hidden="true" implementation</p>
+        <ul aria-hidden="true">
+            <li>test01</li>
+            <li>test02</li>
+            <li>test03</li>
+        </ul>
+    
+    <p>List with aria-hidden="false" implementation</p>
+        <ul aria-hidden="false">
+            <li>test01</li>
+            <li>test02</li>
+            <li>test03</li>
+        </ul>
+    
+    <p>List with text without a list item</p>
+        <ul>
+            test01
+        </ul>
+    
+    <p>List with text without a list item and (li) element</p>
+        <ul>
+            <p>test01</p>
+        </ul>
+    
+    <p>List with Empty an list item</p>
+        <ol>
+            <li></li>
+            <li>test02</li>
+            <li>test03</li>
+        </ol>
+    
+    <p>List (li) nested inside another (li) element</p>
+        <ol>
+            <li>
+                <li>test01</li>
+            </li>
+        </ol>
+
+    <p>Nesting of (Native) List element</p>
+        <ul>
+            <li>
+                <ul>
+                    <li>test01</li>
+                    <li>test02</li>
+                </ul>
+            </li>
+            <li>test002</li>
+        </ul>
+        
+    <p>Nesting of ARIA List inside a native List</p>
+        <ul>
+            <li>
+                <div role="list">
+                    <div role="listitem">test01</div>
+                    <div role="listitem">test02</div>
+                </div>
+            </li>
+            <li>test002</li>
+        </ul>
+    
+    <p>List without list container</p>
+            <li>test01</li>
+            <li>test02</li>
+
+        
+</body>
+</html>
