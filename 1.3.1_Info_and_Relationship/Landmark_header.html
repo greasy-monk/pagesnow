@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Header landmark</h1>
+
+    <h2>Single header landmark</h2>
+
+    <h3>Good example: Native Header landmark with aria-hidden=“true” attribute</h3>
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Good example: ARIA Header landmark with aria-hidden=“true” attribute</h3>
+    <div role="banner">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native Header landmark with aria-hidden=“true” attribute</h3>
+    <header aria-hidden=“true”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: ARIA Header landmark with aria-hidden=“true” attribute</h3>
+    <div aria-hidden=“true” role="banner">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native Header landmark with role=“presentation” attribute</h3>
+    <header  role=“presentation”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: ARIA Header landmark with role=“presentation” attribute</h3>
+    <div role=“presentation” role="banner">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native Header landmark with role=“none” attribute</h3>
+    <header  role=“none”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: ARIA Header landmark with role=“none” attribute</h3>
+    <div role=“none” role="banner">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Good example: Native Header landmark with aria-label attribute</h3>
+    <header aria-label="Primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: Native Header landmark with aria-label(Empty value) attribute</h3>
+    <header aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Good example: ARIA Header landmark with aria-label attribute</h3>
+    <div role="banner" aria-label="Primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: ARIA Header landmark with aria-label(Empty value) attribute</h3>
+    <div role="banner" aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Good example: Native Header landmark with aria-labelledby attribute</h3>
+    <span id="a1">Primary header</span>
+    <header aria-labelledby="a1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Good example: ARIA Header landmark with aria-labelledby attribute</h3>
+    <div role="banner" aria-labelledby="a1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native Header landmark with aria-labelledby(Empty value) attribute</h3>
+    <span id="a1">Primary header</span>
+    <header aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: ARIA Header landmark with aria-labelledby(Empty value) attribute</h3>
+    <div role="banner" aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native Header landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <span id="a1">Primary header</span>
+    <header aria-labelledby="a2">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: ARIA Header landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <div role="banner" aria-labelledby="a2">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+
+    <h2>Multiple header landmark</h2>
+
+    <h3>Good example: Multiple Header landmark</h3>
+    <header aria-label="primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description">
+        <div role="banner" aria-label="secondary">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark</h3>
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+        <div role="banner">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+
+        <h3>Bad example: Multiple Header landmark with no accessible name</h3>
+        <header>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+        <iframe src="url" title="description">
+            <div role="banner">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+        </iframe>
+
+
+
+    <h3>Bad example: Multiple Header landmark with aria-hidden=“true” attribute</h3>
+    <header aria-hidden="true">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description">
+        <div role="banner" aria-hidden="true">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with aria-hidden=“true” attribute</h3>
+    <div role="banner" aria-hidden="true">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header aria-hidden="true">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with role=“presentation” attribute</h3>
+    <header role=“presentation”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description">
+        <div role="banner" role=“presentation”>        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: ARIA Header landmark with role=“presentation” attribute</h3>
+    <div role="banner" role=“presentation”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header role=“presentation”>       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with role=“none” attribute</h3>
+    <header role=“none”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description" >
+        <div role="banner" role=“none”>        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with role=“none” attribute</h3>
+    <div role="banner">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header role=“none”>       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+
+    <h3>Bad example: Multiple Header landmark with aria-label(Empty value) attribute</h3>
+    <header aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description" >
+        <div role="banner" aria-label="">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with aria-label(Empty value) attribute</h3>
+    <div role="banner" aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header aria-label="">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+    <h3>Good example: Multiple Header landmark with aria-labelledby attribute</h3>
+    <span id="a3">Header landmark</span>
+    <header aria-labelledby="a3">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description" >
+        <div role="banner" aria-labelledby="a3">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Good example: Multiple Header landmark with aria-labelledby attribute</h3>
+    <div role="banner" aria-labelledby="a3">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header aria-labelledby="a3">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+    <span id="a3">Header landmark</span>
+    <h3>Bad example: Multiple Header landmark with aria-labelledby(Empty value) attribute</h3>
+    <header aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description" >
+        <div role="banner" aria-labelledby="">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with aria-labelledby(Empty value) attribute</h3>
+    <div role="banner" aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header aria-labelledby="">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <span id="a3">Header landmark</span>
+    <header aria-labelledby="a5">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <iframe src="url" title="description" >
+        <div role="banner" aria-labelledby="a5">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple Header landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <div role="banner" aria-labelledby="a5">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <header aria-labelledby="a5">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+    </iframe>
+
+</body>
+</html>
