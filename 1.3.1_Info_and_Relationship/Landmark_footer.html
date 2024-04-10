@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Footer landmark</h1>
+
+    <h2>Single footer landmark</h2>
+
+    <h3>Good example: Native footer landmark with aria-hidden=“true” attribute</h3>
+    <footer>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Good example: ARIA footer landmark with aria-hidden=“true” attribute</h3>
+    <div role="contentinfo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with aria-hidden=“true” attribute</h3>
+    <footer aria-hidden=“true”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA Footer landmark with aria-hidden=“true” attribute</h3>
+    <div aria-hidden=“true” role="contentinfo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with role=“presentation” attribute</h3>
+    <footer  role=“presentation”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA footer landmark with role=“presentation” attribute</h3>
+    <div role=“presentation” role="contentinfo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with role=“none” attribute</h3>
+    <footer  role=“none”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA footer landmark with role=“none” attribute</h3>
+    <div role=“none” role="contentinfo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Good example: Native footer landmark with aria-label attribute</h3>
+    <footer aria-label="Primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: Native footer landmark with aria-label(Empty value) attribute</h3>
+    <footer aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Good example: ARIA footer landmark with aria-label attribute</h3>
+    <div role="contentinfo" aria-label="Primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: ARIA footer landmark with aria-label(Empty value) attribute</h3>
+    <div role="contentinfo" aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Good example: Native footer landmark with aria-labelledby attribute</h3>
+    <span id="a1">Primary footer</span>
+    <footer aria-labelledby="a1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Good example: ARIA footer landmark with aria-labelledby attribute</h3>
+    <div role="contentinfo" aria-labelledby="a1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with aria-labelledby(Empty value) attribute</h3>
+    <span id="a1">Primary footer</span>
+    <footer aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA footer landmark with aria-labelledby(Empty value) attribute</h3>
+    <div role="contentinfo" aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <span id="a1">Primary footer</span>
+    <footer aria-labelledby="a2">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA footer landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <div role="contentinfo" aria-labelledby="a2">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+
+    <h2>Multiple footer landmark</h2>
+
+    <h3>Good example: Multiple footer landmark</h3>
+    <footer aria-label="primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description">
+        <div role="contentinfo" aria-label="secondary">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark</h3>
+    <footer>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+        <div role="contentinfo">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+
+        <h3>Bad example: Multiple footer landmark with no accessible name</h3>
+        <footer>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+        <iframe src="url" title="description">
+            <div role="contentinfo">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+        </iframe>
+
+
+
+    <h3>Bad example: Multiple footer landmark with aria-hidden=“true” attribute</h3>
+    <footer aria-hidden="true">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description">
+        <div role="contentinfo" aria-hidden="true">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with aria-hidden=“true” attribute</h3>
+    <div role="contentinfo" aria-hidden="true">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer aria-hidden="true">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with role=“presentation” attribute</h3>
+    <footer role=“presentation”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description">
+        <div role="contentinfo" role=“presentation”>        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: ARIA footer landmark with role=“presentation” attribute</h3>
+    <div role="contentinfo" role=“presentation”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer role=“presentation”>       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with role=“none” attribute</h3>
+    <footer role=“none”>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description" >
+        <div role="contentinfo" role=“none”>        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with role=“none” attribute</h3>
+    <div role="contentinfo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer role=“none”>       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+
+    <h3>Bad example: Multiple footer landmark with aria-label(Empty value) attribute</h3>
+    <footer aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description" >
+        <div role="contentinfo" aria-label="">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with aria-label(Empty value) attribute</h3>
+    <div role="contentinfo" aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer aria-label="">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+    <h3>Good example: Multiple footer landmark with aria-labelledby attribute</h3>
+    <span id="a3">footer landmark</span>
+    <footer aria-labelledby="a3">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description" >
+        <div role="contentinfo" aria-labelledby="a3">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Good example: Multiple footer landmark with aria-labelledby attribute</h3>
+    <div role="contentinfo" aria-labelledby="a3">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer aria-labelledby="a3">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+    <span id="a3">footer landmark</span>
+    <h3>Bad example: Multiple footer landmark with aria-labelledby(Empty value) attribute</h3>
+    <footer aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description" >
+        <div role="contentinfo" aria-labelledby="">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with aria-labelledby(Empty value) attribute</h3>
+    <div role="contentinfo" aria-labelledby="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer aria-labelledby="">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <span id="a3">footer landmark</span>
+    <footer aria-labelledby="a5">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+    <iframe src="url" title="description" >
+        <div role="contentinfo" aria-labelledby="a5">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </iframe>
+
+    <h3>Bad example: Multiple footer landmark with aria-labelledby(Incorrect value) attribute</h3>
+    <div role="contentinfo" aria-labelledby="a5">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+    <iframe src="url" title="description">
+        <footer aria-labelledby="a5">       
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+    </iframe>
+
+</body>
+</html>
