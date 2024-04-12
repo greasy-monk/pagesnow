@@ -4,5 +4,137 @@
 <title>ARIA List Conditions</title>
 </head>
 <body>
+
+<h1>ARIA List Conditions</h1>
+
+
+<h2>Good example: role listitem with role list</h2>
+<div role="list">
+  <div role="listitem">Apple</div>
+  <div role="listitem">Banana</div>
+  <div role="listitem">Orange</div>
+  <div role="listitem">Mango</div>
+</div>
+  
+<h2>Bad example: role listitem but missing role list</h2>
+<div>
+  <div role="listitem">Apple</div>
+  <div role="listitem">Banana</div>
+  <div role="listitem">Orange</div>
+  <div role="listitem">Mango</div>
+</div>
+
+<h2>Bad example: role listitem on li with ol as parent element</h2>
+<ol>
+  <li role="listitem">Apple</li>
+  <li role="listitem">Banana</li>
+  <li role="listitem">Orange</li>
+  <li role="listitem">Mango</li>
+</ol>
+
+<h2>Good example: aria-hidden with role list</h2>
+<div role="list">
+  <div role="listitem">Apple</div>
+  <div role="listitem">Banana</div>
+  <div role="listitem">Orange</div>
+  <div role="listitem">Mango</div>
+</div>
+
+<h2>Bad example: aria-hidden with role list</h2>
+<div role="list" aria-hidden="true">
+  <div role="listitem">Apple</div>
+  <div role="listitem">Banana</div>
+  <div role="listitem">Orange</div>
+  <div role="listitem">Mango</div>
+</div>
+
+<h2>Bad example: aria-hidden with role listitem</h2>
+<div role="list">
+  <div role="listitem" aria-hidden="true">Apple</div>
+  <div role="listitem" aria-hidden="true">Banana</div>
+  <div role="listitem" aria-hidden="true">Orange</div>
+  <div role="listitem" aria-hidden="true">Mango</div>
+</div>
+
+<h2>Good example: role list with atleast one text element with role listitem</h2>
+<div role="list">
+  <div role="listitem">Apple</div>
+  <div role="listitem">Banana</div>
+</div>
+
+<h2>Bad example: role list with atleast one text element have role listitem</h2>
+<div role="list">
+ <div>Apple</div>
+ <div>Mango</div>
+</div>
+  
+<h2>Bad example: role list on ul with li</h2>
+<ul role="list">
+  <li>Apple</li>
+  <li>Banana</li>
+</ul>
+
+<h2>Bad example: role list with empty role listitem</h2>
+<ul role="list">
+  <div role="listitem"></div>
+  <div role="listitem"></div>
+</ul>
+
+<h2>Bad example: role list with li element</h2>
+<div role="list">
+<li>Apple</li>
+<li>Mango</li>
+</div>
+
+<h2>Good example: role list with role listitem as first element</h2>
+<div role="list">
+  <div role="listitem">Apple</div>
+  <div role="listitem">Mango</div>
+  <div role="listitem">Orange</div>
+</div>
+
+<h2>Bad example: role list with role listitem as first element</h2>
+<div role="list">
+  <div role="heading" aria-level="3">Apple</div>
+  <div role="listitem">Mango</div>
+  <div role="listitem">Orange</div>
+</div>
+
+<h2>Good example: ul inside the role list and listitem</h2>
+<div role="list">
+<div role="listitem">Fruits</div>
+  <div role="listitem">
+	<ul>
+		<li>Apple</li>
+		<li>Mango</li>
+		<li>Orange</li>
+	</ul>
+  </div>
+  <div role="listitem">Veg</div>
+</div>
+
+<h2>Good example: dl, dt inside the role list and listitem</h2>
+<div role="list">
+  <div role="listitem">Bevarages
+	<dl>
+	  <dt>Coffee</dt>
+	  <dd>Black hot drink</dd>
+	  <div>
+	  <dt>Milk</dt>
+	  <dd>White cold drink</dd>
+	  </div>
+	</dl>
+  </div>
+</div>
+
+<h2>Bad example: role listitem is part of another role listitem</h2>
+<div role="list">
+  <div role="listitem">
+   Apple
+  <div role="listitem">Orange</div>
+  </div>  
+  <div role="listitem">Mango</div>
+</div>
+
 </body>
 </html>
