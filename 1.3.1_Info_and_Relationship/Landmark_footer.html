@@ -51,12 +51,12 @@
     </footer>
 
     <h3>Bad example: ARIA footer landmark with role="presentation" attribute</h3>
-    <div role="presentation" role="contentinfo">
+    <footer role="presentation" >
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
-    </div>
+    </footer>
 
     <h3>Bad example: Native footer landmark with role="none" attribute</h3>
     <footer  role="none">
@@ -67,12 +67,12 @@
     </footer>
 
     <h3>Bad example: ARIA footer landmark with role="none" attribute</h3>
-    <div role="none" role="contentinfo">
+    <dfooter role="none">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
-    </div>
+    </footer>
 
     <h3>Good example: Native footer landmark with aria-label attribute</h3>
     <footer aria-label="Primary">
@@ -248,7 +248,7 @@
         </ul>
     </footer>
     <iframe src="url" title="description">
-        <div role="contentinfo" role="presentation">        
+        <div role="contentinfo">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
@@ -257,7 +257,7 @@
     </iframe>
 
     <h3>Bad example: ARIA footer landmark with role="presentation" attribute</h3>
-    <div role="contentinfo" role="presentation">
+    <div role="contentinfo">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -280,7 +280,7 @@
         </ul>
     </footer>
     <iframe src="url" title="description" >
-        <div role="contentinfo" role="none">        
+        <div role="contentinfo">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
