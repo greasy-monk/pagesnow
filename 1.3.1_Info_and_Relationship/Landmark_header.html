@@ -144,22 +144,6 @@
 
     <h2>Multiple header landmark</h2>
 
-    <h3>Good example: Multiple Header landmark</h3>
-    <header aria-label="primary">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </header>
-    <iframe src="url" title="description">
-        <div role="banner" aria-label="secondary">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-    </iframe>
-
     <h3>Bad example: Multiple Header landmark</h3>
     <header>
         <ul>
@@ -174,55 +158,34 @@
             </ul>
         </div>
 
-        <h3>Bad example: Multiple Header landmark with no accessible name</h3>
-        <header>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </header>
-        <iframe src="url" title="description">
-            <div role="banner">        
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                </ul>
-            </div>
-        </iframe>
-
-
-
-    <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute</h3>
-    <header aria-hidden="true">
+    <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute on custom header</h3>
+    <header>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </header>
-    <iframe src="url" title="description">
         <div role="banner" aria-hidden="true">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
 
-    <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute</h3>
-    <div role="banner" aria-hidden="true">
+
+    <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute on native header</h3>
+    <div role="banner">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-    <iframe src="url" title="description">
         <header aria-hidden="true">       
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </header>
-    </iframe>
 
     <h3>Bad example: Multiple Header landmark with role="presentation" attribute</h3>
     <header role="presentation">
