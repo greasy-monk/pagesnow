@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aside Conditions</title>
+</head>
+<body>
+
+<h1>Aside conditions</h1>
+
+-------------Native aside element------------------------
+
+
+<h2>Good example: Form with aria-hidden and role presentation</h2>
+<aside>
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Bad example: Form with aria-hidden and role presentation</h2>
+<aside aria-hidden="true" role="presentation">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Good example: Form with aria-label</h2>
+<aside aria-label="">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Bad example: Form with no aria-label</h2>
+<aside>
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Good example: Form with aria-labelledby</h2>
+<aside aria-labelledby="">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Bad example: Form with incorrect aria-labelledby</h2>
+<aside aria-labelledby="">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+
+-------------Role Form with element------------------------
+
+<h2>Good example: Form with aria-hidden and role presentation</h2>
+<div role="complementary">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</div>
+
+<h2>Bad example: Form with aria-hidden and role presentation</h2>
+<div role="complementary" aria-hidden="true" role="presentation">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</div>
+
+<h2>Good example: Form with aria-label</h2>
+<div role="complementary" aria-label="">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
+</div>
+
+<h2>Bad example: Form with no aria-label</h2>
+<div role="complementary">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
+</div>
+
+<h2>Good example: Form with aria-labelledby</h2>
+<div role="complementary" aria-labelledby="">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
+</div>
+
+<h2>Bad example: Form with incorrect aria-labelledby</h2>
+<div role="complementary" aria-labelledby="">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</div>
+
+</body>
+</html>
