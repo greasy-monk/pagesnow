@@ -46,12 +46,12 @@
             <li>test03</li>
         </ol>
     
-    <p>List (li) nested inside another (li) element</p>
-        <ol>
+    <p>List (li) nested inside another (li) element (cannot be implemented)</p>
+        <ul>
             <li>
                 <li>test01</li>
             </li>
-        </ol>
+        </ul>
 
     <p>Nesting of (Native) List element</p>
         <ul>
@@ -78,6 +78,22 @@
     <p>List without list container</p>
             <li>test01</li>
             <li>test02</li>
+
+    <p>role list provided to ul/ol element that have child element as li</p>
+    <ul role="list">        
+        <li>test01</li>
+        <li>test02</li>
+    </ul>
+
+    <p>Role listitem provided to li element with ul or ol as parrent element</p>
+    <ul>
+        <li role="listitem">test</li>
+        </ul>
+
+        <p>role="listitem" is provided without any parent ul/ol or role="list"</p>
+            <div role="listitem">test</div>
+            <p role="listitem">test02</p>
+            <span role="listitem">test03</span>
 
         
 </body>
