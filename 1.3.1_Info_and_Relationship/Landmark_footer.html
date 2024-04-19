@@ -34,7 +34,7 @@
         </ul>
     </footer>
 
-    <h3>Bad example: ARIA Footer landmark with aria-hidden="true" attribute</h3>
+    <h3>Bad example: ARIA footer landmark with aria-hidden="true" attribute</h3>
     <div aria-hidden="true" role="contentinfo">
         <ul>
             <li><a href="#">Home</a></li>
@@ -43,15 +43,7 @@
     </div>
 
     <h3>Bad example: Native footer landmark with role="presentation" attribute</h3>
-    <footer  role="presentation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </footer>
-
-    <h3>Bad example: ARIA footer landmark with role="presentation" attribute</h3>
-    <footer role="presentation" >
+    <footer role="presentation">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -66,24 +58,8 @@
         </ul>
     </footer>
 
-    <h3>Bad example: ARIA footer landmark with role="none" attribute</h3>
-    <footer role="none">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </footer>
-
     <h3>Good example: Native footer landmark with aria-label attribute</h3>
     <footer aria-label="Primary">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </footer>
-
-    <h3>Bad example: Native footer landmark with aria-label(Empty value) attribute</h3>
-    <footer aria-label="">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -98,8 +74,32 @@
         </ul>
     </div>
 
-    <h3>Bad example: ARIA footer landmark with aria-label(Empty value) attribute</h3>
+    <h3>Bad example: Native footer landmark with aria-label (empty value) attribute</h3>
+    <footer aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA footer landmark with aria-label (empty value) attribute</h3>
     <div role="contentinfo" aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with aria-label (empty space value) attribute</h3>
+    <footer aria-label=" ">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: Native footer landmark with aria-label (empty space value) attribute</h3>
+    <div role="contentinfo" aria-label=" ">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -142,7 +142,7 @@
 
     <h3>Bad example: Native footer landmark with aria-labelledby(Incorrect value) attribute</h3>
     <span id="a1">Primary footer</span>
-    <footer aria-labelledby="a2">
+    <footer aria-labelledby="a6">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -150,7 +150,7 @@
     </footer>
 
     <h3>Bad example: ARIA footer landmark with aria-labelledby(Incorrect value) attribute</h3>
-    <div role="contentinfo" aria-labelledby="a2">
+    <div role="contentinfo" aria-labelledby="a6">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -160,39 +160,19 @@
 
     <h2>Multiple footer landmark</h2>
 
-    <h3>Good example: Multiple footer landmark</h3>
-    <footer aria-label="primary">
+    <h3>Bad example: Multiple footer landmark</h3>
+    <footer>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-    <iframe src="url" title="description">
-        <div role="contentinfo" aria-label="secondary">        
+        <div role="contentinfo">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
-
-        <h3>Bad example: Multiple footer landmark with no accessible name</h3>
-        <footer>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-        <iframe src="url" title="description">
-            <div role="contentinfo">        
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                </ul>
-            </div>
-        </iframe>
-
-
 
     <h3>Bad example: Multiple footer landmark with aria-hidden="true" attribute</h3>
     <footer aria-hidden="true">
@@ -201,95 +181,12 @@
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-    <iframe src="url" title="description">
         <div role="contentinfo" aria-hidden="true">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
-
-    <h3>Bad example: Multiple footer landmark with aria-hidden="true" attribute</h3>
-    <div role="contentinfo" aria-hidden="true">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-    <iframe src="url" title="description">
-        <footer aria-hidden="true">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-    </iframe>
-
-    <h3>Bad example: Multiple footer landmark with role="presentation" attribute</h3>
-    <footer role="presentation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </footer>
-    <iframe src="url" title="description">
-        <div role="contentinfo">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-    </iframe>
-
-    <h3>Bad example: ARIA footer landmark with role="presentation" attribute</h3>
-    <div role="contentinfo">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-    <iframe src="url" title="description">
-        <footer role="presentation">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-    </iframe>
-
-    <h3>Bad example: Multiple footer landmark with role="none" attribute</h3>
-    <footer role="none">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </footer>
-    <iframe src="url" title="description" >
-        <div role="contentinfo">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-    </iframe>
-
-    <h3>Bad example: Multiple footer landmark with role="none" attribute</h3>
-    <div role="contentinfo">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-    <iframe src="url" title="description">
-        <footer role="none">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-    </iframe>
-
 
     <h3>Bad example: Multiple footer landmark with aria-label(Empty value) attribute</h3>
     <footer aria-label="">
@@ -298,14 +195,12 @@
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-    <iframe src="url" title="description" >
         <div role="contentinfo" aria-label="">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
 
     <h3>Bad example: Multiple footer landmark with aria-label(Empty value) attribute</h3>
     <div role="contentinfo" aria-label="">
@@ -314,14 +209,26 @@
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-    <iframe src="url" title="description">
         <footer aria-label="">       
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </footer>
-    </iframe>
+
+        <h3>Bad example: Multiple footer landmark with aria-label(Empty space value) attribute</h3>
+        <div role="contentinfo" aria-label=" ">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+            <footer aria-label=" ">       
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </footer>
 
     <h3>Good example: Multiple footer landmark with aria-labelledby attribute</h3>
     <span id="a3">footer landmark</span>
@@ -331,30 +238,12 @@
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-    <iframe src="url" title="description" >
         <div role="contentinfo" aria-labelledby="a3">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
-
-    <h3>Good example: Multiple footer landmark with aria-labelledby attribute</h3>
-    <div role="contentinfo" aria-labelledby="a3">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-    <iframe src="url" title="description">
-        <footer aria-labelledby="a3">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-    </iframe>
 
     <span id="a3">footer landmark</span>
     <h3>Bad example: Multiple footer landmark with aria-labelledby(Empty value) attribute</h3>
@@ -364,30 +253,12 @@
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-    <iframe src="url" title="description" >
         <div role="contentinfo" aria-labelledby="">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
-
-    <h3>Bad example: Multiple footer landmark with aria-labelledby(Empty value) attribute</h3>
-    <div role="contentinfo" aria-labelledby="">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-    <iframe src="url" title="description">
-        <footer aria-labelledby="">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-    </iframe>
 
     <h3>Bad example: Multiple footer landmark with aria-labelledby(Incorrect value) attribute</h3>
     <span id="a3">footer landmark</span>
@@ -397,30 +268,12 @@
             <li><a href="#">Services</a></li>
         </ul>
     </footer>
-    <iframe src="url" title="description" >
         <div role="contentinfo" aria-labelledby="a5">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-    </iframe>
-
-    <h3>Bad example: Multiple footer landmark with aria-labelledby(Incorrect value) attribute</h3>
-    <div role="contentinfo" aria-labelledby="a5">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-    <iframe src="url" title="description">
-        <footer aria-labelledby="a5">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
-    </iframe>
 
 </body>
 </html>
