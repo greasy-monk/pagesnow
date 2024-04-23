@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+[role="switch"] {
+  margin: 2px;
+  padding: 4px 4px 8px 8px;
+  border: 0 solid #005a9c;
+  border-radius: 5px;
+  width: 15em;
+  user-select: none;
+}
+
+[role="switch"] .label {
+  display: inline-block;
+  width: 8em;
+}
+
+[role="switch"] .switch {
+  position: relative;
+  display: inline-block;
+  top: 6px;
+  border: 2px solid black;
+  border-radius: 12px;
+  height: 20px;
+  width: 40px;
+}
+
+[role="switch"] .switch span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 12px;
+  width: 12px;
+  background: black;
+}
+
+[role="switch"][aria-checked="true"] .switch span {
+  left: 21px;
+  background: green;
+  border-color: green;
+}
+
+[role="switch"] .on {
+  display: none;
+}
+
+[role="switch"] .off {
+  display: inline;
+}
+
+[role="switch"][aria-checked="true"] .on {
+  display: inline;
+}
+
+[role="switch"][aria-checked="true"] .off {
+  display: none;
+}
+
+[role="switch"]:focus,
+[role="switch"]:hover {
+  padding: 2px 2px 6px 6px;
+  border-width: 2px;
+  outline: none;
+  background-color: #def;
+  cursor: pointer;
+}
+
+[role="switch"]:focus span.switch {
+  background-color: white;
+}
+
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch state</h1>
+    <h2>Good example: Switch control with aria-pressed attribute</h2>
+    <div role="switch" class="test1" aria-checked="false" tabindex="0">
+        <span class="label">Notifications</span>
+        <span class="switch">
+          <span></span>
+        </span>
+        <span class="on" aria-hidden="true">On</span>
+        <span class="off" aria-hidden="true">Off</span>
+      </div>
+
+      <h2>Bad example: Switch control with aria-pressed attribute</h2>
+      <div role="switch" class="test1" aria-pressed="true" tabindex="0">
+          <span class="label">Notifications</span>
+          <span class="switch">
+            <span></span>
+          </span>
+          <span class="on" aria-hidden="true">On</span>
+          <span class="off" aria-hidden="true">Off</span>
+        </div>
+
+        <h2>Bad example: Switch control with aria-checked attribute</h2>
+        <div role="switch" class="secondswitch" tabindex="0">
+            <span class="label">Notifications</span>
+            <span class="switch">
+              <span></span>
+            </span>
+            <span class="on" aria-hidden="true">On</span>
+            <span class="off" aria-hidden="true">Off</span>
+          </div>
+</body>
+
+<script>
+    /*
+ *   This content is licensed according to the W3C Software License at
+ *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+ *
+ *   File:  switch.js
+ *
+ *   Desc:  Switch widget that implements ARIA Authoring Practices
+ */
+
+'use strict';
+
+class Switch {
+  constructor(domNode) {
+    this.switchNode = domNode;
+    this.switchNode.addEventListener('click', () => this.toggleStatus());
+    this.switchNode.addEventListener('keydown', (event) =>
+      this.handleKeydown(event)
+    );
+  }
+
+  handleKeydown(event) {
+    // Only do something when space or return is pressed
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.toggleStatus();
+    }
+  }
+
+  // Switch state of a switch
+  toggleStatus() {
+    const currentState =
+      this.switchNode.getAttribute('aria-checked') === 'true';
+    const newState = String(!currentState);
+
+    this.switchNode.setAttribute('aria-checked', newState);
+  }
+}
+
+class switch1 {
+  constructor(domNode) {
+    this.switchNode = domNode;
+    this.switchNode.addEventListener('keydown', (event) =>
+      this.handleKeydown(event)
+    );
+  }
+
+  handleKeydown(event) {
+    // Only do something when space or return is pressed
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+    }
+  }
+}
+
+// Initialize switches
+window.addEventListener('load', function () {
+    Array.from(document.querySelectorAll('[class^=test1]')).forEach(
+    (element) => new Switch(element)
+  );
+  Array.from(document.querySelectorAll('[class^=secondswitch]')).forEach(
+    (element) => new switch1(element)
+  );
+});
+
+</script>
+</html>
