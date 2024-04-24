@@ -7,38 +7,6 @@
 
 <h1>ARIA List Conditions</h1>
 
-<h2>Good example: role listitem with role list</h2>
-<div role="list">
-  <div role="listitem">Apple</div>
-  <div role="listitem">Banana</div>
-  <div role="listitem">Orange</div>
-  <div role="listitem">Mango</div>
-</div>
-
-<h2>Bad example: role listitem without role list</h2>
-<div>
-  <div role="listitem">Apple</div>
-  <div role="listitem">Banana</div>
-  <div role="listitem">Orange</div>
-  <div role="listitem">Mango</div>
-</div>
-
-<h2>Bad example: role listitem on li with ul</h2>
-<ul>
-  <li role="listitem">Apple</li>
-  <li role="listitem">Banana</li>
-  <li role="listitem">Orange</li>
-  <li role="listitem">Mango</li>
-</ul>
-
-<h2>Bad example: role listitem on li with ol as parent element</h2>
-<ol>
-  <li role="listitem">Apple</li>
-  <li role="listitem">Banana</li>
-  <li role="listitem">Orange</li>
-  <li role="listitem">Mango</li>
-</ol>
-
 <h2>Good example: aria-hidden on role list</h2>
 <div role="list">
   <div role="listitem">Apple</div>
@@ -63,6 +31,7 @@
   <div role="listitem" aria-hidden="true">Mango</div>
 </div>
 
+
 <h2>Good example: role list with atleast one text element with role listitem</h2>
 <div role="list">
   <div role="listitem">Apple</div>
@@ -74,12 +43,6 @@
  <div>Apple</div>
  <div>Mango</div>
 </div>
-
-<h2>Bad example: role list on ul with li</h2>
-<ul role="list">
-  <li>Apple</li>
-  <li>Banana</li>
-</ul>
 
 <h2>Good example: role list without empty role listitem</h2>
 <ul role="list">
@@ -93,7 +56,7 @@
   <div role="listitem"></div>
 </ul>
 
-<h2>Good example: li, dl, dt direct child of ol</h2>
+<h2>Good example: dl, dt direct child of ol</h2>
 	<ol>
 	<li>
 	<dl>
@@ -103,32 +66,14 @@
 	  <dd>White cold drink</dd>
 	</dl>
 	</li>
-	<li>Test</li>
 	</ol>
 
-<h2>Bad example: li, dl, dt inside the role list and listitem</h2>
+<h2>Bad example: dd, dt inside the role list</h2>
 <div role="list">
-	<li>
-	<dl>
 	  <dt>Coffee</dt>
 	  <dd>Black hot drink</dd>
 	  <dt>Milk</dt>
 	  <dd>White cold drink</dd>
-	</dl>
-	</li>
-	<li>Test</li>
-</div>
-
-<h2>Good example: li direct child of ol</h2>
-	<ol>
-	<li>Apple</li>
-	<li>Banana</li>
-	</ol>
-
-<h2>Bad example: li inside the role list and listitem</h2>
-<div role="list">
-	<li>Apple</li>
-	<li>Banana</li>
 </div>
 
 <h2>Good example: role list contains dircet child element with role listitem</h2>
@@ -145,34 +90,26 @@
   <div role="heading" aria-level="3">Orange</div>
 </div>
 
-<h2>Good example: ul inside the role list and listitem</h2>
-<div role="list">
-<div role="listitem">Fruits</div>
-  <div role="listitem">
-	<ul>
-		<li>Apple</li>
-		<li>Mango</li>
-		<li>Orange</li>
-	</ul>
-  </div>
-  <div role="listitem">Veg</div>
-</div>
+<h2>Good example: li direct child of ol</h2>
+	<ol>
+	<li>Apple</li>
+	<li>Banana</li>
+	</ol>
 
-<h2>Good example: dl, dt inside the role list and listitem</h2>
+<h2>Bad example: li inside the role list</h2>
 <div role="list">
-  <div role="listitem">Bevarages
-	<dl>
-	  <dt>Coffee</dt>
-	  <dd>Black hot drink</dd>
-	  <dt>Milk</dt>
-	  <dd>White cold drink</dd>
-	</dl>
-  </div>
+	<li>Apple</li>
+	<li>Banana</li>
 </div>
 
 <h2>Good example: role listitem is not part of another role listitem</h2>
 <div role="list">
-  <div role="listitem">Apple</div>  
+  <div role="listitem">Apple
+  <div role="list">
+  <div role="listitem">Orange</div>
+  <div role="listitem">Banana</div>
+  </div>
+  </div>  
   <div role="listitem">Mango</div>
 </div>
 
@@ -185,6 +122,7 @@
   </div>  
   <div role="listitem">Mango</div>
 </div>
+
 
 </body>
 </html>
