@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ARIA Heading Condition</title>
+</head>
+<body>
+    <h1>ARIA Heading Condition</h1>
+
+	<h2>Good example: heading defined</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+	
+	<h2>Bad example: heading defined</h2>
+	<div>ARIA Heading defined</div>
+	
+	<h2>Good example: aria-hidden and role presentation used on heading</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+ 	
+	<h2>Bad example: aria-hidden and role presentation used on heading</h2>
+	<div role="heading" aria-level="3" aria-hidden="true" role="presentation">ARIA Heading defined</div>
+ 
+	<h2>Good example: role heading with aria-level</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+	
+	<h2>Bad example: role heading missing aria-level</h2>
+	<div role="heading">ARIA Heading defined</div>
+	
+	<h2>Good example: empty heading</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+	
+	<h2>Bad example: empty heading</h2>
+	<div role="heading" aria-level="3"></div>
+
+	<h2>Good example: Multiple headings with aria- level 1</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+	
+	<h2>Bad example: Multiple headings with aria- level 1</h2>
+	<div role="heading" aria-level="1">heading with level 1</div>
+	<div role="heading" aria-level="1">heading with level 1</div>
+	
+	<h2>Good example:Headings levels skipped</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined level 3</div>
+	<div role="heading" aria-level="4">ARIA Heading defined level 4</div>
+	
+	<h2>Bad example: Headings levels skipped</h2>
+	<div role="heading" aria-level="3">heading with level 3</div>
+	<div role="heading" aria-level="5">heading with level 5</div>
+	
+</body>
+</html>
