@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .two:focus-visible{
+      outline: none;
+    }
+    .three:focus-visible{
+      outline: none;
+      background-color: red;
+    }
+</style>
+</head>
+<body>
+  <p>Example 01 native control</p>
+  <button>test01</button>
+  
+  <p>Example 02 native control with outline: none</p>
+  <button class="two">test02</button>
+  
+    <p>Example 03 native control without any focus property</p>
+  <div role="button" tabindex="0">test03</div>
+  
+    <p>Example 04 custom control with outline: none</p>
+  <div role="button" tabindex="0" class="two">test04</div>
+
+  <p>Example 05 native control with outline: none and other properties</p>
+  <button class="three">test05</button>
+
+</body>
+</html>
