@@ -47,6 +47,8 @@
 </aside>
 
 
+
+
 -------------Role Aside with element------------------------
 
 <h2>Good example: Aside with aria-hidden and role presentation</h2>
@@ -84,6 +86,68 @@
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </div>
+
+
+
+--------Multiple Aside element--------------------
+
+
+
+<h2>Good example: Multiple Aside with aria-label</h2>
+<aside aria-label="Center">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside aria-label="Epcot">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Bad example: Multiple Aside with no aria-label</h2>
+<aside>
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside>
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+Good example: Multiple Aside with aria-labelledby
+<aside aria-labelledby="center">
+  <h3 id="center">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside aria-labelledby="mnvgh">
+  <h3 id="mnvgh">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+Bad example: Multiple Aside with incorrcet aria-labelledby
+<aside aria-labelledby="tcfhvbk">
+  <h3 id="kniu">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside aria-labelledby="ergh">
+  <h3 id=""qwe>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
