@@ -202,6 +202,21 @@
             </ul>
         </div>
 
+
+        <h3>Bad example: Multiple Header landmark with role=“presentation” attribute</h3>
+        <header role="presentation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+            <div role="banner" role="presentation">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+
     <h3>Bad example: Multiple Header landmark with aria-label(Empty value) attribute</h3>
     <header aria-label="">
         <ul>
