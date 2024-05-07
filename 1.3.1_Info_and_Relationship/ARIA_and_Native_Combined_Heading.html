@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ARIA and Native Combined Heading Condition</title>
+</head>
+<body>
+
+<h1>ARIA and Native Combined Heading Condition</h1>
+
+	<h2>Good example: heading defined</h2>
+	<h3>h3 used for heading</h3>
+	
+	<h2>Bad example: heading defined</h2>
+	<div>No heading used</div>
+	
+	<h2>Good example: aria-hidden and role presentation on heading</h2>
+	<h3>h3 used for heading</h3>
+	
+	<h2>Bad example: aria-hidden and role presentation on heading</h2>
+	<h3 aria-hidden="true" role="presentations">h3 used for heading with aria-hidden</h3>
+	
+	<h2>Good example: heading element with role heading and aria-level</h2>
+	<h3 role="heading" aria-level="3">aria-level used for h3</h3>
+	
+	<h2>Bad example: heading element with role heading but missing aria-level</h2>
+	<h3 role="heading">aria-level misisng for h3</h3>
+	
+	<h2>Good example: empty heading</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+	
+	<h2>Bad example: empty heading</h2>
+	<div role="heading" aria-level="3"></div>
+
+	<h2>Good example: Multiple headings with aria- level 1</h2>
+	<div role="heading" aria-level="3">ARIA Heading defined</div>
+	
+	<h2>Bad example: Multiple headings with aria- level 1</h2>
+	<div role="heading" aria-level="1">heading with level 1</div>
+	<div role="heading" aria-level="1">heading with level 1</div>
+	
+	<h2>Good example: heading level skipped</h2>
+	<h3>h3 used for heading</h3>
+	<h4>h4 used for heading</h4>
+	
+	<h2>Bad example: heading level skipped</h2>
+	<h3>h3 used for heading</h3>
+	<h5>h5 used for heading</h5>
+	
+</body>
+</html>

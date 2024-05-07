@@ -10,80 +10,132 @@
 -------------Native aside element------------------------
 
 
-<h2>Good example: Form with aria-hidden and role presentation</h2>
+<h2>Good example: Aside with aria-hidden and role presentation</h2>
 <aside>
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
-<h2>Bad example: Form with aria-hidden and role presentation</h2>
+<h2>Bad example: Aside with aria-hidden and role presentation</h2>
 <aside aria-hidden="true" role="presentation">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
-<h2>Good example: Form with aria-label</h2>
-<aside aria-label="">
+<h2>Good example: Aside with aria-label</h2>
+<aside aria-label="Epcot Center">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
-<h2>Bad example: Form with no aria-label</h2>
+<h2>Bad example: Aside with no aria-label</h2>
 <aside>
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
-<h2>Good example: Form with aria-labelledby</h2>
-<aside aria-labelledby="">
-  <h3>Epcot Center</h3>
+<h2>Good example: Aside with aria-labelledby</h2>
+<aside aria-labelledby="plojk">
+  <h3 id="plojk">Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
-<h2>Bad example: Form with incorrect aria-labelledby</h2>
-<aside aria-labelledby="">
-  <h3>Epcot Center</h3>
+<h2>Bad example: Aside with incorrect aria-labelledby</h2>
+<aside aria-labelledby="rtyhg">
+  <h3 id="rtyhg">Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
 
--------------Role Form with element------------------------
 
-<h2>Good example: Form with aria-hidden and role presentation</h2>
+
+-------------Role Aside with element------------------------
+
+<h2>Good example: Aside with aria-hidden and role presentation</h2>
 <div role="complementary">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </div>
 
-<h2>Bad example: Form with aria-hidden and role presentation</h2>
+<h2>Bad example: Aside with aria-hidden and role presentation</h2>
 <div role="complementary" aria-hidden="true" role="presentation">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </div>
 
-<h2>Good example: Form with aria-label</h2>
-<div role="complementary" aria-label="">
+<h2>Good example: Aside with aria-label</h2>
+<div role="complementary" aria-label="Epcot Center aria">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
 </div>
 
-<h2>Bad example: Form with no aria-label</h2>
+<h2>Bad example: Aside with no aria-label</h2>
 <div role="complementary">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
 </div>
 
-<h2>Good example: Form with aria-labelledby</h2>
-<div role="complementary" aria-labelledby="">
-  <h3>Epcot Center</h3>
+<h2>Good example: Aside with aria-labelledby</h2>
+<div role="complementary" aria-labelledby="tyhjnbvdc">
+  <h3 id="tyhjnbvdc">Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
 </div>
 
-<h2>Bad example: Form with incorrect aria-labelledby</h2>
+<h2>Bad example: Aside with incorrect aria-labelledby</h2>
 <div role="complementary" aria-labelledby="">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </div>
+
+
+
+--------Multiple Aside element--------------------
+
+
+
+<h2>Good example: Multiple Aside with aria-label</h2>
+<aside aria-label="Center">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside aria-label="Epcot">
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Bad example: Multiple Aside with no aria-label</h2>
+<aside>
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside>
+  <h3>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Good example: Multiple Aside with aria-labelledby</h2>
+<aside aria-labelledby="center">
+  <h3 id="center">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside aria-labelledby="mnvgh">
+  <h3 id="mnvgh">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<h2>Bad example: Multiple Aside with incorrcet aria-labelledby</h2>
+<aside aria-labelledby="tcfhvbk">
+  <h3 id="kniu">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<aside aria-labelledby="ergh">
+  <h3 id=""qwe>Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
 
 </body>
 </html>
