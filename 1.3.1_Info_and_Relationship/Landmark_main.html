@@ -204,8 +204,8 @@
             </ul>
         </div>
 
-    <h3>Bad example: Multiple main landmark with aria-hidden="true" attribute</h3>
-    <main aria-hidden="true">
+    <h3>Bad example: Multiple main landmark with aria-hidden="true" attribute on ARIA main landmark</h3>
+    <main>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -217,6 +217,20 @@
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
+
+        <h3>Bad example: Multiple main landmark with aria-hidden="true" attribute on native main landmark</h3>
+        <main aria-hidden="true">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </main>
+            <div role="main">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
 
         <h3>Bad example: Multiple main landmark with display none property on ARIA main landmark</h3>
         <main>
