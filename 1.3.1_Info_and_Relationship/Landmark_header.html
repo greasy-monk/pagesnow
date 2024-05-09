@@ -42,6 +42,22 @@
         </ul>
     </div>
 
+    <h3>Bad example: Native Header landmark with display none property</h3>
+    <header style="display: none;">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+
+    <h3>Bad example: ARIA Header landmark with display none property</h3>
+    <div role="banner" style="display: none;">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
     <h3>Bad example: Native Header landmark with role="presentation" attribute</h3>
     <header role="presentation">
         <ul>
@@ -160,7 +176,7 @@
 
     <h2>Multiple header landmark</h2>
 
-    <h3>Good example: Multiple Header landmark with aria-hidden="true" attribute</h3>
+    <h3>Good example: Multiple Header landmark</h3>
     <header aria-label="primary">
         <ul>
             <li><a href="#">Home</a></li>
@@ -202,20 +218,33 @@
             </ul>
         </div>
 
-
-        <h3>Bad example: Multiple Header landmark with role=“presentation” attribute</h3>
-        <header role="presentation">
+        <h3>Bad example: Multiple Header landmark with display none property on ARIA header landmark</h3>
+        <header aria-hidden="true">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </header>
-            <div role="banner" role="presentation">        
+            <div role="banner" aria-hidden="true" style="display: none;">        
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
                 </ul>
             </div>
+
+            <h3>Bad example: Multiple Header landmark with display none property on Native header landmark</h3>
+            <header aria-hidden="true" style="display: none;">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </header>
+                <div role="banner" aria-hidden="true" >        
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
 
     <h3>Bad example: Multiple Header landmark with aria-label(Empty value) attribute</h3>
     <header aria-label="">
@@ -230,20 +259,6 @@
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-
-    <h3>Bad example: Multiple Header landmark with aria-label(Empty value) attribute</h3>
-    <div role="banner" aria-label="">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-        <header aria-label="">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </header>
 
         <h3>Bad example: Multiple Header landmark with aria-label(Empty space value) attribute</h3>
         <div role="banner" aria-label=" ">
