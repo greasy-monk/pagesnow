@@ -8,7 +8,7 @@
 <body>
     <h1>Footer landmark</h1>
 
-    <h2>Single footer landmark</h2>
+    <h2>Single Footer landmark</h2>
 
     <h3>Good example: Native footer landmark with aria-hidden="true" attribute</h3>
     <footer>
@@ -36,6 +36,22 @@
 
     <h3>Bad example: ARIA footer landmark with aria-hidden="true" attribute</h3>
     <div aria-hidden="true" role="contentinfo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native footer landmark with display none property</h3>
+    <footer style="display: none;">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+
+    <h3>Bad example: ARIA footer landmark with display none property</h3>
+    <div role="contentinfo" style="display: none;">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -98,7 +114,7 @@
         </ul>
     </footer>
 
-    <h3>Bad example: Native footer landmark with aria-label (empty space value) attribute</h3>
+    <h3>Bad example: ARIA footer landmark with aria-label (empty space value) attribute</h3>
     <div role="contentinfo" aria-label=" ">
         <ul>
             <li><a href="#">Home</a></li>
@@ -158,9 +174,23 @@
     </div>
 
 
-    <h2>Multiple footer landmark</h2>
+    <h2>Multiple Footer landmark</h2>
 
-    <h3>Bad example: Multiple footer landmark</h3>
+    <h3>Good example: Multiple footer landmark</h3>
+    <footer aria-label="primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </footer>
+        <div role="contentinfo" aria-label="secondary">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+
+    <h3>Bad example: Multiple footer landmark with no accessible name</h3>
     <footer>
         <ul>
             <li><a href="#">Home</a></li>
@@ -188,6 +218,34 @@
             </ul>
         </div>
 
+        <h3>Bad example: Multiple footer landmark with display none property on ARIA footer landmark</h3>
+        <footer aria-hidden="true">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </footer>
+            <div role="contentinfo" aria-hidden="true" style="display: none;">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+
+            <h3>Bad example: Multiple footer landmark with display none property on Native footer landmark</h3>
+            <footer aria-hidden="true" style="display: none;">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </footer>
+                <div role="contentinfo" aria-hidden="true" >        
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+
     <h3>Bad example: Multiple footer landmark with aria-label(Empty value) attribute</h3>
     <footer aria-label="">
         <ul>
@@ -201,20 +259,6 @@
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-
-    <h3>Bad example: Multiple footer landmark with aria-label(Empty value) attribute</h3>
-    <div role="contentinfo" aria-label="">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-        <footer aria-label="">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </footer>
 
         <h3>Bad example: Multiple footer landmark with aria-label(Empty space value) attribute</h3>
         <div role="contentinfo" aria-label=" ">

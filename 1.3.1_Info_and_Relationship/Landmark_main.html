@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>main landmark</h1>
+    <h1>Main landmark</h1>
 
-    <h2>Single main landmark</h2>
+    <h2>Single Main landmark</h2>
 
     <h3>Good example: Native main landmark with aria-hidden="true" attribute</h3>
     <main>
@@ -36,6 +36,22 @@
 
     <h3>Bad example: ARIA main landmark with aria-hidden="true" attribute</h3>
     <div aria-hidden="true" role="main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <h3>Bad example: Native main landmark with display none property</h3>
+    <main style="display: none;">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+
+    <h3>Bad example: ARIA main landmark with display none property</h3>
+    <div role="main" style="display: none;">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -98,7 +114,7 @@
         </ul>
     </main>
 
-    <h3>Bad example: Native main landmark with aria-label (empty space value) attribute</h3>
+    <h3>Bad example: ARIA main landmark with aria-label (empty space value) attribute</h3>
     <div role="main" aria-label=" ">
         <ul>
             <li><a href="#">Home</a></li>
@@ -158,9 +174,23 @@
     </div>
 
 
-    <h2>Multiple main landmark</h2>
+    <h2>Multiple Main landmark</h2>
 
-    <h3>Bad example: Multiple main landmark</h3>
+    <h3>Good example: Multiple main landmark</h3>
+    <main aria-label="primary">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+        <div role="main" aria-label="secondary">        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+
+    <h3>Bad example: Multiple main landmark with no accessible name</h3>
     <main>
         <ul>
             <li><a href="#">Home</a></li>
@@ -188,6 +218,34 @@
             </ul>
         </div>
 
+        <h3>Bad example: Multiple main landmark with display none property on ARIA main landmark</h3>
+        <main aria-hidden="true">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </main>
+            <div role="main" aria-hidden="true" style="display: none;">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+
+            <h3>Bad example: Multiple main landmark with display none property on Native main landmark</h3>
+            <main aria-hidden="true" style="display: none;">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </main>
+                <div role="main" aria-hidden="true" >        
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+
     <h3>Bad example: Multiple main landmark with aria-label(Empty value) attribute</h3>
     <main aria-label="">
         <ul>
@@ -201,20 +259,6 @@
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
-
-    <h3>Bad example: Multiple main landmark with aria-label(Empty value) attribute</h3>
-    <div role="main" aria-label="">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-        <main aria-label="">       
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </main>
 
         <h3>Bad example: Multiple main landmark with aria-label(Empty space value) attribute</h3>
         <div role="main" aria-label=" ">
