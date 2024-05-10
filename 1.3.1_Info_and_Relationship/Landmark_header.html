@@ -204,19 +204,33 @@
             </ul>
         </div>
 
-    <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute</h3>
+    <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute on native header</h3>
     <header aria-hidden="true">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </header>
-        <div role="banner" aria-hidden="true">        
+        <div role="banner">        
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
             </ul>
         </div>
+
+        <h3>Bad example: Multiple Header landmark with aria-hidden="true" attribute on ARIA header</h3>
+        <header>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+            <div role="banner" aria-hidden="true">        
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
 
         <h3>Bad example: Multiple Header landmark with display none property on ARIA header landmark</h3>
         <header aria-hidden="true">
