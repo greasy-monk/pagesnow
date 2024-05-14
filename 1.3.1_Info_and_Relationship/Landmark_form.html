@@ -99,6 +99,24 @@
     </fieldset>
 </form>
 
+<h2>Bad example: Form with empty aria-label</h2>
+<form aria-label="">
+	<fieldset>
+        <legend>Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</form>
+
 <h2>Good example: Form with aria-labelledby</h2>
 <form aria-labelledby="contact">
 	<fieldset>
@@ -135,6 +153,23 @@
     </fieldset>
 </form>
 
+<h2>Bad example: Aside with aria-label and aria-labelledby</h2>
+<form aria-labelledby="informationjuih" aria-label="Add Contact">
+	<fieldset>
+        <legend id="informationjuih">Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</form>
 
 -------------Role Form with element------------------------
 
@@ -321,6 +356,79 @@
     </fieldset>
 </div>
 
+<h2>Bad example: Multiple Aside with empty aria-label</h2>
+<div role="form" aria-label="">
+	<fieldset>
+        <legend>Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+
+<div role="form" aria-label="">
+	<fieldset>
+        <legend>Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+
+<h2>Bad example: Multiple Aside with identical aria-label</h2>
+<div role="form" aria-label="Add Contact">
+	<fieldset>
+        <legend>Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+
+<div role="form" aria-label="Add Contact">
+	<fieldset>
+        <legend>Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
 
 <h2>Good example: Multiple Form with aria-labelledby</h2>
 <div role="form" aria-labelledby="add">
@@ -379,6 +487,78 @@
 <div role="form" aria-labelledby="Add">
 	<fieldset>
         <legend id="poijk">Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+<h2>Bad example: Multiple Aside with identical aria-labelledby</h2>
+<div role="form" aria-labelledby="center123rftg">
+	<fieldset>
+        <legend id="center123rftg">Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+
+<div role="form" aria-labelledby="center123rftg">
+	<fieldset>
+        <legend id="mnvgh">Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+<h2>Bad example: Multiple Form with aria-labelledby and aria-label</h2>
+<div role="form" aria-labelledby="center123rftgdfghj" aria-label="Add Contact">
+	<fieldset>
+        <legend id="center123rftgdfghj">Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</div>
+
+
+<div role="form" aria-labelledby="mnvghfhfhfghh" aria-label="Add Contact">
+	<fieldset>
+        <legend id="mnvghfhfhfghh">Add Contact</legend>
 
               <label for="name_html5">Name</label>
               <input id="name_html5" type="text" size="25">
