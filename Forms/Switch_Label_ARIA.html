@@ -124,5 +124,55 @@
         <span class="on" aria-hidden="true">On</span>
         <span class="off" aria-hidden="true">Off</span>
       </div>
+
+      <h3>Bad Example: Switch with no accessible name</h3>
+      <div role="switch" aria-checked="false" tabindex="0">
+          <span class="label"></span>
+          <span class="switch">
+            <span></span>
+          </span>
+          <span class="on" aria-hidden="true">On</span>
+          <span class="off" aria-hidden="true">Off</span>
+        </div>
+
+        <h2>Good Example: Switch with aria label attribute</h2>
+        <div role="switch" aria-checked="false" tabindex="0" aria-label="Notification1">
+            <span class="label">Notifications</span>
+            <span class="switch">
+              <span></span>
+            </span>
+            <span class="on" aria-hidden="true">On</span>
+            <span class="off" aria-hidden="true">Off</span>
+          </div>
+
+          <h2>Good Example: Switch with aria labelledby attribute</h2>
+          <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="N1">
+              <span id="N1" class="label">Notifications</span>
+              <span class="switch">
+                <span></span>
+              </span>
+              <span class="on" aria-hidden="true">On</span>
+              <span class="off" aria-hidden="true">Off</span>
+            </div>
+
+            <h2>Bad Example: Switch with aria labelledby(empty) attribute</h2>
+            <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="">
+                <span id="N1" class="label">Notifications</span>
+                <span class="switch">
+                  <span></span>
+                </span>
+                <span class="on" aria-hidden="true">On</span>
+                <span class="off" aria-hidden="true">Off</span>
+              </div>
+
+              <h2>Bad Example: Switch with aria labelledby(empty space) attribute</h2>
+              <div role="switch" aria-checked="false" tabindex="0" aria-labelledby=" ">
+                  <span id="N1" class="label">Notifications</span>
+                  <span class="switch">
+                    <span></span>
+                  </span>
+                  <span class="on" aria-hidden="true">On</span>
+                  <span class="off" aria-hidden="true">Off</span>
+                </div>
 </body>
 </html>
