@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Skip link Conditions</title>
+</head>
+<body>
+
+<h1>Skip link conditions</h1>
+
+<h2>Good Example: header with multiple links and button</h2>
+<header>
+<a href="#main">Skip Link</a>
+<a href="www.google.com">Google</a>
+<Button>Test</button>
+</header>
+
+<main id="main">
+This is main section.
+</main>
+
+
+<h2>Bad Example: header with no links and button</h2>
+<header>
+<a href="#main1">Skip Link</a>
+</header>
+
+<main id="main1">
+This is main section.
+</main>
+
+
+<h2>Good Example: main with heading</h2>
+<header>
+<a href="#main3">Skip Link</a>
+<a href="www.google.com">Google</a>
+<Button>Test</button>
+</header>
+
+<main id="main3">
+<h3>This is main section.</h3>
+</main>
+
+
+<h2>Bad Example: no main and no heading</h2>
+<header>
+<a href="#main3">Skip Link</a>
+<a href="www.google.com">Google</a>
+<Button>Test</button>
+</header>
+
+<div id="main3">
+This is main section.
+</div>
+
+
+<h2>Bad Example: skip link is not first element</h2>
+<header>
+<a href="www.google.com">Google</a>
+<Button>Test</button>
+<a href="#main3">Skip Link</a>
+</header>
+
+<main id="main3">
+<h3>This is main section.</h3>
+</main>
+
+</body>
+</html>
