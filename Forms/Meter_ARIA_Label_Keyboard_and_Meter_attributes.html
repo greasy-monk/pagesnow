@@ -1,0 +1,179 @@
+<html>
+    <head>
+      <!--This is the head section-->
+      <title id="testtitle">HTML Sample</title>
+      <meta charset="utf-8">
+      <style>
+[role="meter"] {
+  padding: 2px;
+  width: 200px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: black;
+}
+        </style>
+    </head>
+    <body>
+        <h1>Meter - ARIA Label & Keyboard and Meter ARIA attributes</h1>
+
+        <h2>Good example: Meter with aria-hidden attribute</h2>
+    <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-label="Central Processing Unit (CPU) Usage">
+            <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+              <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+            </svg>
+          </div>
+
+          <h2>Bad example: Meter with aria-hidden attribute and no aria-valuemin</h2>
+          <div role="meter" aria-valuenow="91.2543797024157" aria-valuemax="100" aria-label="Central Processing Unit (CPU) Usage" aria-hidden="true">
+                  <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                    <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                  </svg>
+                </div>
+
+
+          <h2>Bad example: Meter with aria-valuemin(Empty value) attribute</h2>
+              <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="" aria-valuemax="100" aria-label="Central Processing Unit (CPU) Usage">
+                  <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                      <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                  </svg>
+              </div>
+                
+          <h2>Bad example: Meter with aria-valuemin(Empty space value) attribute</h2>
+              <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin=" " aria-valuemax="100" aria-label="Central Processing Unit (CPU) Usage">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+              </div>
+
+        <h2>Bad example: Meter with display none property</h2>
+        <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-label="Central Processing Unit (CPU) Usage" style="display: none;">
+         <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+           <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+         </svg>
+        </div>
+
+        <h2>Bad example: Meter with tabindex 0 and no aria-valuemax attributes</h2>
+        <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-label="Central Processing Unit (CPU) Usage" tabindex="0">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+              </div>
+
+
+        <h2>Bad example: Meter with aria-valuemax(empty value) attributes</h2>
+          <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="" aria-label="Central Processing Unit (CPU) Usage" tabindex="0">
+            <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+              <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+            </svg>
+          </div>
+
+
+          <h2>Bad example: Meter with aria-valuemax(empty space value) attributes</h2>
+          <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax=" " aria-label="Central Processing Unit (CPU) Usage" tabindex="0">
+            <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+              <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+            </svg>
+          </div>
+
+        <h2>Good example: Meter with title attribute</h2>
+          <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" title="Central Processing Unit (CPU) Usage">
+              <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+              </svg>
+            </div>
+
+        <h2>Bad example: Meter with no label</h2>
+            <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+            </div>
+
+            <h2>Bad example: Meter with no label and no aria-valuenow</h2>
+            <div role="meter" aria-valuemin="0" aria-valuemax="100">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+            </div>
+
+            <h2>Bad example: Meter with aria-valuenow(Empty value)</h2>
+            <div role="meter" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+            </div>
+
+            <h2>Bad example: Meter with aria-valuenow(Empty space value)</h2>
+            <div role="meter" aria-valuenow=" " aria-valuemin="0" aria-valuemax="100">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+            </div>
+
+
+        <h2>Bad example: Meter with aria-label(empty) attribute</h2>
+            <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-label="">
+              <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+              </svg>
+            </div>
+    
+        <h2>Bad example: Meter with aria-label(empty space) attribute</h2>
+          <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-label=" ">
+            <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+            </svg>
+          </div>
+
+        <h2>Good example: Meter with aria-labelledby attribute</h2>
+         <span id="a1">Central Processing Unit (CPU) Usage</span>
+         <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-labelledby="a1">
+            <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+              <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+            </svg>
+          </div>
+
+          <h2>Bad example: Meter with aria-labelledby(Incorrect value) attribute</h2>
+            <span id="a1">Central Processing Unit (CPU) Usage</span>
+            <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-labelledby="a1">
+              <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+              </svg>
+            </div>
+
+            <h2>Bad example: Meter with aria-labelledby(empty value) attribute</h2>
+              <span id="a1">Central Processing Unit (CPU) Usage</span>
+                <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-labelledby="">
+                  <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                    <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                  </svg>
+                </div>
+
+            <h2>Bad example: Meter with aria-label and aria-labelledby attribute</h2>
+              <span id="a1">CPU</span>
+              <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-labelledby="a1" aria-label="Central Processing Unit (CPU) Usage">
+                <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                  <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                </svg>
+              </div>
+
+            <h2>Bad example: Meter with aria-label, aria-labelledby and title attribute</h2>
+              <span id="a1">CPU</span>
+                <div role="meter" aria-valuenow="91.2543797024157" aria-valuemin="0" aria-valuemax="100" aria-labelledby="a1" aria-label="Central Processing Unit (CPU) Usage" title="CPU Usage">
+                  <svg width="100" height="100" class="fill" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 91.2544%; color: rgb(204, 36, 0);">
+                    <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+                  </svg>
+                </div>
+
+
+    </body>
+    </html>
