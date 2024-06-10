@@ -117,10 +117,10 @@
     </fieldset>
 </form>
 
-<h2>Good example: Form with aria-labelledby</h2>
-<form aria-labelledby="contact">
+<h2>Bad example: Form with aria-labelledby</h2>
+<form aria-labelledby="c1fghj2">
 	<fieldset>
-        <legend id="contact">Add Contact</legend>
+        <legend id="c1fghj2">Add Contact</legend>
 
               <label for="name_html5">Name</label>
               <input id="name_html5" type="text" size="25">
@@ -134,6 +134,7 @@
               <input type="submit" value="Add Contact">
     </fieldset>
 </form>
+
 
 <h2>Bad example: Form with incorrect aria-labelledby</h2>
 <form aria-labelledby="c12">
@@ -153,7 +154,7 @@
     </fieldset>
 </form>
 
-<h2>Bad example: Aside with aria-label and aria-labelledby</h2>
+<h2>Bad example: Form with aria-label and aria-labelledby</h2>
 <form aria-labelledby="informationjuih" aria-label="Add Contact">
 	<fieldset>
         <legend id="informationjuih">Add Contact</legend>
@@ -356,7 +357,7 @@
     </fieldset>
 </div>
 
-<h2>Bad example: Multiple Aside with empty aria-label</h2>
+<h2>Bad example: Multiple Form with empty aria-label</h2>
 <div role="form" aria-label="">
 	<fieldset>
         <legend>Add Contact</legend>
@@ -393,7 +394,7 @@
 </div>
 
 
-<h2>Bad example: Multiple Aside with identical aria-label</h2>
+<h2>Bad example: Multiple Form with identical aria-label</h2>
 <div role="form" aria-label="Add Contact">
 	<fieldset>
         <legend>Add Contact</legend>
@@ -501,7 +502,7 @@
     </fieldset>
 </div>
 
-<h2>Bad example: Multiple Aside with identical aria-labelledby</h2>
+<h2>Bad example: Multiple Form with identical aria-labelledby</h2>
 <div role="form" aria-labelledby="center123rftg">
 	<fieldset>
         <legend id="center123rftg">Add Contact</legend>
