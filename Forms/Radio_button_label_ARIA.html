@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>[role="radio"] {
+        padding: 4px 8px;
+        border: 0 solid transparent;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        cursor: default;
+        outline: none;
+        color: black;
+      }
+      
+      [role="radio"] + [role="radio"] {
+        margin-left: 1em;
+      }
+      
+      [role="radio"]::before {
+        position: relative;
+        top: 1px;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='14' width='14' style='forced-color-adjust: auto;'%3E%3Ccircle cx='7' cy='7' r='6' stroke='rgb(0, 90, 156)' stroke-width='2' fill-opacity='0' /%3E%3C/svg%3E");
+      }
+      
+      [role="radio"][aria-checked="true"]::before {
+        position: relative;
+        top: 1px;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='14' width='14' style='forced-color-adjust: auto;'%3E%3Ccircle cx='7' cy='7' r='6' stroke='rgb(0, 90, 156)' stroke-width='2' fill-opacity='0' /%3E%3Ccircle cx='7' cy='7' r='3' fill='rgb(0, 90, 156)' stroke-opacity='0' /%3E%3C/svg%3E");
+      }
+      
+      [role="radio"].focus,
+      [role="radio"]:hover {
+        padding: 2px 6px;
+        border: 2px solid #005a9c;
+        background-color: #def;
+        cursor: pointer;
+      }
+      </style>
+</head>
+<body>
+    <h1>Radio button label ARIA</h1>
+
+    <h2>Good Example: Radio button with accessible name</h2>
+    <div role="radio" aria-checked="false" tabindex="0">Pickup</div>
+
+    <h2>Good Example: Radio button with aria hidden attribute</h2>
+    <div role="radio" aria-checked="false" aria-hidden="true" tabindex="0">Pickup</div>
+
+    <h2>Good Example: Radio button with tabindex="-1" attribute</h2>
+    <div role="radio" aria-checked="false" tabindex="-1">Pickup</div>
+
+    <h2>Good Example: Radio button with aria hidden and tabindex="-1" attributes</h2>
+    <div role="radio" aria-checked="false" aria-hidden="true" tabindex="-1">Pickup</div>
+
+    <h2>Good Example: Radio button with display none property</h2>
+    <div role="radio" aria-checked="false" tabindex="0" style="display: none;">Pickup</div>
+
+    <h2>Good Example: Radio button with aria-label attribute</h2>
+    <div role="radio" aria-checked="false" tabindex="0" aria-label="Yes">Pickup</div>
+
+    <h2 id="a1">Good Example: Radio button with aria-labelledby attribute</h2>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a1">Pickup</div>
+
+    <h2 id="a1">Good Example: Radio button with aria-label and aria-labelledby attribute</h2>
+    <div role="radio" aria-checked="false" tabindex="0" aria-label="Yes" aria-labelledby="a1">Pickup</div>
+
+</body>
+</html>
