@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Good example of dialog</p>
+    <dialog aria-label="test">
+      <p>content</p>
+    </dialog>
+
+    <p>Bad example of dialog with empty aria-label attibute</p>
+    <dialog aria-label="">
+      <p>content</p>
+    </dialog>
+
+    <p>Bad example of dialog with inapproprite value for aria-label attibute</p>
+    <dialog aria-label=" ">
+      <p>content</p>
+    </dialog>
+
+    <p>Bad example of dialog with aria-hidden attribute</p>
+    <dialog aria-label="test" aria-hidden="true">
+      <p>content</p>
+    </dialog>
+
+    <p>Bad example of dialog with display non</p>
+    <dialog aria-label="test" style="display: none">
+      <p>content</p>
+    </dialog>
+
+    <p>Good example of dialog with aria-hidden false attribute</p>
+    <dialog aria-label="test" aria-hidden="false">
+      <p>content</p>
+    </dialog>
+
+    <p>Bad example of with accessiable name using aria-label attribute</p>
+    <dialog aria-label="test">
+      <p>content</p>
+    </dialog>
+
+    <p>Bad example of without an accessiable name</p>
+    <dialog>
+      <p>content</p>
+    </dialog>
+
+    <p>Good example with aria-labelledby attribute</p>
+    <dialog aria-labelledby="test" aria-hidden="false">
+      <p id="test">content</p>
+    </dialog>
+
+    <p>Bad example of dialog without proper ID association</p>
+    <dialog aria-labelledby="asso" aria-hidden="false">
+      <p>content</p>
+    </dialog>
+  </body>
+</html>
