@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Select only combobox - Native</h1>
+    <h2>Select only combobox with accessible name(Explicit association)</h2>
+    <label for="a1">Select an option</label>
+    <select id="a1">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+
+    <h2>Select only combobox with accessible name(Implicit association)</h2>
+    <label>Select an option
+        <select>
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Avocado</option>
+            <option>Grapes</option>
+        </select>
+    </label>
+
+    <h2>Select only combobox with label with aria-hidden attribute</h2>
+    <label for="a2" aria-hidden="true">Select an option</label>
+    <select id="a2">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with label with display none CSS property</h2>
+    <label for="a3" style="display: none;">Select an option</label>
+    <select id="a3">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with no association with label</h2>
+    <label>Select an option</label>
+    <select id="a4">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with incorrect association with label</h2>
+    <label for="a5">Select an option</label>
+    <select id="a6">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with aria-label</h2>
+    <label>Select an option</label>
+    <select aria-label="Select a fruit">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with aria-labelledby attribute</h2>
+    <label id="a7">Select an option</label>
+    <select aria-labelledby="a7">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with no accessible name</h2>
+    <select>
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with aria-labelledby(Empty) attribute</h2>
+    <label id="a8">Select an option</label>
+    <select aria-labelledby="">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+    <h2>Select only combobox with aria-labelledby(Empty space) attribute</h2>
+    <label id="a9">Select an option</label>
+    <select aria-labelledby=" ">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Avocado</option>
+        <option>Grapes</option>
+    </select>
+
+</body>
+</html>
