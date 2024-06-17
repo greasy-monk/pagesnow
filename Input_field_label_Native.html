@@ -150,7 +150,7 @@
 <div id="mnbv">Name by aria-labelledby</div>
 
 
-<h2>Example: Input element with aria-hidden and aria-labelledby</h2>
+<h2>Example: Input with aria-labelledby and label with aria-hidden</h2>
 <label id="first1" aria-hidden="true">Name:</label><br>
 <input aria-labelledby="first1" type="text" placeholder="name">
 
@@ -186,46 +186,41 @@
 ---------aria-labelledby, aria-label and title-----------------
 
 
-<h2>Example: Input element with title</h2>
+<h2>Example: Input element with aria-labelledby, aria-label and title</h2>
 <input title="first name" aria-label="first name by aria label" aria-labelledby="first9" id="test" type="text" placeholder="name">
 <div id="first9">Name by aria-labelledby:</div>
 
 
-<h2>Example: Input element without title</h2>
+<h2>Example: Input element without aria-labelledby, aria-label and title</h2>
 <input id="test" type="text" placeholder="name">
 
 
-<h2>Example: Input element with aria-hidden and title</h2>
+<h2>Example: Input element with aria-hidden and aria-labelledby, aria-label and title</h2>
 <label aria-hidden="true">Name:</label><br>
 <input title="first name" aria-label="first name by aria label" aria-labelledby="first11" type="text" placeholder="name">
 <div id="first11">Name by aria-labelledby:</div>
 
 
-<h2>Example: label with title but no aria-hidden</h2>
+<h2>Example: Input with aria-labelledby, aria-label and title but no aria-hidden</h2>
 <label>Name:</label><br>
 <input title="first name" aria-label="first name by aria label" aria-labelledby="first12" type="text" placeholder="name">
 <div id="first12">Name by aria-labelledby:</div>
 
 
-<h2>Example: Input wrapped in label and aria-labelledby</h2>
+<h2>Example: Input wrapped in label and aria-labelledby, aria-label and title</h2>
 <label>Name:<br>
 <input title="first name" aria-label="first name by aria label" aria-labelledby="first13" type="text" placeholder="name">
 </label>
 <div id="first13">Name by aria-labelledby:</div>
 
 
-<h2>Example: Input and label with title and no for and id</h2>
-<label>Name:</label><br>
-<input type="text" placeholder="name">
-
-
-<h2>Example: Input and label with title and for and id</h2>
+<h2>Example: Input and label with aria-labelledby, aria-label and title and for and id</h2>
 <label for="testsd">Name:</label><br>
 <input title="first name" aria-label="first name by aria label" aria-labelledby="first15" id="testsd" type="text" placeholder="name">
 <div id="first15">Name by aria-labelledby:</div>
 
 
-<h2>Example: Input and label with incorrcet for and id values and title</h2>
+<h2>Example: Input and label with incorrcet for and id values and aria-labelledby, aria-label and title</h2>
 <label for="name123">Name:</label><br>
 <input title="first name" aria-label="first name by aria label" aria-labelledby="first16" id="last123" type="text" placeholder="name">
 <div id="first16">Name by aria-labelledby:</div>
