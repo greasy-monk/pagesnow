@@ -5,106 +5,39 @@
 </head>
 <body>
 
+
+
+
 <h1>Skip link conditions</h1>
 
-<h2>Good Example: header with multiple links and button</h2>
-<header>
-<a href="#main">Skip to main content</a>
-<br>
-<a href="www.google.com">Google</a>
-<Button>Test</button>
-<br>
-----------------------
-</header>
+<h2>Good Example: Skip link in first three interactive elemets</h2>
 
+<a href="#main">Skip to main content</a>
+          
 <main id="main">
 This is main section.
 </main>
 
 
-<h2>Bad Example: header with no links and button</h2>
-<header>
-<a href="#main1">Skip to main content</a>
-<br>
-----------------------
-</header>
+<h2>Bad Example: Skip link not in first three interactive elemets</h2>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
 
-<main id="main1">
+<a href="#main">Skip to main content</a>
+          
+<main id="main">
 This is main section.
 </main>
 
 
-<h2>Good Example: main with heading</h2>
-<header>
-<a href="#main3">Skip to main content</a>
-<br>
-<a href="www.google.com">Google</a>
-<Button>Test</button>
-<br>
-----------------------
-</header>
+<h2>Bad Example: region without skip link</h2>
 
-<main id="main3">
-<h3>This is main section.</h3>
-</main>
-
-
-<h2>Bad Example: no main and no heading</h2>
-<header>
-<a href="#main3">Skip to main content</a>
-<br>
-<a href="www.google.com">Google</a>
-<Button>Test</button>
-<br>
-----------------------
-</header>
-
-<div id="main3">
-This is not main section.
-</div>
-
-
-<h2>Bad Example: no main and no skip link</h2>
-<header>
-<br>
-<a href="www.google.com">Google</a>
-<Button>Test</button>
-<br>
-----------------------
-</header>
-
-<div id="main4">
-This is not main section.
-</div>
-
-
-<h2>Bad Example: no skip link with main</h2>
-<header>
-<a href="www.google.com">Google</a>
-<Button>Test</button>
-<br>
-----------------------
-</header>
-
-<main id="main5">
+<main id="main">
 This is main section.
 </main>
 
-
-
-<h2>Bad Example: skip link is not first element</h2>
-<header>
-<a href="www.google.com">Google</a>
-<Button>Test</button>
-<br>
-<a href="#main3">Skip to main content</a>
-<br>
-----------------------
-</header>
-
-<main id="main3">
-<h3>This is main section.</h3>
-</main>
 
 </body>
 </html>
