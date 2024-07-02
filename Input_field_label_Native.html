@@ -8,6 +8,105 @@
 <h1>Input field label - Native conditions</h1>
 
 
+---------aria-labelledby-----------------
+
+<h2>Example: Input element with aria-labelledby</h2>
+<input aria-labelledby="first" id="test" type="text" placeholder="name">
+<div id="first">Name by aria-labelledby</div>
+
+
+<h2>Example: Input element with incorrcet aria-labelledby</h2>
+<input aria-labelledby="firstjiukn" id="test" type="text" placeholder="name">
+<div id="mnbv">Name by aria-labelledby</div>
+
+<h2>Example: Input element without aria-labelledby</h2>
+<input type="text" placeholder="name">
+
+---------aria-label-----------------
+
+<h2>Example: Input element with aria-label</h2>
+<input aria-label="first name by aria label" id="test" type="text" placeholder="name">
+
+
+<h2>Example: Input element with empty aria-label</h2>
+<input aria-label="" id="test" type="text" placeholder="name">
+
+
+<h2>Example: Input element without aria-label</h2>
+<input type="text" placeholder="name">
+
+---------title-----------------
+
+<h2>Example: Input element with title</h2>
+<input title="first name" id="test" type="text" placeholder="name">
+
+
+<h2>Example: Input element with empty title</h2>
+<input title="" id="test" type="text" placeholder="name">
+
+
+<h2>Example: Input element without title</h2>
+<input type="text" placeholder="name">
+
+
+<h2>Example: Input with id and label with for</h2>
+<label for="namename">Name:</label><br>
+<input id="namename" type="text" placeholder="name">
+
+
+<h2>Example: Input without for and id</h2>
+<label>Name:</label><br>
+<input type="text" placeholder="name">
+
+
+<h2>Example: Input and label with incorrcet for and id values</h2>
+<label for="name123">Name:</label><br>
+<input id="last123" type="text" placeholder="name">
+
+
+<h2>Example: Label wrapped surrounding Input</h2>
+<label>Name:<br>
+<input type="text" placeholder="name">
+</label>
+
+
+<h2>Example: Label wrapped surrounding Input in div</h2>
+<label>
+<div>Name:</div><br>
+<div>
+<input type="text" placeholder="name">
+</div>
+</label>
+
+
+<h2>Example: Label and Input present in different div</h2>
+<div>
+<label for="poiuhjbn">Name:</label><br>
+</div>
+<div>
+<input id="poiuhjbn" type="text" placeholder="name">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>Example: label with for id</h2>
 <label for="namename">Name:</label><br>
 <input id="namename" type="text" placeholder="name">
@@ -138,16 +237,6 @@
 
 
 -------------------------------------------------------------------------------
----------aria-labelledby-----------------
-
-<h2>Example: Input element with aria-labelledby</h2>
-<input aria-labelledby="first" id="test" type="text" placeholder="name">
-<div id="first">Name by aria-labelledby</div>
-
-
-<h2>Example: Input element with incorrcet aria-labelledby</h2>
-<input aria-labelledby="firstjiukn" id="test" type="text" placeholder="name">
-<div id="mnbv">Name by aria-labelledby</div>
 
 
 <h2>Example: Input with aria-labelledby and label with aria-hidden</h2>
