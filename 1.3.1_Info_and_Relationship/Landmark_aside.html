@@ -18,28 +18,21 @@
 
 
 <h2>Bad example: Aside with aria-hidden and role presentation</h2>
-<aside aria-hidden="true" role="presentation">
-  <h3>Epcot Center</h3>
-  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</aside>
-
-
-<h2>Bad example: Aside with visibility hidden</h2>
-<aside style="visibility:hidden;">
+<aside aria-hidden="true">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
 
 <h2>Good example: Aside with aria-label</h2>
-<aside aria-label="Epcot Center">
+<aside>
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
 
-<h2>Bad example: Aside with no aria-label</h2>
-<aside>
+<h2>Bad example: Aside with aria-label</h2>
+<aside aria-label="Epcot Center">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
@@ -51,8 +44,14 @@
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
+Good example: Aside without aria-labelledby
+<aside>
+  <h3 id="plojk">Epcot Center</h3>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
 
-<h2>Good example: Aside with aria-labelledby</h2>
+
+<h2>Bad example: Aside with aria-labelledby</h2>
 <aside aria-labelledby="plojk">
   <h3 id="plojk">Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
@@ -61,7 +60,7 @@
 
 <h2>Bad example: Aside with incorrect aria-labelledby</h2>
 <aside aria-labelledby="rtyhg">
-  <h3 id="rtyhg">Epcot Center</h3>
+  <h3 id="sfd">Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </aside>
 
@@ -75,22 +74,22 @@
 </div>
 
 
-<h2>Bad example: Aside with aria-hidden and role presentation</h2>
-<div role="complementary" aria-hidden="true" role="presentation">
+<h2>Bad example: Aside with aria-hidden</h2>
+<div role="complementary" aria-hidden="true">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
 </div>
 
 
 <h2>Good example: Aside with aria-label</h2>
-<div role="complementary" aria-label="Epcot Center aria">
+<div role="complementary">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
 </div>
 
 
 <h2>Bad example: Aside with no aria-label</h2>
-<div role="complementary">
+<div role="complementary" aria-label="Epcot Center aria">
   <h3>Epcot Center</h3>
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>	
 </div>
