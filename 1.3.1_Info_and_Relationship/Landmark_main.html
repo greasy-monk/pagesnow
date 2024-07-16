@@ -8,7 +8,7 @@
 <body>
     <h1>Main landmark</h1>
 
-    <h2>Single Main landmark</h2>
+-------------------Single Main landmark---------------------------
 
     <h3>Good example: Native main landmark with aria-hidden="true" attribute</h3>
     <main>
@@ -17,8 +17,8 @@
             <li><a href="#">Services</a></li>
         </ul>
     </main>
-
-    <h3>Good example: ARIA main landmark with aria-hidden="true" attribute</h3>
+	
+	<h3>Good example: custom main landmark with aria-hidden="true" attribute</h3>
     <div role="main">
         <ul>
             <li><a href="#">Home</a></li>
@@ -34,63 +34,31 @@
         </ul>
     </main>
 
-    <h3>Bad example: ARIA main landmark with aria-hidden="true" attribute</h3>
-    <div aria-hidden="true" role="main">
+	<h3>Bad example: custom main landmark with aria-hidden="true" attribute</h3>
+    <div role="main" aria-hidden="true">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-
-    <h3>Bad example: Native main landmark with display none property</h3>
-    <main style="display: none;">
+	
+	<h3>Bad example: Native main landmark with aria-label attribute</h3>
+    <main aria-label="Single main">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </main>
 
-    <h3>Bad example: ARIA main landmark with display none property</h3>
-    <div role="main" style="display: none;">
+	<h3>Bad example: custom main landmark with aria-label attribute</h3>
+    <div role="main" aria-label="one main">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-
-    <h3>Bad example: Native main landmark with role="presentation" attribute</h3>
-    <main role="presentation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </main>
-
-    <h3>Bad example: Native main landmark with role="none" attribute</h3>
-    <main  role="none">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </main>
-
-    <h3>Good example: Native main landmark with aria-label attribute</h3>
-    <main aria-label="Primary">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </main>
-
-    <h3>Good example: ARIA main landmark with aria-label attribute</h3>
-    <div role="main" aria-label="Primary">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </div>
-
-    <h3>Bad example: Native main landmark with aria-label (empty value) attribute</h3>
+	
+	<h3>Bad example: Native main landmark with empty aria-label attribute</h3>
     <main aria-label="">
         <ul>
             <li><a href="#">Home</a></li>
@@ -98,240 +66,261 @@
         </ul>
     </main>
 
-    <h3>Bad example: ARIA main landmark with aria-label (empty value) attribute</h3>
+	<h3>Bad example: custom main landmark with empty aria-label attribute</h3>
+    <div role="main" aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>	
+	
+	<h3>Bad example: Native main landmark with aria-labelledby attribute</h3>
+    <main aria-labelledby="xyz">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+		<div id="xyz">Test1</div>
+    </main>
+
+	<h3>Bad example: custom main landmark with aria-labelledby attribute</h3>
+    <div role="main" aria-labelledby="abc">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+		<div id="abc">Testing12345</div>
+    </div>	
+	
+	
+-------------------Multiple Main landmark---------------------------
+
+	<h3>Good example: Native main landmark with aria-label attribute</h3>
+    <main aria-label="single main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+	
+	<main aria-label="one main landmark">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+
+	<h3>Good example: custom main landmark with aria-label attribute</h3>
+    <div role="main" aria-label="custom main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+	
+	<div role="main" aria-label="custom one landmark">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+	
+	
+	<h3>Bad example: Native main landmark without aria-label attribute</h3>
+    <main>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+	
+	<main>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+
+	<h3>Bad example: custom main landmark without aria-label attribute</h3>
+    <div role="main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+	
+	<div role="main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+	
+	<h3>Bad example: Native main landmark with empty aria-label attribute</h3>
+    <main aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+	
+	<main aria-label="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+
+	<h3>Bad example: custom main landmark with empty aria-label attribute</h3>
     <div role="main" aria-label="">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-
-    <h3>Bad example: Native main landmark with aria-label (empty space value) attribute</h3>
-    <main aria-label=" ">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </main>
-
-    <h3>Bad example: ARIA main landmark with aria-label (empty space value) attribute</h3>
-    <div role="main" aria-label=" ">
+	
+	<div role="main" aria-label="">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
+	
 
-    <h3>Good example: Native main landmark with aria-labelledby attribute</h3>
-    <span id="a1">Primary main</span>
-    <main aria-labelledby="a1">
+	<h3>Bad example: Native main landmark with identical aria-label attribute</h3>
+    <main aria-label="multiple main">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </main>
+	
+	<main aria-label="multiple main">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </main>
 
-    <h3>Good example: ARIA main landmark with aria-labelledby attribute</h3>
-    <div role="main" aria-labelledby="a1">
+	<h3>Bad example: custom main landmark with identical aria-label attribute</h3>
+    <div role="main" aria-label="custom multiple main">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-
-    <h3>Bad example: Native main landmark with aria-labelledby(Empty value) attribute</h3>
-    <span id="a1">Primary main</span>
-    <main aria-labelledby="">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-        </ul>
-    </main>
-
-    <h3>Bad example: ARIA main landmark with aria-labelledby(Empty value) attribute</h3>
-    <div role="main" aria-labelledby="">
+	
+	<div role="main" aria-label="custom multiple main">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
     </div>
-
-    <h3>Bad example: Native main landmark with aria-labelledby(Incorrect value) attribute</h3>
-    <span id="a1">Primary main</span>
-    <main aria-labelledby="a6">
+	
+	
+	<h3>Good example: Native main landmark with aria-labelledby attribute</h3>
+    <main aria-labelledby="poi">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
+		<div id="poi">Multiple main</div>
+    </main>
+	
+	<main aria-labelledby="qwe">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+		<div id="qwe">Main landmark</div>
     </main>
 
-    <h3>Bad example: ARIA main landmark with aria-labelledby(Incorrect value) attribute</h3>
-    <div role="main" aria-labelledby="a6">
+	<h3>Good example: custom main landmark with aria-labelledby attribute</h3>
+    <div role="main" aria-labelledby="mnb">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
+		<div id="mnb">custom multiple main</div>
     </div>
-
-
-    <h2>Multiple Main landmark</h2>
-
-    <h3>Good example: Multiple main landmark</h3>
-    <main aria-label="primary">
+	
+	<div role="main" aria-labelledby="fgh">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
-    </main>
-        <div role="main" aria-label="secondary">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-
-    <h3>Bad example: Multiple main landmark with no accessible name</h3>
-    <main>
+		<div id="fgh">custom landmark</div>
+    </div>
+	
+	
+	<h3>Bad example: Native main landmark with incorrect aria-labelledby association</h3>
+    <main aria-labelledby="plm">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
+		<div id="gbh">Multiple main</div>
     </main>
-        <div role="main">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-
-    <h3>Bad example: Multiple main landmark with aria-hidden="true" attribute on ARIA main landmark</h3>
-    <main>
+	
+	<main aria-labelledby="nuyg">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
+		<div id="sdfg">Main landmark</div>
     </main>
-        <div role="main" aria-hidden="true">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
 
-        <h3>Bad example: Multiple main landmark with aria-hidden="true" attribute on native main landmark</h3>
-        <main aria-hidden="true">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </main>
-            <div role="main">        
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                </ul>
-            </div>
-
-        <h3>Bad example: Multiple main landmark with display none property on ARIA main landmark</h3>
-        <main>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </main>
-            <div role="main" style="display: none;">        
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                </ul>
-            </div>
-
-            <h3>Bad example: Multiple main landmark with display none property on Native main landmark</h3>
-            <main aria-hidden="true" style="display: none;">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                </ul>
-            </main>
-                <div role="main" aria-hidden="true" >        
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                    </ul>
-                </div>
-
-    <h3>Bad example: Multiple main landmark with aria-label(Empty value) attribute</h3>
-    <main aria-label="">
+	<h3>Bad example: custom main landmark with incorrect aria-labelledby association</h3>
+    <div role="main" aria-labelledby="oiugf">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
-    </main>
-        <div role="main" aria-label="">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-
-        <h3>Bad example: Multiple main landmark with aria-label(Empty space value) attribute</h3>
-        <div role="main" aria-label=" ">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-            <main aria-label=" ">       
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                </ul>
-            </main>
-
-    <h3>Good example: Multiple main landmark with aria-labelledby attribute</h3>
-    <span id="a3">main landmark</span>
-    <main aria-labelledby="a3">
+		<div id="sddc">custom multiple main</div>
+    </div>
+	
+	<div role="main" aria-labelledby="iuyt">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
-    </main>
-        <div role="main" aria-labelledby="a3">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
+		<div id="ccxck">custom landmark</div>
+    </div>
+	
 
-    <span id="a3">main landmark</span>
-    <h3>Bad example: Multiple main landmark with aria-labelledby(Empty value) attribute</h3>
-    <main aria-labelledby="">
+		<h3>Bad example: Native main landmark with Identical aria-labelledby association</h3>
+    <main aria-labelledby="dfgh">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
+		<div id="dfgh">more than one main</div>
     </main>
-        <div role="main" aria-labelledby="">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
-
-    <h3>Bad example: Multiple main landmark with aria-labelledby(Incorrect value) attribute</h3>
-    <span id="a3">main landmark</span>
-    <main aria-labelledby="a5">
+	
+	<main aria-labelledby="iuyt">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
         </ul>
+		<div id="iuyt">more than one main</div>
     </main>
-        <div role="main" aria-labelledby="a5">        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </div>
 
+	<h3>Bad example: custom main landmark with Identical aria-labelledby association</h3>
+    <div role="main" aria-labelledby="sdfgddc">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+		<div id="sdfgddc">custom multiple main landmarks are used</div>
+    </div>
+	
+	<div role="main" aria-labelledby="ccdfgcvhbjk">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+		<div id="ccdfgcvhbjk">custom multiple main landmarks are used</div>
+    </div>	
+	
 </body>
 </html>
