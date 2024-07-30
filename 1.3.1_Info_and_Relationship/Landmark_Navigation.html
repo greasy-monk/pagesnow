@@ -6,72 +6,128 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Good Example of single Navigation region</p>
+    <p>Good Example: Native Navigation region</p>
     <nav>
         <p>Nav01</p>
     </nav>
+	
+	<p>Good Example:  Aria Navigation region</p>
+    <div role="navigation">
+    <p>Nav01</p>
+    </div>
     
-    <p>Good Example of Single naviagtion region with accessiable name using aria-label attribute</p>
+	<p>Bad Example: Native Navigation region with aria-hidden</p>
+    <nav aria-hidden="true">
+        <p>Nav01</p>
+    </nav>
+	
+	<p>Bad Example:  Aria Navigation region with aria-hidden</p>
+    <div role="navigation" aria-hidden="true">
+    <p>Nav01</p>
+    </div>
+	
+    <p>Good Example:  Native Navigation region with accessiable name using aria-label attribute</p>
     <nav aria-label="Nav01">
         <p>Nav01</p>
     </nav>
+	
+	 <p>Good Example:  Aria Navigation region with accessiable name using aria-label attribute</p>
+    <div role="navigation" aria-label="Nav01">
+        <p>Nav01</p>
+    </div>
     
-    <p>Good Example of Single naviagtion region with accessiable name using aria-labelledby attribute</p>
-    <div role="navigation" aria-labelledby="test">
+    <p>Good Example: Native Navigation region with accessiable name using aria-labelledby attribute</p>
+    <nav aria-labelledby="test">
         <p id="test">Nav01</p>
+    </nav>
+	
+	<p>Good Example: Aria Navigation region with accessiable name using aria-labelledby attribute</p>
+    <div role="navigation" aria-labelledby="test123">
+        <p id="test123">Nav01</p>
     </div>
 
-    <p>Bad Example of Single naviagtion region with accessiable name using aria-labelledby attribute (unassiciated aria-labelledby attribute)</p>
+	<p>Bad Example: Native Navigation region with accessiable name using aria-labelledby attribute (unassociated aria-labelledby attribute)</p>
+    <nav aria-labelledby="testpoi">
+        <p>Nav01</p>
+    </nav>
+	
+    <p>Bad Example: Aria Navigation region with accessiable name using aria-labelledby attribute (unassociated aria-labelledby attribute)</p>
     <div role="navigation" aria-labelledby="test">
         <p>Nav01</p>
     </div>
-    
-    <p>Good Example of multiple naviagtion region with accessiable name using aria-label attribute</p>
+
+	
+    <p>Good Example: Multiple Navigation region with accessiable name using aria-label attribute</p>
     <nav aria-label="Nav01">
         <p>Nav01</p>
     </nav>
-    <div role="navigation" aria-lable="Nav02">
+	
+    <div role="navigation" aria-label="Nav02">
         <p>Nav01</p>
     </div>
     
-    <p>Bad Example of multiple naviagtion region with accessiable name provided to only one region using aria-label attribute (only one unassiciated)</p>
-    <nav aria-lable="Nav01">
+    <p>Bad Example: Multiple Navigation region with accessiable name provided to only one region using aria-label attribute</p>
+    <nav aria-label="Nav01">
         <p>Nav01</p>
     </nav>
+	
     <div role="navigation">
         <p>Nav01</p>
     </div>
 
-    <p>Bad Example of multiple naviagtion region with no accessiable name provided any navigation region</p>
+    <p>Bad Example: Multiple Navigation region with no accessiable name provided any navigation region</p>
     <nav>
         <p>Nav01</p>
     </nav>
+	
     <div role="navigation">
         <p>Nav01</p>
     </div>
+	
+	
+	<p>Bad Example: Multiple Navigation region with identical accessiable name</p>
+    <nav aria-label="navigation">
+        <p>Nav01</p>
+    </nav>
+	
+    <div aria-label="navigation" role="navigation">
+        <p>Nav01</p>
+    </div>
 
-    <p>Good Example of multiple naviagtion region with accessiable name using aria-labelledby attribute</p>
+    <p>Good Example: Multiple Navigation region with accessiable name using aria-labelledby attribute</p>
     <nav aria-labelledby="test03">
         <p id="test03">Nav01</p>
     </nav>
+	
     <div role="navigation" aria-labelledby="test04">
         <p id="test04">Nav01</p>
     </div>
 
-    <p>Bad Example of multiple naviagtion region with accessiable name using aria-labelledby attribute (unassiciated aria-labelledby attribute)</p>
-    <nav aria-labelledby="test03">
+    <p>Bad Example: Multiple Navigation region with accessiable name using aria-labelledby attribute (unassiciated aria-labelledby attribute)</p>
+    <nav aria-labelledby="test09">
         <p>Nav01</p>
     </nav>
-    <div role="navigation" aria-labelledby="test04">
+	
+    <div role="navigation" aria-labelledby="test09">
         <p>Nav01</p>
     </div>
 
-    <p>Bad Example of multiple naviagtion region with accessiable name using aria-labelledby attribute ( one unassiciated aria-labelledby attribute)</p>
-    <nav aria-labelledby="test05">
-        <p id="test05">Nav01</p>
+    <p>Bad Example: Multiple Navigation region with accessiable name using aria-labelledby attribute (one unassociated aria-labelledby attribute)</p>
+    <nav class="abc" aria-labelledby="test05">
+        <p id="test05">Primary Navigation</p>
     </nav>
-    <div role="navigation" aria-labelledby="test06">
+	
+    <div class="asd" role="navigation" aria-labelledby="testqwert">
         <p>Nav01</p>
+    </div>
+	
+	    <p>Bad Example: Multiple Navigation region with identical accessiable name using aria-labelledby attribute</p>
+    <nav aria-labelledby="test07">
+        <p id="test07">Nav01</p>
+    </nav>
+	
+    <div role="navigation" aria-labelledby="test08">
+        <p id="test08">Nav01</p>
     </div>
 </body>
 </html>
