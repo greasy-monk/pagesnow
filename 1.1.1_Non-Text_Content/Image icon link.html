@@ -7,9 +7,34 @@
 </head>
 <body>
     <h1>Image icon link</h1>
-    <h2>Image icon link with accessible name</h2>
-    <a href=""><i class="material-icons"></i></a>
+    <h2>Image icon link with accessible name(aria-label)</h2>
+    <a href="" role="img" aria-label="Add photo"><i class="material-icons"></i></a>
+
+    <h2>Image icon link with accessible name(aria-labelledby)</h2>
+    <a href="" role="img" aria-labelledby="a1"><i class="material-icons"></i></a>
+    <span id="a1">Add Photo</span>
 
     <h2>Image icon link with no accessible name</h2>
+    <a href=""><i class="material-icons"></i></a>
+
+    <h2>Image icon link with aria-hidden attribute</h2>
+    <a href="" aria-hidden="true"><i class="material-icons"></i></a>
+
+    <h2>Image icon link with no role information</h2>
+    <a href="" aria-label="Add photo"><i class="material-icons"></i></a>
+
+    <h2>Image icon link with accessible name(aria-labelledby not associated)</h2>
+    <a href="" role="img" aria-labelledby="a2"><i class="material-icons"></i></a>
+    <span id="a3">Add Photo</span>
+
+    <h2>Image icon link with accessible name(aria-labelledby not associated and empty aria-label)</h2>
+    <a href="" role="img" aria-labelledby="a4" aria-label=""><i class="material-icons"></i></a>
+    <span id="a5">Add Photo</span>
+
+    <h2>Image icon link with accessible name(aria-labelledby not associated and empty aria-label)</h2>
+    <a href="" role="img" aria-labelledby="a6" aria-label="Add photo"><i class="material-icons"></i></a>
+    <span id="a7">Add Photo</span>
+
+
 </body>
 </html>
