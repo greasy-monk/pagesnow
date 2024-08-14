@@ -2,159 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<div id="txtboxLabel">Enter your five-digit zipcode</div>
     <title>Document</title>
 </head>
 <body>
     <h1>Input field label-ARIA</h1>
-    <div id="txtboxLabel">Good example: Text field with aria-hidden="true"</div>
-    <div id="textbox"
-      role="textbox"
-      contenteditable="true"
-      aria-labelledby="txtboxLabel"
-      style="border: 2px solid blue;
-      width: 15%;
-      padding: 5px 5px;
-      margin: 8px 0;"></div>
-      
-<div id="txtboxLabel">Good example: Input element with aria-hidden="true"</div>
-<input aria-labelledby="txtboxLabel" type="text" role="textbox" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-
-<div id="txtboxLabel">Bad example: Text field with aria-hidden="true"</div>
-<div id="textbox"
+    <span>Input field with accessible name using aria-labelledby</span>
+    <div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div
   role="textbox"
   contenteditable="true"
-  aria-hidden="true"
-  aria-labelledby="txtboxLabel"
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="txtboxLabel" style="  border: 2px solid red; border-radius: 4px;"></div>
 
-<div id="txtboxLabel">Bad example: Input element with aria-hidden="true"</div>
-<input aria-labelledby="txtboxLabel" type="text" role="textbox" aria-hidden="true" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
+  <span>Input field with accessible name using aria-label</span>
+  <div id="txtboxLabel">Enter your five-digit zipcode</div>
+  <div
+    role="textbox"
+    contenteditable="true"
+    aria-placeholder="5-digit zipcode"
+    aria-label="Enter your five-digit zipcode"></div>
 
-<div id="txtboxLabel">Bad example: Text field with tabindex="-1"</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  tabindex="-1"
-  aria-labelledby="txtboxLabel"
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-
-<div id="txtboxLabel">Bad example: Input element with tabindex="-1"</div>
-<input aria-labelledby="txtboxLabel" type="text" role="textbox" tabindex="-1" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-<div id="txtboxLabel" style="padding-bottom: 50px;">Bad example: Text field with display:none</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  aria-labelledby="txtboxLabel"
-  style="border: 2px solid blue;
-  display: none;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-
-<div id="txtboxLabel" style="padding-bottom: 50px;">Bad example: Input element with display:none</div>
-<input aria-labelledby="txtboxLabel" type="text" role="textbox"  style="border: 2px solid blue;
-display: none;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-<div id="txtboxLabel">Good example: Text field with aria-label</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  aria-label="Good example: Text field with aria-label"
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-  
-<div id="txtboxLabel">Good example: Input element with aria-label</div>
-<input type="text" role="textbox" aria-label="Good example: Text field with aria-label" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-<div id="txtboxLabel">Bad example: Text field with aria-label(empty value)</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  aria-label=""
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-  
-<div id="txtboxLabel">Bad example: Input element with aria-label(empty value)</div>
-<input type="text" role="textbox" aria-label="" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-<div id="txtboxLabel">Good example: Text field with aria-labelledby</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  aria-labelledby="txtboxLabel"
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-  
-<div id="txtboxLabel1">Good example: Input element with aria-labelledby</div>
-<input type="text" role="textbox" aria-labelledby="txtboxLabel1" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-<div id="txtboxLabel">Bad example: Text field with aria-labelledby(empty value)</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  aria-labelledby=""
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-  
-<div id="txtboxLabel1">Bad example: Input element with aria-labelledy(empty value)</div>
-<input type="text" role="textbox" aria-labelledby="" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
-<div id="txtboxLabel">Bad example: Text field with aria-labelledby(incorrect value)</div>
-<div id="textbox"
-  role="textbox"
-  contenteditable="true"
-  aria-labelledby="test"
-  style="border: 2px solid blue;
-  width: 15%;
-  padding: 5px 5px;
-  margin: 8px 0;"></div>
-  
-<div id="txtboxLabel1">Bad example: Input element with aria-labelledby(incorrect value)</div>
-<input type="text" role="textbox" aria-labelledby="test1" style="border: 2px solid blue;
-width: 15%;
-padding: 5px 5px;
-margin: 8px 0;">
-
+  <div id="txtboxLabel">Enter your five-digit zipcode</div>
+  <div
+    role="textbox"
+    contenteditable="true"
+    aria-placeholder="5-digit zipcode"
+    aria-labelledby="txtboxLabel"></div>
 </body>
 </html>
