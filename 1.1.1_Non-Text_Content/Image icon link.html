@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<h1>Image Icon link</h1>
+
+
+    <span>Good example: Image icon link with accessible name(aria-label)</span>
+    <br>
+    <a href="#"><i class="material-icons" role="img" aria-label="Add photo">add_a_photo</i></a>
+    <br>
+
+    <span>Good example: Image icon link with accessible name(aria-labelledby)</span>
+    <br>
+    <a href="#"><i class="material-icons" role="img" aria-labelledby="a1"></i></a>
+    <br>
+    <span id="a1">Add Photo</span>
+    <br>
+
+    <span>Bad example: Image icon link with no accessible name</span>
+    <br>
+    <a href="#"><i class="material-icons"></i></a>
+    <br>
+
+    <span>Bad example: Image icon link with aria-hidden attribute</span>
+    <br>
+    <a href="#"><i class="material-icons" aria-hidden="true"></i></a>
+    <br>
+
+    <span>Bad example: Image icon link with no role information</span>
+    <br>
+    <a href="#"><i class="material-icons" aria-label="Add photo"></i></a>
+    <br>
+
+    <span>Bad example: Image icon link with accessible name(aria-labelledby not associated)</span>
+    <br>
+    <a href="#"><i class="material-icons" role="img" aria-labelledby="a2"></i></a>
+    <br>
+    <span id="a3">Add Photo</span>
+    <br>
+
+    <span>Bad example: Image icon link with accessible name(aria-labelledby not associated and empty aria-label)</span>
+    <br>
+    <a href="#"><i class="material-icons" role="img" aria-labelledby="a4" aria-label=""></i></a>
+    <br>
+    <span id="a5">Add Photo</span>
+    <br>
+
+    <span>Bad example: Image icon link with accessible name(aria-labelledby not associated and aria-label)</span>
+    <br>
+    <a href="#"><i class="material-icons" role="img" aria-labelledby="a6" aria-label="Add photo"></i></a>
+    <br>
+    <span id="a7">Add Photo</span>
+    <br>
+
+
+</body>
+</html>
