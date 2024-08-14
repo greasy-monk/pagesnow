@@ -7,27 +7,60 @@
 </head>
 <body>
     <h1>Input field label-ARIA</h1>
-    <span>Input field with accessible name using aria-labelledby</span>
+    <span>Good example: Input field with accessible name using aria-labelledby</span>
     <div id="txtboxLabel">Enter your five-digit zipcode</div>
 <div
   role="textbox"
   contenteditable="true"
   aria-placeholder="5-digit zipcode"
-  aria-labelledby="txtboxLabel" style="  border: 2px solid red; border-radius: 4px;"></div>
+  aria-labelledby="txtboxLabel" size="4" style="border: 2px solid black; border-radius: 4px;"></div>
 
-  <span>Input field with accessible name using aria-label</span>
+  <span>Good example: Input field with accessible name using aria-label</span>
   <div id="txtboxLabel">Enter your five-digit zipcode</div>
   <div
     role="textbox"
     contenteditable="true"
     aria-placeholder="5-digit zipcode"
-    aria-label="Enter your five-digit zipcode"></div>
+    aria-label="Enter your five-digit zipcode" style="border: 2px solid black; border-radius: 4px;"></div>
 
+
+  <span>Bad example:Input field with accessible name with no accessible name</span>
   <div id="txtboxLabel">Enter your five-digit zipcode</div>
   <div
     role="textbox"
     contenteditable="true"
-    aria-placeholder="5-digit zipcode"
-    aria-labelledby="txtboxLabel"></div>
+    aria-placeholder="5-digit zipcode" style="border: 2px solid black; border-radius: 4px;"></div>
+
+    <span>Bad example: Input field with accessible name aria-labelledby not associated</span>
+    <div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="" size="4" style="border: 2px solid black; border-radius: 4px;"></div>
+
+<span>Bad example: Input field with accessible name aria-labelledby not associated and empty aria-label(empty)</span>
+<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div
+role="textbox"
+contenteditable="true"
+aria-placeholder="5-digit zipcode"
+aria-labelledby="" aria-label="" size="4" style=" border: 2px solid black; border-radius: 4px;"></div>
+
+<span>Bad example: Input field with accessible name aria-labelledby not associated and empty aria-label(empty space)</span>
+<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div
+role="textbox"
+contenteditable="true"
+aria-placeholder="5-digit zipcode"
+aria-labelledby="" aria-label=" " size="4" style=" border: 2px solid black; border-radius: 4px;"></div>
+
+<span>Bad example: Input field with accessible name aria-labelledby not associated and aria-label</span>
+<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div
+role="textbox"
+contenteditable="true"
+aria-placeholder="5-digit zipcode"
+aria-labelledby="" aria-label=" " size="4" style=" border: 2px solid black; border-radius: 4px;"></div>
 </body>
 </html>
