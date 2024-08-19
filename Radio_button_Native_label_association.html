@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio button native label association Conditions</title>
+</head>
+<body>
+
+<h1>Radio button native label association conditions</h1>
+
+
+---------aria-labelledby-----------------
+
+<h2>Example: Radio button element with aria-labelledby</h2>
+<input aria-labelledby="first" id="test" type="radio" placeholder="name">
+<div id="first">Name by aria-labelledby</div>
+
+
+<h2>Example: Radio button element with incorrcet aria-labelledby</h2>
+<input aria-labelledby="firstjiukn" id="test" type="radio" placeholder="name">
+<div id="mnbv">Name by aria-labelledby</div>
+
+<h2>Example: Radio button element without aria-labelledby</h2>
+<input type="radio" placeholder="name">
+
+---------aria-label-----------------
+
+<h2>Example: Radio button element with aria-label</h2>
+<input aria-label="first name by aria label" id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element with empty aria-label</h2>
+<input aria-label="" id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element without aria-label</h2>
+<input type="radio" placeholder="name">
+
+---------title-----------------
+
+<h2>Example: Radio button element with title</h2>
+<input title="first name" id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element with empty title</h2>
+<input title="" id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element without title</h2>
+<input type="radio" placeholder="name">
+
+
+<h2>Example: Radio button with id and label with for</h2>
+<label for="namename">Name:</label><br>
+<input id="namename" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button without for and id</h2>
+<label>Name:</label><br>
+<input type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with incorrcet for and id values</h2>
+<label for="name123">Name:</label><br>
+<input id="last123" type="radio" placeholder="name">
+
+
+<h2>Example: Label wrapped surrounding Radio button</h2>
+<label>Name:<br>
+<input type="radio" placeholder="name">
+</label>
+
+
+<h2>Example: Label wrapped surrounding Radio button in div</h2>
+<label>
+<div>Name:</div><br>
+<div>
+<input type="radio" placeholder="name">
+</div>
+</label>
+
+
+<h2>Example: Label and Radio button present in different div</h2>
+<div>
+<label for="poiuhjbn">Name:</label><br>
+</div>
+<div>
+<input id="poiuhjbn" type="radio" placeholder="name">
+</div>
+
+
+<h2>Example: label with for id</h2>
+<label for="namename">Name:</label><br>
+<input id="namename" type="radio" placeholder="name">
+
+
+<h2>Example: label without for and id</h2>
+<label>Name:</label><br>
+<input type="radio" placeholder="name">
+
+
+<h2>Example: label without aria-hidden</h2>
+<label for="asdfg">Name:</label><br>
+<input id="asdfg" type="radio" placeholder="name">
+
+
+<h2>Example: label with aria-hidden</h2>
+<label aria-hidden="true">Name:</label><br>
+<input type="radio" placeholder="name">
+
+
+<h2>Example: Label wrapped surrounding Radio button</h2>
+<label>Name:<br>
+<input type="radio" placeholder="name">
+</label>
+
+
+<h2>Example: Label not wrapped surrounding Radio button</h2>
+<label>Name:</label><br>
+<input type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with for and id</h2>
+<label for="test">Name:</label><br>
+<input id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label without for and id</h2>
+<label>Name:</label><br>
+<input type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with incorrcet for and id values</h2>
+<label for="name123">Name:</label><br>
+<input id="last123" type="radio" placeholder="name">
+
+---------title-----------------
+
+
+<h2>Example: Radio button element with title</h2>
+<input title="first name" id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element without title</h2>
+<input id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element with aria-hidden and title</h2>
+<label aria-hidden="true">Name:</label><br>
+<input title="first name" type="radio" placeholder="name">
+
+
+<h2>Example: label with title but no aria-hidden</h2>
+<label for="asd">Name:</label><br>
+<input id="asd" title="first name" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button wrapped in label and title</h2>
+<label>Name:<br>
+<input title="first name" type="radio" placeholder="name">
+</label>
+
+<h2>Example: Radio button and label with title and no for and id</h2>
+<label>Name:</label><br>
+<input title="first name" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with title and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input title="first name" id="testsd" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with incorrcet for and id values and title</h2>
+<label for="name123">Name:</label><br>
+<input title="first name" id="last123" type="radio" placeholder="name">
+
+-------------------------------------------------------------------------------
+
+---------aria-label-----------------
+
+
+<h2>Example: Radio button element with aria-label</h2>
+<input aria-label="first name by aria label" id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element without aria-label</h2>
+<input id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element with aria-hidden and aria-label</h2>
+<label aria-hidden="true">Name:</label><br>
+<input aria-label="first name by aria label" type="radio" placeholder="name">
+
+
+<h2>Example: label with aria-label but no aria-hidden</h2>
+<label for="kij">Name:</label><br>
+<input id="kij" aria-label="first name by aria label" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button wrapped in label and aria-label</h2>
+<label>Name:<br>
+<input aria-label="first name by aria label" type="radio" placeholder="name">
+</label>
+
+
+<h2>Example: Radio button and label with aria-label and no for and id</h2>
+<label>Name:</label><br>
+<input aria-label="first name by aria label" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with aria-label and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input aria-label="first name by aria label" id="testsd" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with incorrcet for and id values and aria-label</h2>
+<label for="name123">Name:</label><br>
+<input aria-label="first name by aria label" id="last123" type="radio" placeholder="name">
+
+
+-------------------------------------------------------------------------------
+
+
+<h2>Example: Radio button with aria-labelledby and label with aria-hidden</h2>
+<label id="first1" aria-hidden="true">Name:</label><br>
+<input aria-labelledby="first1" type="radio" placeholder="name">
+
+
+<h2>Example: label with aria-labelledby but no aria-hidden</h2>
+<label id="first2">Name by aria-labelledby:</label><br>
+<input aria-labelledby="first2" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button wrapped in label and aria-labelledby</h2>
+<label id="first3">Name by aria-labelledby:<br>
+<input aria-labelledby="first3" type="radio" placeholder="name">
+</label>
+
+
+<h2>Example: Radio button and label with aria-labelledby and no for and id</h2>
+<label id="first5">Name by aria-labelledby:<br>
+<input aria-labelledby="first5" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button and label with aria-labelledby and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input aria-labelledby="first6" id="testsd" type="radio" placeholder="name">
+<div id="first6">Name by aria-labelledby:</div>
+
+
+<h2>Example: Radio button and label with incorrcet for and id values and aria-labelledby</h2>
+<label for="name123">Name:</label><br>
+<input aria-labelledby="first7" id="last123" type="radio" placeholder="name">
+<div id="first7">Name by aria-labelledby:</div>
+
+------------------------------------------------------------------------------------------
+---------aria-labelledby, aria-label and title-----------------
+
+
+<h2>Example: Radio button element with aria-labelledby, aria-label and title</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first9" id="test" type="radio" placeholder="name">
+<div id="first9">Name by aria-labelledby:</div>
+
+
+<h2>Example: Radio button element without aria-labelledby, aria-label and title</h2>
+<input id="test" type="radio" placeholder="name">
+
+
+<h2>Example: Radio button element with aria-hidden and aria-labelledby, aria-label and title</h2>
+<label aria-hidden="true">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first11" type="radio" placeholder="name">
+<div id="first11">Name by aria-labelledby:</div>
+
+
+<h2>Example: Radio button with aria-labelledby, aria-label and title but no aria-hidden</h2>
+<label>Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first12" type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+
+<h2>Example: Radio button wrapped in label and aria-labelledby, aria-label and title</h2>
+<label>Name:<br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first13" type="radio" placeholder="name">
+</label>
+<div id="first13">Name by aria-labelledby:</div>
+
+
+<h2>Example: Radio button and label with aria-labelledby, aria-label and title and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first15" id="testsd" type="radio" placeholder="name">
+<div id="first15">Name by aria-labelledby:</div>
+
+
+<h2>Example: Radio button and label with incorrcet for and id values and aria-labelledby, aria-label and title</h2>
+<label for="name123">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first16" id="last123" type="radio" placeholder="name">
+<div id="first16">Name by aria-labelledby:</div>
+
+</body>
+</html>
