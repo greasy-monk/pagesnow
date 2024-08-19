@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkbox native label association Conditions</title>
+</head>
+<body>
+
+<h1>Checkbox native label association conditions</h1>
+
+
+---------aria-labelledby-----------------
+
+<h2>Good Example: Checkbox element with label using aria-labelledby</h2>
+<div id="first">Name by aria-labelledby</div>
+<input aria-labelledby="first" id="test" type="checkbox" placeholder="name">
+
+<h2>Bad Example: Checkbox element with label using incorrect aria-labelledby association</h2>
+<div id="mnbv">Name by aria-labelledby</div>
+<input aria-labelledby="firstjiukn" id="test" type="checkbox" placeholder="name">
+
+<h2>Bad Example: Checkbox element without label</h2>
+<input type="checkbox" placeholder="name">
+
+---------aria-label-----------------
+
+<h2>GoodExample: Checkbox element with aria-label</h2>
+<input aria-label="first name by aria label" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad Example: Checkbox element with empty as value for aria-label attribute</h2>
+<input aria-label="" id="test" type="checkbox" placeholder="name">
+
+<h2>Bad Example: Checkbox element with empty space as value for aria-label attribute</h2>
+<input aria-label=" " id="test" type="checkbox" placeholder="name">
+
+---------title-----------------
+
+<h2>Good Example: Checkbox element with title</h2>
+<input title="first name" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad Example: Checkbox element with empty title</h2>
+<input title="" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad Example: Checkbox element without title</h2>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox with id and label with for</h2>
+<label for="namename">Name:</label><br>
+<input id="namename" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox without for and id</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with incorrcet for and id values</h2>
+<label for="name123">Name:</label><br>
+<input id="last123" type="checkbox" placeholder="name">
+
+
+<h2>Example: Label wrapped surrounding Input</h2>
+<label>Name:<br>
+<input type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Example: Label wrapped surrounding Input in div</h2>
+<label>
+<div>Name:</div><br>
+<div>
+<input type="checkbox" placeholder="name">
+</div>
+</label>
+
+
+<h2>Example: Label and Input present in different div</h2>
+<div>
+<label for="poiuhjbn">Name:</label><br>
+</div>
+<div>
+<input id="poiuhjbn" type="checkbox" placeholder="name">
+</div>
+
+
+<h2>Example: label with for id</h2>
+<label for="namename">Name:</label><br>
+<input id="namename" type="checkbox" placeholder="name">
+
+
+<h2>Example: label without for and id</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Example: label without aria-hidden</h2>
+<label for="asdfg">Name:</label><br>
+<input id="asdfg" type="checkbox" placeholder="name">
+
+
+<h2>Example: label with aria-hidden</h2>
+<label aria-hidden="true">Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Example: Label wrapped surrounding Input</h2>
+<label>Name:<br>
+<input type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Example: Label not wrapped surrounding Input</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with for and id</h2>
+<label for="test">Name:</label><br>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label without for and id</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with incorrcet for and id values</h2>
+<label for="name123">Name:</label><br>
+<input id="last123" type="checkbox" placeholder="name">
+
+---------title-----------------
+
+
+<h2>Example: Checkbox element with title</h2>
+<input title="first name" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox element without title</h2>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox element with aria-hidden and title</h2>
+<label aria-hidden="true">Name:</label><br>
+<input title="first name" type="checkbox" placeholder="name">
+
+
+<h2>Example: label with title but no aria-hidden</h2>
+<label for="asd">Name:</label><br>
+<input id="asd" title="first name" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox wrapped in label and title</h2>
+<label>Name:<br>
+<input title="first name" type="checkbox" placeholder="name">
+</label>
+
+<h2>Example: Checkbox and label with title and no for and id</h2>
+<label>Name:</label><br>
+<input title="first name" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with title and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input title="first name" id="testsd" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with incorrcet for and id values and title</h2>
+<label for="name123">Name:</label><br>
+<input title="first name" id="last123" type="checkbox" placeholder="name">
+
+-------------------------------------------------------------------------------
+
+---------aria-label-----------------
+
+
+<h2>Example: Checkbox element with aria-label</h2>
+<input aria-label="first name by aria label" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox element without aria-label</h2>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox element with aria-hidden and aria-label</h2>
+<label aria-hidden="true">Name:</label><br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+
+
+<h2>Example: label with aria-label but no aria-hidden</h2>
+<label for="kij">Name:</label><br>
+<input id="kij" aria-label="first name by aria label" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox wrapped in label and aria-label</h2>
+<label>Name:<br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Example: Checkbox and label with aria-label and no for and id</h2>
+<label>Name:</label><br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with aria-label and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input aria-label="first name by aria label" id="testsd" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with incorrcet for and id values and aria-label</h2>
+<label for="name123">Name:</label><br>
+<input aria-label="first name by aria label" id="last123" type="checkbox" placeholder="name">
+
+
+-------------------------------------------------------------------------------
+
+
+<h2>Example: Checkbox with aria-labelledby and label with aria-hidden</h2>
+<label id="first1" aria-hidden="true">Name:</label><br>
+<input aria-labelledby="first1" type="checkbox" placeholder="name">
+
+
+<h2>Example: label with aria-labelledby but no aria-hidden</h2>
+<label id="first2">Name by aria-labelledby:</label><br>
+<input aria-labelledby="first2" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox wrapped in label and aria-labelledby</h2>
+<label id="first3">Name by aria-labelledby:<br>
+<input aria-labelledby="first3" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Example: Checkbox and label with aria-labelledby and no for and id</h2>
+<label id="first5">Name by aria-labelledby:<br>
+<input aria-labelledby="first5" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox and label with aria-labelledby and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input aria-labelledby="first6" id="testsd" type="checkbox" placeholder="name">
+<div id="first6">Name by aria-labelledby:</div>
+
+
+<h2>Example: Checkbox and label with incorrcet for and id values and aria-labelledby</h2>
+<label for="name123">Name:</label><br>
+<input aria-labelledby="first7" id="last123" type="checkbox" placeholder="name">
+<div id="first7">Name by aria-labelledby:</div>
+
+------------------------------------------------------------------------------------------
+---------aria-labelledby, aria-label and title-----------------
+
+
+<h2>Example: Checkbox element with aria-labelledby, aria-label and title</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first9" id="test" type="checkbox" placeholder="name">
+<div id="first9">Name by aria-labelledby:</div>
+
+
+<h2>Example: Checkbox element without aria-labelledby, aria-label and title</h2>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Example: Checkbox element with aria-hidden and aria-labelledby, aria-label and title</h2>
+<label aria-hidden="true">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first11" type="checkbox" placeholder="name">
+<div id="first11">Name by aria-labelledby:</div>
+
+
+<h2>Example: Checkbox with aria-labelledby, aria-label and title but no aria-hidden</h2>
+<label>Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first12" type="checkbox" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+
+<h2>Example: Checkbox wrapped in label and aria-labelledby, aria-label and title</h2>
+<label>Name:<br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first13" type="checkbox" placeholder="name">
+</label>
+<div id="first13">Name by aria-labelledby:</div>
+
+
+<h2>Example: Checkbox and label with aria-labelledby, aria-label and title and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first15" id="testsd" type="checkbox" placeholder="name">
+<div id="first15">Name by aria-labelledby:</div>
+
+
+<h2>Example: Checkbox and label with incorrcet for and id values and aria-labelledby, aria-label and title</h2>
+<label for="name123">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first16" id="last123" type="checkbox" placeholder="name">
+<div id="first16">Name by aria-labelledby:</div>
+
+</body>
+</html>
