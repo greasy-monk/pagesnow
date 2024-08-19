@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input field label - Native Conditions</title>
+</head>
+<body>
+
+<h1>Input field label - Native conditions</h1>
+
+
+<h2>Good example: label within 5th element</h2>
+<label for="namename">Name:</label><br>
+<input id="namename" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: label within 5th element</h2>
+<label>Name:</label><br>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Good example: label without aria-hidden</h2>
+<label for="asdfg">Name:</label><br>
+<input id="asdfg" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: label with aria-hidden</h2>
+<label aria-hidden="true">Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Good example: Label wrapped srrounding Inputtill 5th element</h2>
+<label>Name:<br>
+<input type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Bad example: Checkbox within label till 5th element</h2>
+<label>Name:<br>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<input type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Good example: Checkbox and label with for and id</h2>
+<label for="test">Name:</label><br>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label without for and id</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox and label with for and id</h2>
+<label for="test">Name:</label><br>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with incorrcet for and id values</h2>
+<label for="name123">Name:</label><br>
+<input id="last123" type="checkbox" placeholder="name">
+
+---------title-----------------
+
+
+<h2>Good example: Checkbox element with title</h2>
+<input title="first name" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox element without title</h2>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox element with aria-hidden and title</h2>
+<label aria-hidden="true">Name:</label><br>
+<input title="first name" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: label with title but no aria-hidden</h2>
+<label>Name:</label><br>
+<input title="first name" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox within label till 5th element and title</h2>
+<label>Name:<br>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<input title="first name" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Bad example: Checkbox within label till 5th element and title</h2>
+<label>Name:<br>
+<input title="first name" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Good example: Checkbox and label with title and no for and id</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with title and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input title="first name" id="testsd" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox and label with incorrcet for and id values and title</h2>
+<label for="name123">Name:</label><br>
+<input title="first name" id="last123" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with correct for and id values and title</h2>
+<label for="test">Name:</label><br>
+<input title="first name" id="test" type="checkbox" placeholder="name">
+
+-------------------------------------------------------------------------------
+
+---------aria-label-----------------
+
+
+<h2>Good example: Checkbox element with aria-label</h2>
+<input aria-label="first name by aria label" id="test" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox element without aria-label</h2>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox element with aria-hidden and aria-label</h2>
+<label aria-hidden="true">Name:</label><br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox with aria-label but no aria-hidden</h2>
+<label>Name:</label><br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox within label till 5th element and aria-label</h2>
+<label>Name:<br>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Bad example: Checkbox within label till 5th element and aria-label</h2>
+<label>Name:<br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Good example: Checkbox and label with aria-label and no for and id</h2>
+<label>Name:</label><br>
+<input aria-label="first name by aria label" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with aria-label and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input aria-label="first name by aria label" id="testsd" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox and label with incorrcet for and id values and aria-label</h2>
+<label for="name123">Name:</label><br>
+<input aria-label="first name by aria label" id="last123" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with correct for and id values and aria-label</h2>
+<label for="test">Name:</label><br>
+<input aria-label="first name by aria label" id="test" type="checkbox" placeholder="name">
+
+-------------------------------------------------------------------------------
+---------aria-labelledby-----------------
+
+<h2>Good example: Checkbox element with aria-labelledby</h2>
+<input aria-labelledby="first" id="test" type="checkbox" placeholder="name">
+<div id="first">Name by aria-labelledby</div>
+
+
+<h2>Bad example: Checkbox element with incorrcet aria-labelledby</h2>
+<input aria-labelledby="firstjiukn" id="test" type="checkbox" placeholder="name">
+<div id="mnbv">Name by aria-labelledby</div>
+
+
+<h2>Good example: Checkbox element with aria-hidden and aria-labelledby</h2>
+<label aria-hidden="true">Name:</label><br>
+<input aria-labelledby="first1" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: label with aria-labelledby but no aria-hidden</h2>
+<label id="first2">Name by aria-labelledby:</label><br>
+<input aria-labelledby="first2" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox within label till 5th element and aria-labelledby</h2>
+<label id="first3">Name by aria-labelledby:<br>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<input aria-label="first3" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Bad example: Checkbox within label till 5th element and aria-labelledby</h2>
+<label id="first4">Name by aria-labelledby:<br>
+<input aria-labelledby="first4" type="checkbox" placeholder="name">
+</label>
+
+
+<h2>Good example: Checkbox and label with aria-labelledby and no for and id</h2>
+<label id="first5">Name by aria-labelledby:<br>
+<input aria-labelledby="first5" type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with aria-labelledby and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input aria-labelledby="first6" id="testsd" type="checkbox" placeholder="name">
+<div id="first6">Name by aria-labelledby:</div>
+
+
+<h2>Good example: Checkbox and label with incorrcet for and id values and aria-labelledby</h2>
+<label for="name123">Name:</label><br>
+<input aria-labelledby="first7" id="last123" type="checkbox" placeholder="name">
+<div id="first7">Name by aria-labelledby:</div>
+
+
+<h2>Bad example: Checkbox and label with correct for and id values and aria-labelledby</h2>
+<label for="test">Name:</label><br>
+<input aria-labelledby="first8" id="test" type="checkbox" placeholder="name">
+<div id="first8">Name by aria-labelledby:</div>
+
+
+---------------------------------------------------Completed-----------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+---------aria-labelledby, aria-label and title-----------------
+
+
+<h2>Good example: Checkbox element with title</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first9" id="test" type="checkbox" placeholder="name">
+<div id="first9">Name by aria-labelledby:</div>
+
+
+<h2>Bad example: Checkbox element without title</h2>
+<input id="test" type="checkbox" placeholder="name">
+
+
+<h2>Good example: Checkbox element with aria-hidden and title</h2>
+<label aria-hidden="true">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first11" type="checkbox" placeholder="name">
+<div id="first11">Name by aria-labelledby:</div>
+
+
+<h2>Bad example: Checkbox with title but no aria-hidden</h2>
+<label>Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first12" type="checkbox" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+
+<h2>Good example: Checkbox within label till 5th element and title</h2>
+<label>Name:<br>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first13" type="checkbox" placeholder="name">
+</label>
+<div id="first13">Name by aria-labelledby:</div>
+
+
+<h2>Bad example: Checkbox within label till 5th element and title</h2>
+<label>Name:<br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first14" type="checkbox" placeholder="name">
+</label>
+<div id="first14">Name by aria-labelledby:</div>
+
+
+<h2>Good example: Checkbox and label with title and no for and id</h2>
+<label>Name:</label><br>
+<input type="checkbox" placeholder="name">
+
+
+<h2>Bad example: Checkbox and label with title and for and id</h2>
+<label for="testsd">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first15" id="testsd" type="checkbox" placeholder="name">
+<div id="first15">Name by aria-labelledby:</div>
+
+
+<h2>Good example: Checkbox and label with incorrcet for and id values and title</h2>
+<label for="name123">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first16" id="last123" type="checkbox" placeholder="name">
+<div id="first16">Name by aria-labelledby:</div>
+
+
+<h2>Bad example: Checkbox and label with correct for and id values and title</h2>
+<label for="test">Name:</label><br>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first17" id="test" type="checkbox" placeholder="name">
+<div id="first17">Name by aria-labelledby:</div>
+
+
+
+</body>
+</html>
