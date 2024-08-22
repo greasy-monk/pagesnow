@@ -39,33 +39,222 @@
         cursor: pointer;
       }
       </style>
+      <script>/*
+        *   This content is licensed according to the W3C Software License at
+        *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+        *
+        *   File:   radio.js
+        *
+        *   Desc:   Radio group widget that implements ARIA Authoring Practices
+        */
+       
+       'use strict';
+       
+       class RadioGroup {
+         constructor(groupNode) {
+           this.groupNode = groupNode;
+       
+           this.radioButtons = [];
+       
+           this.firstRadioButton = null;
+           this.lastRadioButton = null;
+       
+           var rbs = this.groupNode.querySelectorAll('[role=radio]');
+       
+           for (var i = 0; i < rbs.length; i++) {
+             var rb = rbs[i];
+       
+             rb.tabIndex = -1;
+             rb.setAttribute('aria-checked', 'false');
+       
+             rb.addEventListener('keydown', this.handleKeydown.bind(this));
+             rb.addEventListener('click', this.handleClick.bind(this));
+             rb.addEventListener('focus', this.handleFocus.bind(this));
+             rb.addEventListener('blur', this.handleBlur.bind(this));
+       
+             this.radioButtons.push(rb);
+       
+             if (!this.firstRadioButton) {
+               this.firstRadioButton = rb;
+             }
+             this.lastRadioButton = rb;
+           }
+           this.firstRadioButton.tabIndex = 0;
+         }
+       
+         setChecked(currentItem) {
+           for (var i = 0; i < this.radioButtons.length; i++) {
+             var rb = this.radioButtons[i];
+             rb.setAttribute('aria-checked', 'false');
+             rb.tabIndex = -1;
+           }
+           currentItem.setAttribute('aria-checked', 'true');
+           currentItem.tabIndex = 0;
+           currentItem.focus();
+         }
+       
+         setCheckedToPreviousItem(currentItem) {
+           var index;
+       
+           if (currentItem === this.firstRadioButton) {
+             this.setChecked(this.lastRadioButton);
+           } else {
+             index = this.radioButtons.indexOf(currentItem);
+             this.setChecked(this.radioButtons[index - 1]);
+           }
+         }
+       
+         setCheckedToNextItem(currentItem) {
+           var index;
+       
+           if (currentItem === this.lastRadioButton) {
+             this.setChecked(this.firstRadioButton);
+           } else {
+             index = this.radioButtons.indexOf(currentItem);
+             this.setChecked(this.radioButtons[index + 1]);
+           }
+         }
+       
+         /* EVENT HANDLERS */
+       
+         handleKeydown(event) {
+           var tgt = event.currentTarget,
+             flag = false;
+       
+           switch (event.key) {
+             case ' ':
+               this.setChecked(tgt);
+               flag = true;
+               break;
+       
+             case 'Up':
+             case 'ArrowUp':
+             case 'Left':
+             case 'ArrowLeft':
+               this.setCheckedToPreviousItem(tgt);
+               flag = true;
+               break;
+       
+             case 'Down':
+             case 'ArrowDown':
+             case 'Right':
+             case 'ArrowRight':
+               this.setCheckedToNextItem(tgt);
+               flag = true;
+               break;
+       
+             default:
+               break;
+           }
+       
+           if (flag) {
+             event.stopPropagation();
+             event.preventDefault();
+           }
+         }
+       
+         handleClick(event) {
+           this.setChecked(event.currentTarget);
+         }
+       
+         handleFocus(event) {
+           event.currentTarget.classList.add('focus');
+         }
+       
+         handleBlur(event) {
+           event.currentTarget.classList.remove('focus');
+         }
+       }
+       
+       // Initialize radio button group
+       window.addEventListener('load', function () {
+         var radios = document.querySelectorAll('[role="radiogroup"]');
+         for (var i = 0; i < radios.length; i++) {
+           new RadioGroup(radios[i]);
+         }
+       });
+       </script>
 </head>
 <body>
-    <h1>Radio button label ARIA</h1>
+    <h1>Radio button label - ARIA</h1>
 
-    <h2>Good Example: Radio button with accessible name</h2>
-    <div role="radio" aria-checked="false" tabindex="0">Pickup</div>
+    <h2>Good example: Radio buttons with accessible name through internal text</h2>
+    <div role="radio" aria-checked="false" tabindex="0">Regular crust</div>
+    <div role="radio" aria-checked="false" tabindex="-1">Deep dish</div>
+    <div role="radio" aria-checked="false" tabindex="-1">Thin crust</div>
 
-    <h2>Good Example: Radio button with aria hidden attribute</h2>
-    <div role="radio" aria-checked="false" aria-hidden="true" tabindex="0">Pickup</div>
+    <h2>Good example: Radio buttons with accessible name through aria-label attribute</h2>
+    <span>Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-label="Regular crust"></div>
+    <span>Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label="Deep dish"></div>
+    <span>Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label="Thin crust"></div>
 
-    <h2>Good Example: Radio button with tabindex="-1" attribute</h2>
-    <div role="radio" aria-checked="false" tabindex="-1">Pickup</div>
+    <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute</h2>
+    <span id="a1">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a1"></div>
+    <span id="b1">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b1"></div>
+    <span id="c1">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c1"></div>
 
-    <h2>Good Example: Radio button with aria hidden and tabindex="-1" attributes</h2>
-    <div role="radio" aria-checked="false" aria-hidden="true" tabindex="-1">Pickup</div>
+    <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute and empty aria-label attribute</h2>
+    <span id="a3">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a3" aria-label=""></div>
+    <span id="b3">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b3" aria-label=""></div>
+    <span id="c3">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c3" aria-label=""></div>
 
-    <h2>Good Example: Radio button with display none property</h2>
-    <div role="radio" aria-checked="false" tabindex="0" style="display: none;">Pickup</div>
+    <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute(Incorrect value) and aria-label attribute</h2>
+    <span id="a1">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label=""></div>
+    <span id="b1">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2" aria-label=""></div>
+    <span id="c1">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2" aria-label=""></div>
 
-    <h2>Good Example: Radio button with aria-label attribute</h2>
-    <div role="radio" aria-checked="false" tabindex="0" aria-label="Yes">Pickup</div>
+    <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute(no internal text) and aria-label attribute</h2>
+    <span id="a4"></span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a4" aria-label="Regular crust"></div>
+    <span id="b4"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b4" aria-label="Deep dish"></div>
+    <span id="c4"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c4" aria-label="Thin crust"></div>
 
-    <h2 id="a1">Good Example: Radio button with aria-labelledby attribute</h2>
-    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a1">Pickup</div>
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(empty) attribute</h2>
+    <span id="a1">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby=""></div>
+    <span id="b1">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby=""></div>
+    <span id="c1">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby=""></div>
 
-    <h2 id="a1">Good Example: Radio button with aria-label and aria-labelledby attribute</h2>
-    <div role="radio" aria-checked="false" tabindex="0" aria-label="Yes" aria-labelledby="a1">Pickup</div>
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute</h2>
+    <span id="a1">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2"></div>
+    <span id="b1">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2"></div>
+    <span id="c1">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2"></div>
+
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label</h2>
+    <span id="a1">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2"></div>
+    <span id="b1">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2"></div>
+    <span id="c1">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2"></div>
+
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label and no internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2"></div>
+    <span id="b1">Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2"></div>
+    <span id="c1">Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2"></div>
+    
 
 </body>
 </html>
