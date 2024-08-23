@@ -191,6 +191,14 @@
     <span>Thin crust</span>
     <div role="radio" aria-checked="false" tabindex="-1" aria-label="Thin crust"></div>
 
+    <h2>Good example: Radio buttons with accessible name through empty aria-label attribute and internal text</h2>
+    <span>Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-label="">Regular crust</div>
+    <span>Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label="">Deep dish</div>
+    <span>Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label="">Thin crust</div>
+
     <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute</h2>
     <span id="a1">Regular crust</span>
     <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a1"></div>
@@ -297,13 +305,11 @@
     <span>Thin crust</span>
     <div role="radio" aria-checked="false" tabindex="-1" aria-label=""></div>
 
-    <h2>Good example: Radio buttons with accessible name through empty aria-label attribute and internal text</h2>
-    <span>Regular crust</span>
-    <div role="radio" aria-checked="false" tabindex="0" aria-label="">Regular crust</div>
-    <span>Deep dish</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-label="">Deep dish</div>
-    <span>Thin crust</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-label="">Thin crust</div>
+    <h2>Bad example: Radio buttons with no accessible name</h2>
+    <div role="radio" aria-checked="false" tabindex="0"></div>
+    <div role="radio" aria-checked="false" tabindex="-1"></div>
+    <div role="radio" aria-checked="false" tabindex="-1"></div>
+
 
 </body>
 </html>
