@@ -201,19 +201,19 @@
 
     <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute(Incorrect value) and aria-label attribute</h2>
     <span id="a1">Regular crust</span>
-    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label="Regular crust"></div>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a8" aria-label="Regular crust"></div>
     <span id="b1">Deep dish</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2" aria-label="Deep dish"></div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b8" aria-label="Deep dish"></div>
     <span id="c1">Thin crust</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2" aria-label="Thin crust"></div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c8" aria-label="Thin crust"></div>
 
     <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute(Incorrect value) and empty aria-label attribute and internal text</h2>
     <span id="a1">Regular crust</span>
-    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label="">Regular crust</div>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a9" aria-label="">Regular crust</div>
     <span id="b1">Deep dish</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2" aria-label="">Deep dish</div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b9" aria-label="">Deep dish</div>
     <span id="c1">Thin crust</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2" aria-label="">Thin crust</div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c9" aria-label="">Thin crust</div>
 
     <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute(Incorrect value) and no aria-label attribute and internal text</h2>
     <span id="a1">Regular crust</span>
@@ -239,9 +239,17 @@
     <span id="c5"></span>
     <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c5">Thin crust</div>
 
+    <h2>Good example: Radio buttons with accessible name through aria-labelledby attribute(no internal text) and empty aria-label attribute and internal text</h2>
+    <span id="a5"></span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a5" aria-label="">Regular crust</div>
+    <span id="b5"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b5" aria-label="">Deep dish</div>
+    <span id="c5"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c5" aria-label="">Thin crust</div>
 
 
-    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(empty) attribute</h2>
+
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(empty) attribute and no internal text</h2>
     <span id="a1">Regular crust</span>
     <div role="radio" aria-checked="false" tabindex="0" aria-labelledby=""></div>
     <span id="b1">Deep dish</span>
@@ -249,30 +257,53 @@
     <span id="c1">Thin crust</span>
     <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby=""></div>
 
-    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute</h2>
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute and no internal text</h2>
     <span id="a1">Regular crust</span>
-    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2"></div>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a21"></div>
     <span id="b1">Deep dish</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2"></div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b21"></div>
     <span id="c1">Thin crust</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2"></div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c21"></div>
 
-    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label</h2>
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label and not internal text</h2>
     <span id="a1">Regular crust</span>
-    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2"></div>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label=""></div>
     <span id="b1">Deep dish</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2"></div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2" aria-label=""></div>
     <span id="c1">Thin crust</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2"></div>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2" aria-label=""></div>
 
-    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label and no internal text</h2>
-    <span id="a1">Regular crust</span>
-    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="a2"></div>
-    <span id="b1">Deep dish</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="b2"></div>
-    <span id="c1">Thin crust</span>
-    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="c2"></div>
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(no internal text) attribute and empty aria-label and no internal text</h2>
+    <span id="z1"></span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="z1" aria-label=""></div>
+    <span id="x1"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="x1" aria-label=""></div>
+    <span id="y1"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="y1" aria-label=""></div>
+
+    <h2>Bad example: Radio buttons with accessible name through aria-labelledby(no internal text) attribute and no aria-label and no internal text</h2>
+    <span id="z1"></span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-labelledby="z1"></div>
+    <span id="x1"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="x1"></div>
+    <span id="y1"></span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-labelledby="y1"></div>
     
+    <h2>Bad example: Radio buttons with accessible name through empty aria-label attribute and no internal text</h2>
+    <span>Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-label=""></div>
+    <span>Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label=""></div>
+    <span>Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label=""></div>
+
+    <h2>Good example: Radio buttons with accessible name through empty aria-label attribute and internal text</h2>
+    <span>Regular crust</span>
+    <div role="radio" aria-checked="false" tabindex="0" aria-label="">Regular crust</div>
+    <span>Deep dish</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label="">Deep dish</div>
+    <span>Thin crust</span>
+    <div role="radio" aria-checked="false" tabindex="-1" aria-label="">Thin crust</div>
 
 </body>
 </html>
