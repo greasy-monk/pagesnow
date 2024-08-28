@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div id="combo1-label" class="combo-label"></div>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Select only combobox label - ARIA </h1>
+
+
+    <span>Good example: Input field with accessible name using aria-labelledby</span>
+    <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+    <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+    <br>
+  <span>Good example: Input field with accessible name using aria-label</span>
+  <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+  <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+  <br>
+    <span>Good example: Input field with accessible name using aria-labelledby(incorrect value) and aria-label attribute</span>
+    <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+    <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+    <br>
+
+    <span>Good example: Input field with accessible name using aria-labelledby(empty value) and aria-label attribute</span>
+    <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+    <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+    <br>
+
+    <span>Good example: Input field with accessible name using aria-labelledby(no internal text) and aria-label attribute</span>
+    <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+    <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+    <br>
+
+
+
+  <span>Bad example:Input field with no accessible name</span>
+  <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+  <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+  <br>
+
+  <span>Bad example: Input field with accessible name using aria-labelledby not associated and no aria-label</span>
+  <div id="combo1-label" class="combo-label">Favorite Fruit</div>
+  <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+  <br>
+
+<span>Bad example: Input field with accessible name using aria-labelledby not associated and empty aria-label(empty)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+<span>Bad example: Input field with accessible name using aria-labelledby not associated and empty aria-label(empty space)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+<span>Bad example: Input field with accessible name using aria-labelledby associated (Empty internal text)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+<span>Bad example: Input field with accessible name using aria-labelledby associated (Empty internal text) and aria-label(Empty)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+<span>Bad example: Input field with accessible name using aria-labelledby associated (Empty internal text) and aria-label(Empty space)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+<span>Bad example: Input field with accessible name using aria-label(empty)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+<span>Bad example: Input field with accessible name using aria-label(empty space)</span>
+<div id="combo1-label" class="combo-label">Favorite Fruit</div>
+<div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0">Choose a Fruit</div>
+<br>
+
+
+</body>
+</html>
