@@ -115,64 +115,178 @@
 <body>
     <h1>Switch Label ARIA</h1>
 
-    <h2>Good Example: Switch with accessible name</h2>
+    <h2>Good example: Switch with accessible name through internal text</h2>
     <div role="switch" aria-checked="false" tabindex="0">
-        <span class="label">Notifications</span>
-        <span class="switch">
-          <span></span>
-        </span>
-        <span class="on" aria-hidden="true">On</span>
-        <span class="off" aria-hidden="true">Off</span>
-      </div>
+      <span class="label">Notifications</span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
 
-      <h3>Bad Example: Switch with no accessible name</h3>
-      <div role="switch" aria-checked="false" tabindex="0">
-          <span class="label"></span>
-          <span class="switch">
-            <span></span>
-          </span>
-          <span class="on" aria-hidden="true">On</span>
-          <span class="off" aria-hidden="true">Off</span>
-        </div>
+    <h2>Good example: Switch with accessible name through aria-label attribute</h2>
+    <div role="switch" aria-checked="false" tabindex="0" aria-label="Notifications">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
 
-        <h2>Good Example: Switch with aria label attribute</h2>
-        <div role="switch" aria-checked="false" tabindex="0" aria-label="Notification1">
-            <span class="label">Notifications</span>
-            <span class="switch">
-              <span></span>
-            </span>
-            <span class="on" aria-hidden="true">On</span>
-            <span class="off" aria-hidden="true">Off</span>
-          </div>
+    <h2>Good example: Switch with accessible name through empty aria-label attribute and internal text</h2>
+    <div role="switch" aria-checked="false" tabindex="0" aria-label="">
+      <span class="label">Notifications</span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
 
-          <h2>Good Example: Switch with aria labelledby attribute</h2>
-          <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="N1">
-              <span id="N1" class="label">Notifications</span>
-              <span class="switch">
-                <span></span>
-              </span>
-              <span class="on" aria-hidden="true">On</span>
-              <span class="off" aria-hidden="true">Off</span>
-            </div>
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute</h2>
+    <span id="a1">Notifications</span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a1">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
 
-            <h2>Bad Example: Switch with aria labelledby(empty) attribute</h2>
-            <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="">
-                <span id="N1" class="label">Notifications</span>
-                <span class="switch">
-                  <span></span>
-                </span>
-                <span class="on" aria-hidden="true">On</span>
-                <span class="off" aria-hidden="true">Off</span>
-              </div>
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute(Incorrect value) and aria-label attribute</h2>
+    <span id="a1">Notifications</span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label="Notifications">
+      <span class="label"></span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
 
-              <h2>Bad Example: Switch with aria labelledby(empty space) attribute</h2>
-              <div role="switch" aria-checked="false" tabindex="0" aria-labelledby=" ">
-                  <span id="N1" class="label">Notifications</span>
-                  <span class="switch">
-                    <span></span>
-                  </span>
-                  <span class="on" aria-hidden="true">On</span>
-                  <span class="off" aria-hidden="true">Off</span>
-                </div>
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute(Incorrect value) and empty aria-label attribute and internal text</h2>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label="">
+      <span class="label">Notifications</span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute(Incorrect value) and no aria-label attribute and internal text</h2>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a2">
+      <span class="label">Notifications</span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute(no internal text) and aria-label attribute</h2>
+    <span id="a4"></span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a4" aria-label="Notifications">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute(no internal text) and no aria-label attribute and internal text</h2>
+    <span id="a5"></span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a5">
+      <span class="label">Notifications</span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Good example: Switch with accessible name through aria-labelledby attribute(no internal text) and empty aria-label attribute and internal text</h2>
+    <span id="a5"></span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a5" aria-label="">
+      <span class="label">Notifications</span>
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+
+
+    <h2>Bad example: Switch with accessible name through aria-labelledby(empty) attribute and no internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Bad example: Switch with accessible name through aria-labelledby(incorrect value) attribute and no internal text</h2>
+    <span id="a1">Notifications</span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a6">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Bad example: Switch with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label and no internal text</h2>
+    <span id="a1">Notifications</span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="a6" aria-label="">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Bad example: Switch with accessible name through aria-labelledby(no internal text) attribute and empty aria-label and no internal text</h2>
+    <span id="z1"></span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="z1" aria-label="">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Bad example: Switch with accessible name through aria-labelledby(no internal text) attribute and no aria-label and no internal text</h2>
+    <span id="z1"></span>
+    <div role="switch" aria-checked="false" tabindex="0" aria-labelledby="z1">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+    
+    <h2>Bad example: Switch with accessible name through empty aria-label attribute and no internal text</h2>
+    <div role="switch" aria-checked="false" tabindex="0" aria-label="">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+    <h2>Bad example: Switch with no accessible name</h2>
+    <div role="switch" aria-checked="false" tabindex="0">
+      <span class="switch">
+        <span></span>
+      </span>
+      <span class="on" aria-hidden="true">On</span>
+      <span class="off" aria-hidden="true">Off</span>
+    </div>
+
+
 </body>
 </html>
