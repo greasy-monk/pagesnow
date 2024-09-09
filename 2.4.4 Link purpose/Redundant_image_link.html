@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Redundant image link</h1>
+
+<span>Good example: Link text and image link with non-identical accessible name</span>
+<br>
+
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+
+Image link
+<a href="https://www.barrierbreak.com/">
+  <img src="w3c.png" alt="Home">
+</a>
+<br>
+<br>
+
+<span>Good example: Link text and SVG image link with non-identical accessible name</span>
+<br>
+
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+
+SVG image in link
+<a href="https://www.barrierbreak.com/">
+<svg width="50" height="50">
+<title>Home</title>
+  <circle cx="25" cy="25" r="20" stroke="green" stroke-width="2" fill="yellow" />
+</svg>
+</a>
+<br>
+<br>
+
+<span>Good example: Link text and image icon link with non-identical accessible name</span>
+<br>
+
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+
+Image icon in link
+<a href="https://www.barrierbreak.com/">
+<i class="fas fa-band-aid" role="img" aria-label="Home"></i>
+</a>
+<br>
+<br>
+
+<span>Bad example: Link text and image link with identical accessible name</span>
+<br>
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+
+Image link
+<a href="https://www.w3.org/">
+  <img src="w3c.png" alt="Services">
+</a>
+<br>
+<br>
+
+<span>Bad example: Link text and SVG image link with identical accessible name</span>
+<br>
+
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+
+SVG image in link
+<a href="https://www.w3.org/">
+<svg width="100" height="100">
+<title>Services</title>
+<circle cx="25" cy="25" r="20" stroke="green" stroke-width="2" fill="yellow" />
+</svg>
+</a>
+<br>
+<br>
+
+<span>Bad example: Link text and image icon link with identical accessible name</span>
+<br>
+
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+
+Image icon in link
+<a href="https://www.w3.org/">
+<i class="fas fa-band-aid" role="img" aria-label="Services"></i>
+</a>
+<br>
+
+
+</body>
+</html>
