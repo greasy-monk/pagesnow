@@ -10,67 +10,96 @@
 
 ---------aria-labelledby-----------------
 
-<h2>Good Example: Radio button element with aria-labelledby</h2>
-<input aria-labelledby="first" id="test" type="radio" placeholder="name">
+<h2>Good Example: Radio button element with accessible name through aria-labelledby attribute</h2>
+<input aria-labelledby="first" type="radio" placeholder="name">
 <div id="first">Name by aria-labelledby</div>
 
-
-<h2>Example: Radio button element with incorrcet aria-labelledby</h2>
-<input aria-labelledby="firstjiukn" id="test" type="radio" placeholder="name">
+<h2>Bad Example: Radio button element with accessible name through incorrect aria-labelledby attribute</h2>
+<input aria-labelledby="firstjiukn" type="radio" placeholder="name">
 <div id="mnbv">Name by aria-labelledby</div>
 
-<h2>Example: Radio button element without aria-labelledby</h2>
+<h2>Bad Example: Radio button element with accessible name through empty aria-labelledby attribute</h2>
+<input aria-labelledby="" type="radio" placeholder="name">
+<div id="mnbv">Name by aria-labelledby</div>
+
+<h2>Bad Example: Radio button element with accessible name through empty space aria-labelledby attribute</h2>
+<input aria-labelledby=" " type="radio" placeholder="name">
+<div id="mnbv">Name by aria-labelledby</div>
+
+<h2>Bad Example: Radio button element with accessible name through aria-labelledby(Empty internal text) attribute</h2>
+<input aria-labelledby="mnbv" type="radio" placeholder="name">
+<div id="mnbv"></div>
+
+<h2>Bad Example: Radio button element without accessible name</h2>
 <input type="radio" placeholder="name">
 
 ---------aria-label-----------------
 
-<h2>Example: Radio button element with aria-label</h2>
-<input aria-label="first name by aria label" id="test" type="radio" placeholder="name">
+<h2>Good Example: Radio button element with accessible name through aria-label attribute</h2>
+<input aria-label="First name" type="radio" placeholder="name">
 
 
-<h2>Example: Radio button element with empty aria-label</h2>
-<input aria-label="" id="test" type="radio" placeholder="name">
+<h2>Bad Example: Radio button element with accessible name through empty aria-label attribute</h2>
+<input aria-label="" type="radio" placeholder="name">
 
+<h2>Bad Example: Radio button element with accessible name through empty space aria-label attribute</h2>
+<input aria-label=" " type="radio" placeholder="name">
 
-<h2>Example: Radio button element without aria-label</h2>
-<input type="radio" placeholder="name">
+<h2>Good Example: Radio button wrapped in label and aria-label</h2>
+<label>Name:<br>
+<input aria-label="first name by aria label" type="radio" placeholder="name">
+</label>
+
+<h2>Good Example: Radio button and label with incorrcet explicit association and aria-label</h2>
+<label for="name123">Name:</label><br>
+<input aria-label="first name by aria label" id="last123" type="radio" placeholder="name">
 
 ---------title-----------------
 
-<h2>Example: Radio button element with title</h2>
-<input title="first name" id="test" type="radio" placeholder="name">
+<h2>Good Example: Radio button element with accessible name through title attribute</h2>
+<label>Last name</label>
+<input title="first name" type="radio" placeholder="name">
 
 
-<h2>Example: Radio button element with empty title</h2>
-<input title="" id="test" type="radio" placeholder="name">
+<h2>Bad Example: Radio button element with accessible name through empty title attribute</h2>
+<input title="" type="radio" placeholder="name">
 
+<h2>Bad Example: Radio button element with accessible name through empty space title attribute</h2>
+<input title=" " type="radio" placeholder="name">
 
-<h2>Example: Radio button element without title</h2>
-<input type="radio" placeholder="name">
+-----------Explicit Association-----------
 
-
-<h2>Example: Radio button with id and label with for</h2>
-<label for="namename">Name:</label><br>
+<h2>Good Example: Radio button with explicit association with label</h2>
+<label for="namename">First Name:</label><br>
 <input id="namename" type="radio" placeholder="name">
 
 
-<h2>Example: Radio button without for and id</h2>
+<h2>Bad Example: Radio button without explicit association</h2>
 <label>Name:</label><br>
 <input type="radio" placeholder="name">
 
 
-<h2>Example: Radio button and label with incorrcet for and id values</h2>
-<label for="name123">Name:</label><br>
+<h2>Bad Example: Radio button with incorrect explicit association with label</h2>
+<label for="name123">First Name:</label><br>
 <input id="last123" type="radio" placeholder="name">
 
+<h2>Good Example: Radio button with explicit association with label (Label and Radio button present in different div)</h2>
+<div>
+<label for="a1">Name:</label><br>
+</div>
+<div>
+<input id="a1" type="radio" placeholder="name">
+</div>
 
-<h2>Example: Label wrapped surrounding Radio button</h2>
-<label>Name:<br>
+-----------Implicit Association-----------
+
+<h2>Good Example: Radio button with implicit association with label</h2>
+<label>First Name:<br>
 <input type="radio" placeholder="name">
 </label>
 
 
-<h2>Example: Label wrapped surrounding Radio button in div</h2>
+<h2>Good Example: Radio button with implicit association with label (Wrapped surrounding Radio button in div)</h2>
 <label>
 <div>Name:</div><br>
 <div>
@@ -78,222 +107,87 @@
 </div>
 </label>
 
-
-<h2>Example: Label and Radio button present in different div</h2>
-<div>
-<label for="poiuhjbn">Name:</label><br>
-</div>
-<div>
-<input id="poiuhjbn" type="radio" placeholder="name">
-</div>
+---------Title and Implicit combination-----------------
 
 
-<h2>Example: label with for id</h2>
-<label for="namename">Name:</label><br>
-<input id="namename" type="radio" placeholder="name">
-
-
-<h2>Example: label without for and id</h2>
-<label>Name:</label><br>
-<input type="radio" placeholder="name">
-
-
-<h2>Example: label without aria-hidden</h2>
-<label for="asdfg">Name:</label><br>
-<input id="asdfg" type="radio" placeholder="name">
-
-
-<h2>Example: label with aria-hidden</h2>
-<label aria-hidden="true">Name:</label><br>
-<input type="radio" placeholder="name">
-
-
-<h2>Example: Label wrapped surrounding Radio button</h2>
+<h2>Good Example: Radio button wrapped in label and empty title</h2>
 <label>Name:<br>
-<input type="radio" placeholder="name">
+<input title="" type="radio" placeholder="name">
 </label>
 
 
-<h2>Example: Label not wrapped surrounding Radio button</h2>
-<label>Name:</label><br>
-<input type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label with for and id</h2>
-<label for="test">Name:</label><br>
-<input id="test" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label without for and id</h2>
-<label>Name:</label><br>
-<input type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label with incorrcet for and id values</h2>
-<label for="name123">Name:</label><br>
-<input id="last123" type="radio" placeholder="name">
-
----------title-----------------
-
-
-<h2>Example: Radio button element with title</h2>
-<input title="first name" id="test" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button element without title</h2>
-<input id="test" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button element with aria-hidden and title</h2>
-<label aria-hidden="true">Name:</label><br>
-<input title="first name" type="radio" placeholder="name">
-
-
-<h2>Example: label with title but no aria-hidden</h2>
-<label for="asd">Name:</label><br>
-<input id="asd" title="first name" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button wrapped in label and title</h2>
-<label>Name:<br>
-<input title="first name" type="radio" placeholder="name">
-</label>
-
-<h2>Example: Radio button and label with title and no for and id</h2>
-<label>Name:</label><br>
-<input title="first name" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label with title and for and id</h2>
+<h2>Good Example: Radio button and label with title and for and id</h2>
 <label for="testsd">Name:</label><br>
 <input title="first name" id="testsd" type="radio" placeholder="name">
 
 
-<h2>Example: Radio button and label with incorrcet for and id values and title</h2>
+<h2>Good Example: Radio button and label with incorrect explicit association and title</h2>
 <label for="name123">Name:</label><br>
 <input title="first name" id="last123" type="radio" placeholder="name">
 
--------------------------------------------------------------------------------
-
----------aria-label-----------------
+---------aria-labelledby, aria-label and title combination-----------------
 
 
-<h2>Example: Radio button element with aria-label</h2>
-<input aria-label="first name by aria label" id="test" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button element without aria-label</h2>
-<input id="test" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button element with aria-hidden and aria-label</h2>
-<label aria-hidden="true">Name:</label><br>
-<input aria-label="first name by aria label" type="radio" placeholder="name">
-
-
-<h2>Example: label with aria-label but no aria-hidden</h2>
-<label for="kij">Name:</label><br>
-<input id="kij" aria-label="first name by aria label" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button wrapped in label and aria-label</h2>
-<label>Name:<br>
-<input aria-label="first name by aria label" type="radio" placeholder="name">
-</label>
-
-
-<h2>Example: Radio button and label with aria-label and no for and id</h2>
-<label>Name:</label><br>
-<input aria-label="first name by aria label" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label with aria-label and for and id</h2>
-<label for="testsd">Name:</label><br>
-<input aria-label="first name by aria label" id="testsd" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label with incorrcet for and id values and aria-label</h2>
-<label for="name123">Name:</label><br>
-<input aria-label="first name by aria label" id="last123" type="radio" placeholder="name">
-
-
--------------------------------------------------------------------------------
-
-
-<h2>Example: Radio button with aria-labelledby and label with aria-hidden</h2>
-<label id="first1" aria-hidden="true">Name:</label><br>
-<input aria-labelledby="first1" type="radio" placeholder="name">
-
-
-<h2>Example: label with aria-labelledby but no aria-hidden</h2>
-<label id="first2">Name by aria-labelledby:</label><br>
-<input aria-labelledby="first2" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button wrapped in label and aria-labelledby</h2>
-<label id="first3">Name by aria-labelledby:<br>
-<input aria-labelledby="first3" type="radio" placeholder="name">
-</label>
-
-
-<h2>Example: Radio button and label with aria-labelledby and no for and id</h2>
-<label id="first5">Name by aria-labelledby:<br>
-<input aria-labelledby="first5" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button and label with aria-labelledby and for and id</h2>
-<label for="testsd">Name:</label><br>
-<input aria-labelledby="first6" id="testsd" type="radio" placeholder="name">
-<div id="first6">Name by aria-labelledby:</div>
-
-
-<h2>Example: Radio button and label with incorrcet for and id values and aria-labelledby</h2>
-<label for="name123">Name:</label><br>
-<input aria-labelledby="first7" id="last123" type="radio" placeholder="name">
-<div id="first7">Name by aria-labelledby:</div>
-
-------------------------------------------------------------------------------------------
----------aria-labelledby, aria-label and title-----------------
-
-
-<h2>Example: Radio button element with aria-labelledby, aria-label and title</h2>
-<input title="first name" aria-label="first name by aria label" aria-labelledby="first9" id="test" type="radio" placeholder="name">
+<h2>Good Example: Radio button element with aria-labelledby, aria-label and title</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first9" type="radio" placeholder="name">
 <div id="first9">Name by aria-labelledby:</div>
 
-
-<h2>Example: Radio button element without aria-labelledby, aria-label and title</h2>
-<input id="test" type="radio" placeholder="name">
-
-
-<h2>Example: Radio button element with aria-hidden and aria-labelledby, aria-label and title</h2>
-<label aria-hidden="true">Name:</label><br>
-<input title="first name" aria-label="first name by aria label" aria-labelledby="first11" type="radio" placeholder="name">
-<div id="first11">Name by aria-labelledby:</div>
-
-
-<h2>Example: Radio button with aria-labelledby, aria-label and title but no aria-hidden</h2>
-<label>Name:</label><br>
-<input title="first name" aria-label="first name by aria label" aria-labelledby="first12" type="radio" placeholder="name">
+<h2>Bad Example: Radio button element with incorrect aria-labelledby and aria-label</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first9" type="radio" placeholder="name">
 <div id="first12">Name by aria-labelledby:</div>
 
+<h2>Bad Example: Radio button element with empty aria-labelledby and aria-label</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="" type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
 
-<h2>Example: Radio button wrapped in label and aria-labelledby, aria-label and title</h2>
-<label>Name:<br>
-<input title="first name" aria-label="first name by aria label" aria-labelledby="first13" type="radio" placeholder="name">
+<h2>Bad Example: Radio button element with empty space aria-labelledby and aria-label</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby=" " type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+<h2>Bad Example: Radio button element with aria-labelledby (Empty internal text) and aria-label</h2>
+<input title="first name" aria-label="first name by aria label" aria-labelledby="first12" type="radio" placeholder="name">
+<div id="first12"></div>
+
+
+<h2>Bad Example: Radio button element with incorrect aria-labelledby and empty aria-label and title attribute</h2>
+<input title="first name" aria-label="" title="first name by aria label" aria-labelledby="first9" type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+<h2>Bad Example: Radio button element with empty aria-labelledby and empty aria-label and title</h2>
+<input title="first name" aria-label="" title="first name by aria label" aria-labelledby="" type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+<h2>Bad Example: Radio button element with empty space aria-labelledby and aria-label and title</h2>
+<input title="first name" aria-label="" title="first name by aria label" aria-labelledby=" " type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+<h2>Bad Example: Radio button element with aria-labelledby (Empty internal text) and empty aria-label and title</h2>
+<input title="first name" aria-label="" title="first name by aria label" aria-labelledby="first12" type="radio" placeholder="name">
+<div id="first12"></div>
+
+---------aria-labelledby, aria-label, title combination, explicit, and implicit association combination-----------------
+
+<h2>Bad Example: Radio button element with empty aria-labelledby, empty aria-label, no title and explicit association</h2>
+<label for="a1">First name:</label>
+<input id="a1" aria-label="" aria-labelledby="" type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+<h2>Bad Example: Radio button element with incorrect aria-labelledby,empty aria-label, no title attribute and explicit association</h2>
+<label for="g1">First name:</label>
+<input id="g1" aria-label="" aria-labelledby="first9" type="radio" placeholder="name">
+<div id="first12">Name by aria-labelledby:</div>
+
+<h2>Bad Example: Radio button element with incorrect aria-labelledby,empty aria-label, no title attribute and implicit association</h2>
+<label>First name:
+<input aria-label="" aria-labelledby="first9" type="radio" placeholder="name">
 </label>
-<div id="first13">Name by aria-labelledby:</div>
+<div id="first12">Name by aria-labelledby:</div>
 
-
-<h2>Example: Radio button and label with aria-labelledby, aria-label and title and for and id</h2>
-<label for="testsd">Name:</label><br>
-<input title="first name" aria-label="first name by aria label" aria-labelledby="first15" id="testsd" type="radio" placeholder="name">
-<div id="first15">Name by aria-labelledby:</div>
-
-
-<h2>Example: Radio button and label with incorrcet for and id values and aria-labelledby, aria-label and title</h2>
-<label for="name123">Name:</label><br>
-<input title="first name" aria-label="first name by aria label" aria-labelledby="first16" id="last123" type="radio" placeholder="name">
-<div id="first16">Name by aria-labelledby:</div>
+<h2>Bad Example: Radio button element with empty aria-labelledby, empty aria-label, no title and implicit association</h2>
+<label>First name:
+<input aria-label="" aria-labelledby="" type="radio" placeholder="name">
+</label>
+<div id="first12">Name by aria-labelledby:</div>
 
 </body>
 </html>
