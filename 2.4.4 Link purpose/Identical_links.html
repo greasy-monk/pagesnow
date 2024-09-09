@@ -9,20 +9,23 @@
     <h1>Identical links</h1>
     
 <span>Good example: Link text and image link with un-indentical accessible name</span>
+<br>
     Link text
 <a href="https://www.w3.org/">Services</a>
+<br>
 
 Image link
 <a href="https://www.barrierbreak.com/">
   <img src="w3c.png" alt="Home">
 </a>
-
+<br>
+<br>
 
 <span>Good example: Link text and SVG image link with un-indentical accessible name</span>
 <br>
 Link text
 <a href="https://www.w3.org/">Services</a>
-
+<br>
 SVG image in link
 <a href="https://www.barrierbreak.com/">
 <svg width="100" height="100">
@@ -36,6 +39,102 @@ SVG image in link
 <span>Good example: Link text and image icon link with un-indentical accessible name</span>
 <br>
 <a href="https://www.w3.org/">Services</a>
+<br>
+Image icon in link
+<a href="https://www.barrierbreak.com/">
+<i class="fas fa-band-aid" role="img" aria-label="Home"></i>
+</a>
+<br><br>
+
+
+<span>Bad example: Link text and image link having indentical accessible name but pointing to different locations</span>
+<br>
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+Image link
+<a href="https://www.barrierbreak.com/">
+  <img src="w3c.png" alt="Services">
+</a>
+<br><br>
+
+<span>Bad example: Link text and SVG image link having indentical accessible name but pointing to different locations</span>
+<br>
+Link text
+<a href="https://www.w3.org/">Services</a>
+<br>
+SVG image in link
+<a href="https://www.barrierbreak.com/">
+<svg width="100" height="100">
+<title>Services</title>
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+</a>
+<br>
+<br>
+
+<span>Bad example: Link text and image icon link having indentical accessible name but pointing to different locations</span>
+<br>
+<a href="https://www.w3.org/">Services</a>
+<br>
+Image icon in link
+<a href="https://www.barrierbreak.com/">
+<i class="fas fa-band-aid" role="img" aria-label="Services"></i>
+</a>
+<br><br>
+
+<span>Bad example: Image link and SVG image link having indentical accessible name but pointing to different locations</span>
+<br>
+Image link
+<a href="https://www.w3.org/">
+  <img src="w3c.png" alt="Services">
+</a>
+<br>
+
+SVG image in link
+<a href="https://www.barrierbreak.com/">
+<svg width="100" height="100">
+<title>Services</title>
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+</a>
+<br>
+<br>
+
+<span>Bad example: Image link and image icon link having indentical accessible name but pointing to different locations</span>
+<br>
+Image link
+<a href="https://www.w3.org/">
+  <img src="w3c.png" alt="Services">
+</a>
+<br>
+
+
+Image icon in link
+<a href="https://www.barrierbreak.com/">
+<i class="fas fa-band-aid" role="img" aria-label="Services"></i>
+</a>
+<br><br>
+
+
+<span>Bad example: Image icon link and SVG image link having indentical accessible name but pointing to different locations</span>
+<br>
+Image icon in link
+<a href="https://www.barrierbreak.com/">
+<i class="fas fa-band-aid" role="img" aria-label="Services"></i>
+</a>
+<br>
+
+SVG image in link
+<a href="https://www.w3.org/">
+<svg width="100" height="100">
+<title>Services</title>
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+</a>
+<br>
+<br>
+
 
 
 </body>
