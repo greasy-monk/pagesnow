@@ -7,37 +7,37 @@
 
 <h1>Checkbox native label association conditions</h1>
 
-<h2>Good example: CHeckbox with accessible name using aria-labelledby attribute</h2>
+<h2>Good example: Checkbox with accessible name using aria-labelledby attribute</h2>
 <input type="checkbox" aria-labelledby="a1">
 <div id="a1">First name:</div>
 
-<h2>Good example: CHeckbox with accessible name using aria-label attribute</h2>
+<h2>Good example: Checkbox with accessible name using aria-label attribute</h2>
 <input type="checkbox" aria-label="First name:">
 
-<h2>Good example: CHeckbox with accessible name using title attribute</h2>
+<h2>Good example: Checkbox with accessible name using title attribute</h2>
 <input type="checkbox" title="First name:">
 
-<h2>Good example: CHeckbox with accessible name using explicit association</h2>
+<h2>Good example: Checkbox with accessible name using explicit association</h2>
 <label for="a1">First name:</label>
 <input type="checkbox" id="a1">
 
-<h2>Good example: CHeckbox with accessible name using implicit association</h2>
+<h2>Good example: Checkbox with accessible name using implicit association</h2>
 <label>First name:
 <input type="checkbox" id="a1"></label>
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association and aria-label attribute</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association and aria-label attribute</h2>
 <input type="checkbox" aria-labelledby="a2" aria-label="Last Name">
 <div id="a1">First name:</div>
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association and title attribute</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association and title attribute</h2>
 <input type="checkbox" aria-labelledby="a2" title="Last Name">
 <div id="a1">First name:</div>
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association and explicit association</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association and explicit association</h2>
 <label for="a1" id="a1">First name:</label>
 <input type="checkbox" aria-labelledby="a2" id="a1">
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association and implicit association</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association and implicit association</h2>
 <label id="a1">First name:
 <input type="checkbox" aria-labelledby="a2"></label>
 
@@ -45,19 +45,19 @@
 <input type="checkbox" aria-labelledby="a2" aria-label="" title="Last Name">
 <div id="a1">First name:</div>
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association and empty aria-label and explicit association</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association and empty aria-label and explicit association</h2>
 <label for="a1" id="a1">First name:</label>
 <input id="a1" type="checkbox" aria-labelledby="a2" aria-label="">
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association and empty aria-label and implicit association</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association and empty aria-label and implicit association</h2>
 <label id="a1">First name:
 <input type="checkbox" aria-labelledby="a2" aria-label=""></label>
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association,empty aria-label, empty title, and implicit association</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association,empty aria-label, empty title, and implicit association</h2>
 <label id="a1">First name:
 <input type="checkbox" aria-labelledby="a2" aria-label="" title=""></label>
 
-<h2>Good example: CHeckbox with accessible name using incorrect aria-labelledby association,empty aria-label, empty title, and explicit association</h2>
+<h2>Good example: Checkbox with accessible name using incorrect aria-labelledby association,empty aria-label, empty title, and explicit association</h2>
 <label for="a1" id="g1">First name:</label>
 <input id="a1" type="checkbox" aria-labelledby="a2" aria-label="" title="">
 
@@ -66,7 +66,7 @@
 <h2>Bad example: Checkbox with no accessible name</h2>
 <input type="checkbox">
 
-<h2>Bad example: CHeckbox with accessible name using incorrect aria-labelledby association</h2>
+<h2>Bad example: Checkbox with accessible name using incorrect aria-labelledby association</h2>
 <input type="checkbox" aria-labelledby="a2">
 <div id="a1">First name:</div>
 
@@ -76,27 +76,27 @@
 <h2>Bad example: Checkbox with accessible name using empty title attribute</h2>
 <input type="checkbox" title="">
 
-<h2>Bad example: CHeckbox with accessible name using incorrect explicit association</h2>
+<h2>Bad example: Checkbox with accessible name using incorrect explicit association</h2>
 <label for="a11">First name:</label>
 <input type="checkbox" id="a1">
 
-<h2>Bad example: CHeckbox with accessible name using incorrect aria-labelledby association and empty aria-label attribute</h2>
+<h2>Bad example: Checkbox with accessible name using incorrect aria-labelledby association and empty aria-label attribute</h2>
 <input type="checkbox" aria-labelledby="a2" aria-label="">
 <div id="a1">First name:</div>
 
-<h2>Bad example: CHeckbox with accessible name using incorrect aria-labelledby association and empty title attribute</h2>
+<h2>Bad example: Checkbox with accessible name using incorrect aria-labelledby association and empty title attribute</h2>
 <input type="checkbox" aria-labelledby="a2" title="">
 <div id="a1">First name:</div>
 
-<h2>Bad example: CHeckbox with accessible name using incorrect aria-labelledby association and empty aria-label attribute and empty title attribute</h2>
+<h2>Bad example: Checkbox with accessible name using incorrect aria-labelledby association and empty aria-label attribute and empty title attribute</h2>
 <input type="checkbox" aria-labelledby="a2" aria-label="" title="">
 <div id="a1">First name:</div>
 
-<h2>Bad example: CHeckbox with accessible name using incorrect aria-labelledby and incorrect explicit association</h2>
+<h2>Bad example: Checkbox with accessible name using incorrect aria-labelledby and incorrect explicit association</h2>
 <label for="a11">First name:</label>
 <input type="checkbox" id="a1" aria-labelledby="a2">
 
-<h2>Bad example: CHeckbox with accessible name using empty aria-label and empty title attribute and incorrect explicit association</h2>
+<h2>Bad example: Checkbox with accessible name using empty aria-label and empty title attribute and incorrect explicit association</h2>
 <label for="a11">First name:</label>
 <input type="checkbox" id="a1" aria-label="" title="">
 
