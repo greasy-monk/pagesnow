@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Image button (img)</h1>
+    <h2>Good example: Image button with accessible name using alt attribute on img element</h2>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" alt="Print this page">
+    </button>
+
+    <h2>Good example: Image button with accessible name using aria-labelledby attribute on img element</h2>
+    <span id="a1">Print</span>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" aria-labelledby="a1">
+    </button>
+
+    <h2>Good example: Image button with accessible name using aria-labelledby(incorrect value) and aria-label attribute on img element</h2>
+    <span id="a1">Print</span>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" aria-labelledby="a2" aria-label="Print">
+    </button>
+
+    <h2>Good example: Image button with accessible name using aria-labelledby(incorrect value) and no aria-label attribute and alt attribute on img element</h2>
+    <span id="a1">Print</span>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" aria-labelledby="a2" alt="Print">
+    </button>
+
+    <h2>Good example: Image button with accessible name using just aria-label attribute img element</h2>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" aria-label="Print">
+    </button>
+
+    <h2>Good example: Image button with accessible name using aria-label(empty) and alt attribute on img element</h2>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" aria-label="Print">
+    </button>
+
+
+
+    <h2>Bad example: Image button with role none attribute on img element</h2>
+    <button>
+        <img role="none" src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" alt="Print this page">
+    </button>
+
+    <h2>Bad example: Image button with role presentation attribute on img element</h2>
+    <button>
+        <img role="presentation" src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" alt="Print this page">
+    </button>
+
+    <h2>Bad example: Image button with aria-hidden attribute on img element</h2>
+    <button>
+        <img aria-hidden="true" src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png" alt="Print this page">
+    </button>
+
+    <h2>Bad example: Image button with no accessible name</h2>
+    <button>
+        <img src="C:\Users\HrushikeshPatil\OneDrive - BarrierBreak Solutions Private Limited\Documents\GitHub\pagesnow\1.1.1_Non-Text_Content\Image_Button_\Image buttons (img)/print.png">
+    </button>
+   
+
+</body>
+</html>
