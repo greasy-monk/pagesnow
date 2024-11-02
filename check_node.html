@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Picker with Teams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #pickedName {
+            margin-top: 20px;
+            font-size: 24px;
+            color: green;
+        }
+        #pickedList, #teamList {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: left;
+            display: inline-block;
+        }
+        .nameEntry {
+            margin: 5px 0;
+        }
+        .teamEntry {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Name Picker with Teams</h1>
+    <button id="pickButton">Pick a Name</button>
+    <div id="pickedName"></div>
+    <div id="pickedList">Picked Names:<br>No names picked yet.</div>
+    <div id="teamList">Teams:<br></div>
+
+    <script>
+        // JSON list of names
+        const names = [
+            "Bharti","ankita","priyanka","Prathamesh","kinjal","pratik","mukesh","jagruti","dhruti","devashish","kiran","deepika","tejal","sadhana","arpit","sharad","prakash", "komal", "priya", "tanvi", "pankaj", "ami","narendra", "neeta"];
+        const pickedNames = []; // Array to hold picked names and their assigned numbers
+        const teams = {
+            Dipesh: { points: 240, members: [] },
+            Jay: { points: 240, members: [] }
+        };
+
+        // Function to pick a random name
+        function pickRandomName() {
+            if (names.length === 0) {
+                document.getElementById('pickedName').textContent = "No names left to pick!";
+                return;
+            }
+
+            // Generate a random index
+            const randomIndex = Math.floor(Math.random() * names.length);
+            // Get the name
+            const pickedName = names[randomIndex].toUpperCase();
+            // Remove the picked name from the array
+            names.splice(randomIndex, 1);
+            // Ask for a number to associate with the picked name
+            const number = prompt(`Assign Points for ${pickedName.toUpperCase()}:`);
+            if (number !== null && number.trim() !== '') {
+                const team = prompt("Assign the name to a team (Dipesh, Jay):");
+                if (teams[team]) {
+                    // Deduct points from the selected team's purse
+                    if (teams[team].points >= number) {
+                        // Add the picked name and its number to the pickedNames array
+                        pickedNames.push({ name: pickedName.toUpperCase(), number: number, team: team });
+                        teams[team].points -= number;
+                        teams[team].members.push({ name: pickedName.toUpperCase(), number: number });
+
+                        // Display the picked name
+                        document.getElementById('pickedName').textContent = `Picked Name: ${pickedName.toUpperCase()} (Points: ${number}) assigned to ${team}`;
+                        // Update the list of picked names
+                        updatePickedList();
+                        // Update the list of teams
+                        updateTeamList();
+                    } else {
+                        alert(`${team} does not have enough points.`);
+                    }
+                } else {
+                    alert("Invalid team name.");
+                }
+            }
+        }
+
+        // Function to update the display of picked names
+        function updatePickedList() {
+            const pickedListDiv = document.getElementById('pickedList');
+            pickedListDiv.innerHTML = "Picked Names:<br>";
+            if (pickedNames.length === 0) {
+                pickedListDiv.innerHTML += "No names picked yet.";
+            } else {
+                pickedNames.forEach(entry => {
+                    pickedListDiv.innerHTML += `<div class="nameEntry">${entry.name} - Points: ${entry.number} (Team: ${entry.team})</div>`;
+                });
+            }
+        }
+
+        // Function to update the display of teams
+        function updateTeamList() {
+            const teamListDiv = document.getElementById('teamList');
+            teamListDiv.innerHTML = "Teams:<br>";
+            for (const team in teams) {
+                teamListDiv.innerHTML += `<div class="teamEntry">${team} - Remaining Points: ${teams[team].points}</div>`;
+                if (teams[team].members.length > 0) {
+                    teams[team].members.forEach(member => {
+                        teamListDiv.innerHTML += `<div class="nameEntry">  ${member.name} - Points: ${member.number}</div>`;
+                    });
+                }
+            }
+        }
+
+        // Add event listener to the button
+        document.getElementById('pickButton').addEventListener('click', pickRandomName);
+    </script>
+
+</body>
+</html>
