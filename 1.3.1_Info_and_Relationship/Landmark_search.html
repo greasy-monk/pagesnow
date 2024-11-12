@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Good example: Native search landmark with aria-hidden="true" attribute</h2>
+<search>
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Good example: Aria search landmark with aria-hidden="true" attribute</h2>
+<div role="search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Bad example: Native search landmark with aria-hidden="true" attribute</h2>
+<search aria-hidden="true">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Bad example: Aria search landmark with aria-hidden="true" attribute</h2>
+<div role="search" aria-hidden="true">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Good example: Native search landmark with fields</h2>
+<search>
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Good example: Aria search landmark with fields</h2>
+<div role="search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Bad example: Native search landmark without fields</h2>
+<search>
+  <p>test</p>
+</search>
+
+<h2>Bad example: Aria search landmark without fields</h2>
+<div role="search">
+  <p>testing</p>
+</div>
+
+<h2>Bad example: Native search landmark with aria-label</h2>
+<search aria-label="search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Bad example: Aria search landmark with aria-label</h2>
+<form role="search" aria-label="search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</form>
+
+<h2>Bad example: Native search landmark with aria-labelledby</h2>
+<search aria-labelledby="sea">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="sea">Search</div>
+</search>
+
+<h2>Bad example: Aria search landmark with aria-labelledby</h2>
+<form role="search" aria-labelledby="search123">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="search123">Search</div>
+</form>
+
+<h2>Good example: Multiple Native search landmark with aria-label</h2>
+<search aria-label="header search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<search aria-label="main search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Good example: Multiple Aria search landmark with aria-label</h2>
+<div role="search" aria-label="header search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<div role="search" aria-label="main search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Bad example: Multiple Native search landmark without name</h2>
+<search>
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<search>
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Bad example: Multiple Aria search landmark without name</h2>
+<div role="search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<div role="search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Bad example: Multiple Native search landmark with identical aria-label</h2>
+<search aria-label="header search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<search aria-label="header search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Bad example: Multiple Aria search landmark with identical aria-label</h2>
+<div role="search" aria-label="main search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<div role="search" aria-label="main search">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Bad example: Multiple Native search landmark with empty aria-label</h2>
+<search aria-label="">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<search aria-label="">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</search>
+
+<h2>Bad example: Multiple Aria search landmark with empty aria-label</h2>
+<div role="search" aria-label="">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<div role="search" aria-label="">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+</div>
+
+<h2>Bad example: Multiple Native search landmark with aria-label and aria-labelledby</h2>
+<search aria-label="search 123" aria-labelledby="gh">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="gh">header search</div>
+</search>
+
+<search aria-label="search 123" aria-labelledby="ghasd">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="ghasd">main search</div>
+</search>
+
+<h2>Bad example: Multiple Aria search landmark with aria-label and aria-labelledby</h2>
+<div role="search" aria-label="search 098" aria-labelledby="poi">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="poi">main search</div>
+</div>
+
+<div role="search" aria-label="search 098" aria-labelledby="poihead">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="poihead">header search</div>
+</div>
+
+<h2>Good example: Multiple Native search landmark with aria-labelledby</h2>
+<search aria-labelledby="tyuio">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="tyuio">header search</div>
+</search>
+
+<search aria-labelledby="olkmnb">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="olkmnb">main search</div>
+</search>
+
+<h2>Good example: Multiple Aria search landmark with aria-label and aria-labelledby</h2>
+<div role="search" aria-labelledby="werfghn">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="werfghn">main search</div>
+</div>
+
+<div role="search" aria-labelledby="cftgvhuh">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="cftgvhuh">header search</div>
+</div>
+
+<h2>Bad example: Multiple Native search landmark with aria-label and incorrect aria-labelledby</h2>
+<search aria-label="header search" aria-labelledby="tyuio">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="tyu3456io">header search</div>
+</search>
+
+<search aria-label="main search" aria-labelledby="olkmnb">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="ol5678kmnb">main search</div>
+</search>
+
+<h2>Bad example: Multiple Aria search landmark with aria-label and incorrect aria-labelledby</h2>
+<div role="search" aria-label="wergkcvbnhn" aria-labelledby="werfghn">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="wergkcvbnhn">main search</div>
+</div>
+
+<div role="search" aria-label="header search" aria-labelledby="cftgvhuh">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="cfghokn">header search</div>
+</div>
+
+<h2>Bad example: Multiple Native search landmark with identical aria-labelledby</h2>
+<search aria-labelledby="tyu3456io">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="tyu3456io">header search</div>
+</search>
+
+<search aria-labelledby="ol5678kmnb">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="ol5678kmnb">header search</div>
+</search>
+
+<h2>Bad example: Multiple Aria search landmark with identical and aria-labelledby</h2>
+<div role="search" aria-labelledby="wergkcvbnhn">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="wergkcvbnhn">main search</div>
+</div>
+
+<div role="search" aria-labelledby="cfghokn">
+  <input type="search" aria-label="search text" size="20">
+  <input type="submit" value="Search">
+  <div id="cfghokn">main search</div>
+</div>
+
+</body>
+</html>

@@ -27,8 +27,8 @@
     </fieldset>
 </form>
 
-<h2>Bad example: Form with aria-hidden and role presentation</h2>
-<form aria-hidden="true" role="presentation">
+<h2>Bad example: Form with aria-hidden</h2>
+<form aria-hidden="true">
 	<fieldset>
         <legend>Add Contact</legend>
 
@@ -45,44 +45,26 @@
     </fieldset>
 </form>
 
-<h2>Bad example: Form with visibility hidden</h2>
-<form style="visibility:hidden;">
-	<fieldset>
-        <legend>Add Contact</legend>
-
-              <label for="name_html5">Name</label>
-              <input id="name_html5" type="text" size="25">
-
-              <label for="email_html5">E-mail</label>
-              <input id="email_html5" type="text" size="25">
-
-              <label for="phone_html5">Phone</label>
-              <input id="phone_html5" type="text" size="25">
-
-              <input type="submit" value="Add Contact">
-    </fieldset>
-</form>
-
-<h2>Good example: Form with aria-label</h2>
-<form aria-label="Add contact">
-	<fieldset>
-        <legend>Add Contact</legend>
-
-              <label for="name_html5">Name</label>
-              <input id="name_html5" type="text" size="25">
-
-              <label for="email_html5">E-mail</label>
-              <input id="email_html5" type="text" size="25">
-
-              <label for="phone_html5">Phone</label>
-              <input id="phone_html5" type="text" size="25">
-
-              <input type="submit" value="Add Contact">
-    </fieldset>
-</form>
-
-<h2>Bad example: Form with no aria-label</h2>
+<h2>Good example: Form with no aria-label</h2>
 <form>
+	<fieldset>
+        <legend>Add Contact</legend>
+
+              <label for="name_html5">Name</label>
+              <input id="name_html5" type="text" size="25">
+
+              <label for="email_html5">E-mail</label>
+              <input id="email_html5" type="text" size="25">
+
+              <label for="phone_html5">Phone</label>
+              <input id="phone_html5" type="text" size="25">
+
+              <input type="submit" value="Add Contact">
+    </fieldset>
+</form>
+
+<h2>Bad example: Form with aria-label</h2>
+<form aria-label="Contact">
 	<fieldset>
         <legend>Add Contact</legend>
 
@@ -154,9 +136,15 @@
     </fieldset>
 </form>
 
+
+<h2>Bad example: Form without form fields</h2>
+<form>
+<div>ABC</div>
+</form>
+
 -------------Role Form with element------------------------
 
-<h2>Good example: Form with aria-hidden and role presentation</h2>
+<h2>Good example: Form with aria-hidden</h2>
 <div role="form">
 	<fieldset>
         <legend>Add Contact</legend>
@@ -174,8 +162,8 @@
     </fieldset>
 </div>
 
-<h2>Bad example: Form with aria-hidden and role presentation</h2>
-<div role="form" aria-hidden="true" role="presentation">
+<h2>Good example: Form with no aria-label</h2>
+<div role="form">
 	<fieldset>
         <legend>Add Contact</legend>
 
@@ -192,7 +180,7 @@
     </fieldset>
 </div>
 
-<h2>Good example: Form with aria-label</h2>
+<h2>Bad example: Form with aria-label</h2>
 <div role="form" aria-label="Add contact">
 	<fieldset>
         <legend>Add Contact</legend>
@@ -210,25 +198,7 @@
     </fieldset>
 </div>
 
-<h2>Bad example: Form with no aria-label</h2>
-<div role="form">
-	<fieldset>
-        <legend>Add Contact</legend>
-
-              <label for="name_html5">Name</label>
-              <input id="name_html5" type="text" size="25">
-
-              <label for="email_html5">E-mail</label>
-              <input id="email_html5" type="text" size="25">
-
-              <label for="phone_html5">Phone</label>
-              <input id="phone_html5" type="text" size="25">
-
-              <input type="submit" value="Add Contact">
-    </fieldset>
-</div>
-
-<h2>Good example: Form with aria-labelledby</h2>
+<h2>Bad example: Form with aria-labelledby</h2>
 <div role="form" aria-labelledby="test">
 	<fieldset>
         <legend id="add">Add Contact</legend>

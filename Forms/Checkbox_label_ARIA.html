@@ -41,31 +41,137 @@
 <body>
     <h1>Checkbox label ARIA</h1>
 
+    <h2>Good example: checkbox buttons with accessible name through internal text</h2>
+    <div role="checkbox" aria-checked="false" tabindex="0">Regular crust</div>
+    <div role="checkbox" aria-checked="false" tabindex="-1">Deep dish</div>
+    <div role="checkbox" aria-checked="false" tabindex="-1">Thin crust</div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-label attribute</h2>
+    <span>Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-label="Regular crust"></div>
+    <span>Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-label="Deep dish"></div>
+    <span>Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-label="Thin crust"></div>
+
+    <h2>Good example: checkbox buttons with accessible name through empty aria-label attribute and internal text</h2>
+    <span>Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-label="">Regular crust</div>
+    <span>Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-label="">Deep dish</div>
+    <span>Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-label="">Thin crust</div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a1"></div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b1"></div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c1"></div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute(Incorrect value) and aria-label attribute</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a8" aria-label="Regular crust"></div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b8" aria-label="Deep dish"></div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c8" aria-label="Thin crust"></div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute(Incorrect value) and empty aria-label attribute and internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a9" aria-label="">Regular crust</div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b9" aria-label="">Deep dish</div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c9" aria-label="">Thin crust</div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute(Incorrect value) and no aria-label attribute and internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a2">Regular crust</div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b2">Deep dish</div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c2">Thin crust</div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute(no internal text) and aria-label attribute</h2>
+    <span id="a4"></span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a4" aria-label="Regular crust"></div>
+    <span id="b4"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b4" aria-label="Deep dish"></div>
+    <span id="c4"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c4" aria-label="Thin crust"></div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute(no internal text) and no aria-label attribute and internal text</h2>
+    <span id="a5"></span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a5">Regular crust</div>
+    <span id="b5"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b5">Deep dish</div>
+    <span id="c5"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c5">Thin crust</div>
+
+    <h2>Good example: checkbox buttons with accessible name through aria-labelledby attribute(no internal text) and empty aria-label attribute and internal text</h2>
+    <span id="a5"></span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a5" aria-label="">Regular crust</div>
+    <span id="b5"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b5" aria-label="">Deep dish</div>
+    <span id="c5"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c5" aria-label="">Thin crust</div>
+
+
+
+    <h2>Bad example: checkbox buttons with accessible name through aria-labelledby(empty) attribute and no internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby=""></div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby=""></div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby=""></div>
+
+    <h2>Bad example: checkbox buttons with accessible name through aria-labelledby(incorrect value) attribute and no internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a21"></div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b21"></div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c21"></div>
+
+    <h2>Bad example: checkbox buttons with accessible name through aria-labelledby(incorrect value) attribute and empty aria-label and not internal text</h2>
+    <span id="a1">Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a2" aria-label=""></div>
+    <span id="b1">Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="b2" aria-label=""></div>
+    <span id="c1">Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="c2" aria-label=""></div>
+
+    <h2>Bad example: checkbox buttons with accessible name through aria-labelledby(no internal text) attribute and empty aria-label and no internal text</h2>
+    <span id="z1"></span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="z1" aria-label=""></div>
+    <span id="x1"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="x1" aria-label=""></div>
+    <span id="y1"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="y1" aria-label=""></div>
+
+    <h2>Bad example: checkbox buttons with accessible name through aria-labelledby(no internal text) attribute and no aria-label and no internal text</h2>
+    <span id="z1"></span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="z1"></div>
+    <span id="x1"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="x1"></div>
+    <span id="y1"></span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-labelledby="y1"></div>
     
+    <h2>Bad example: checkbox buttons with accessible name through empty aria-label attribute and no internal text</h2>
+    <span>Regular crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="0" aria-label=""></div>
+    <span>Deep dish</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-label=""></div>
+    <span>Thin crust</span>
+    <div role="checkbox" aria-checked="false" tabindex="-1" aria-label=""></div>
 
-    <h2>Good Example: Checkbox with accessible name</h2>
-    <div role="checkbox" aria-checked="false" tabindex="0">Lettuce</div>
-
-    <h2>Good Example: Checkbox with aria hidden attribute</h2>
-    <div role="checkbox" aria-checked="false" tabindex="0" aria-hidden="true">Lettuce</div>
-
-    <h2>Good Example: Checkbox with tabindex="-1" attribute</h2>
-    <div role="checkbox" aria-checked="false" tabindex="-1">Lettuce</div>
-
-    <h2>Good Example: Checkbox with aria hidden and tabindex="-1" attributes</h2>
-    <div role="radio" aria-checked="false" aria-hidden="true" tabindex="-1">Pickup</div>
-
-    <h2>Good Example: Checkbox with display none property</h2>
-    <div role="checkbox" aria-checked="false" tabindex="0" style="display: none;">Lettuce</div>
-
-    <h2>Good Example: Checkbox with aria-label attribute</h2>
-    <div role="checkbox" aria-checked="false" tabindex="0" aria-label="Yes">Lettuce</div>
-
-    <h2 id="a1">Good Example: Checkbox with aria-labelledby attribute</h2>
-    <div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="a1">Lettuce</div>
-
-    <h2 id="a1">Good Example: Checkbox with aria-label and aria-labelledby attribute</h2>
-    <div role="checkbox" aria-checked="false" tabindex="0" aria-label="Yes" aria-labelledby="a1">Lettuce</div>
+    <h2>Bad example: checkbox buttons with no accessible name</h2>
+    <div role="checkbox" aria-checked="false" tabindex="0"></div>
+    <div role="checkbox" aria-checked="false" tabindex="-1"></div>
+    <div role="checkbox" aria-checked="false" tabindex="-1"></div>
 
 </body>
 </html>

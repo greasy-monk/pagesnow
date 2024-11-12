@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Link</title>
+</head>
+<body>
+
+<h1>SVG Link</h1>
+
+<h2>Good Example: Image link without aria-hidden<h2>
+<a href="#">
+<svg width="100" height="100">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with aria-hidden</h2>
+<a href="#">
+<svg width="100" height="100" aria-hidden="true">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with role presentation and aria-hidden</h2>
+<a href="#">
+<svg width="100" height="100" role="presentation" aria-hidden="true">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with text</h2>
+<a href="#">
+<svg width="100" height="100">
+<text>Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link without text</h2>
+<a href="#">
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with text, aria-label, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test" role="img">
+<text>Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with text and aria-label, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test">
+<text>Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with text and no aria-label, role</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+<text>Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+<h2>Good Example: Image link with text, aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test" role="img">
+<text id="test">Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with text, incorrect aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="testwer" role="img">
+<text id="test">Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with text, no aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+<text id="test">Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with text and aria-labelledby, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test">
+<text id="test">Test</text>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as first element</h2>
+<a href="#">
+<svg width="100" height="100">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as not first element</h2>
+<a href="#">
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title>Test</title>
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as first element with aria-label, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test" role="img">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as not first element with aria-label, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title>Test</title>
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as first element with aria-label, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as not first element with aria-label, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title>Test</title>
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as first element with no aria-label</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+<title>Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+<h2>Bad Example: Image link with title as not first element with no aria-label</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title>Test</title>
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as first element with aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test" role="img">
+<title id="test">Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as not first element with aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title id="test">Test</title>
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as first element with aria-labelledby, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test">
+<title id="test">Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as not first element with aria-labelledby, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title id="test">Test</title>
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as first element with incorrect aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="testfghj" role="img">
+<title id="test">Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Good Example: Image link with title as not first element with incorrect aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="tesghnmt" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title id="test">Test</title>
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as first element with no aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+<title id="test">Test</title>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: Image link with title as not first element with no aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+<title id="test">Test</title>
+</svg>
+</a>
+
+
+<h2>Good Example: SVG link with aria-label, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: SVG link without aria-label and role</h2>
+<a href="#">
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+<h2>Bad Example: SVG link with role, no aria-label</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+<h2>Bad Example: SVG link with no role, aria-label</h2>
+<a href="#">
+<svg width="100" height="100" aria-label="test">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+
+
+
+<h2>Good Example: SVG link with aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+<p id="test">Test</p>
+
+
+
+<h2>Bad Example: SVG link with aria-labelledby, no role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="test">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+<p id="test">Test</p>
+
+
+<h2>Bad Example: SVG link with incorrect aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" aria-labelledby="testfghj" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+<p id="test">Test</p>
+
+
+
+<h2>Bad Example: SVG link with no aria-labelledby, role</h2>
+<a href="#">
+<svg width="100" height="100" role="img">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="green" />
+</svg>
+</a>
+<p id="test">Test</p>
+
+
+
+</body>
+</html>

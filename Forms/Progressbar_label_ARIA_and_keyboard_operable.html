@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div id="combo1-label" class="combo-label"></div>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Progressbar label - ARIA and keyboard operable </h1>
+
+
+    <span>Good example: Progressbar with accessible name using aria-labelledby</span>
+    <br>
+    <span id="loadinglabel">Loading:</span>
+    <span role="progressbar" aria-labelledby="loadinglabel" aria-valuenow="23">
+      <svg width="100" height="10">
+        <rect height="10" width="100" stroke="black" fill="black" />
+        <rect height="10" width="23" fill="white" />
+      </svg>
+    </span>
+    <br>
+
+  <span>Good example: Progressbar with accessible name using aria-label</span>
+  <br>
+  <span id="loadinglabel">Loading:</span>
+  <span role="progressbar" aria-label="Loading:" aria-valuenow="23">
+    <svg width="100" height="10">
+      <rect height="10" width="100" stroke="black" fill="black" />
+      <rect height="10" width="23" fill="white" />
+    </svg>
+  </span>
+  <br>
+  
+    <span>Good example: Progressbar with accessible name using aria-labelledby(incorrect value) and aria-label attribute</span>
+    <br>
+    <span id="loadinglabel">Loading:</span>
+    <span role="progressbar" aria-labelledby="loadinglabel1" aria-label="Loading:" aria-valuenow="23">
+      <svg width="100" height="10">
+        <rect height="10" width="100" stroke="black" fill="black" />
+        <rect height="10" width="23" fill="white" />
+      </svg>
+    </span>
+    <br>
+
+    <span>Good example: Progressbar with accessible name using aria-labelledby(empty value) and aria-label attribute</span>
+    <br>
+    <span id="loadinglabel">Loading:</span>
+    <span role="progressbar" aria-labelledby="" aria-label="Loading:" aria-valuenow="23">
+      <svg width="100" height="10">
+        <rect height="10" width="100" stroke="black" fill="black" />
+        <rect height="10" width="23" fill="white" />
+      </svg>
+    </span>
+    <br>
+
+    <span>Good example: Progressbar with accessible name using aria-labelledby(empty space) and aria-label attribute</span>
+    <br>
+    <span id="loadinglabel">Loading:</span>
+    <span role="progressbar" aria-labelledby=" " aria-label="Loading:" aria-valuenow="23">
+      <svg width="100" height="10">
+        <rect height="10" width="100" stroke="black" fill="black" />
+        <rect height="10" width="23" fill="white" />
+      </svg>
+    </span>
+    <br>
+
+    <span>Good example: Progressbar with accessible name using aria-labelledby(no internal text) and aria-label attribute</span>
+    <br>
+    <span id="loadinglabel"></span>
+    <span role="progressbar" aria-labelledby="loadinglabel" aria-label="Loading:" aria-valuenow="23">
+      <svg width="100" height="10">
+        <rect height="10" width="100" stroke="black" fill="black" />
+        <rect height="10" width="23" fill="white" />
+      </svg>
+    </span>
+    <br>
+
+    <span>Bad example: Progressbar with tabindex 0 attribute</span>
+    <br>
+    <span id="loadinglabel">Loading:</span>
+    <span role="progressbar" aria-labelledby="loadinglabel" aria-valuenow="23" tabindex="0">
+      <svg width="100" height="10">
+        <rect height="10" width="100" stroke="black" fill="black" />
+        <rect height="10" width="23" fill="white" />
+      </svg>
+    </span>
+    <br>
+
+
+  <span>Bad example:Progressbar with no accessible name</span>
+  <br>
+  <span id="loadinglabel">Loading:</span>
+  <span role="progressbar" aria-valuenow="23">
+    <svg width="100" height="10">
+      <rect height="10" width="100" stroke="black" fill="black" />
+      <rect height="10" width="23" fill="white" />
+    </svg>
+  </span>
+  <br>
+
+  <span>Bad example: Progressbar with accessible name using aria-labelledby not associated and no aria-label</span>
+  <br>
+  <span id="loadinglabel">Loading:</span>
+  <span role="progressbar" aria-labelledby="loadinglabel1" aria-valuenow="23">
+    <svg width="100" height="10">
+      <rect height="10" width="100" stroke="black" fill="black" />
+      <rect height="10" width="23" fill="white" />
+    </svg>
+  </span>
+  <br>
+
+<span>Bad example: Progressbar with accessible name using aria-labelledby not associated and empty aria-label(empty)</span>
+<br>
+<span id="loadinglabel">Loading:</span>
+<span role="progressbar" aria-labelledby="loadinglabel1" aria-label="" aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+<span>Bad example: Progressbar with accessible name using aria-labelledby not associated and empty aria-label(empty space)</span>
+<br>
+<span id="loadinglabel">Loading:</span>
+<span role="progressbar" aria-labelledby="" aria-label=" " aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+<span>Bad example: Progressbar with accessible name using aria-labelledby associated (Empty internal text)</span>
+<br>
+<span id="loadinglabel"></span>
+<span role="progressbar" aria-labelledby="loadinglabel" aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+<span>Bad example: Progressbar with accessible name using aria-labelledby associated (Empty internal text) and aria-label(Empty)</span>
+<br>
+<span id="loadinglabel"></span>
+<span role="progressbar" aria-labelledby="loadinglabel" aria-label="" aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+<span>Bad example: Progressbar with accessible name using aria-labelledby associated (Empty internal text) and aria-label(Empty space)</span>
+<br>
+<span id="loadinglabel"></span>
+<span role="progressbar" aria-labelledby="loadinglabel" aria-label=" " aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+<span>Bad example: Progressbar with accessible name using aria-label(empty)</span>
+<br>
+<span id="loadinglabel">Loading:</span>
+<span role="progressbar" aria-label="" aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+<span>Bad example: Progressbar with accessible name using aria-label(empty space)</span>
+<br>
+<span id="loadinglabel">Loading:</span>
+<span role="progressbar" aria-label=" " aria-valuenow="23">
+  <svg width="100" height="10">
+    <rect height="10" width="100" stroke="black" fill="black" />
+    <rect height="10" width="23" fill="white" />
+  </svg>
+</span>
+<br>
+
+
+</body>
+</html>
