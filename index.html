@@ -11,6 +11,7 @@
     />
   </head>
   <body>
+    <h1 id="welcome-message">Welcome!</h1>
     <h1 class="main-heading">Webpage links</h1>
 
     <ul>
@@ -303,4 +304,14 @@
       </li>
     </ul>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let subdomain = window.location.hostname.split('.')[0]; // Get subdomain
+      if (subdomain !== "example" && subdomain !== "www") {
+        document.getElementById("welcome-message").innerText = `Welcome to ${subdomain}!`;
+      } else {
+        document.getElementById("welcome-message").innerText = `Welcome to Example.net!`;
+      }
+    });
+  </script>
 </html>
