@@ -1,0 +1,1051 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <title>BarrierBreak Blog</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="noindex,nofollow">
+      <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/assessment/two/css/styles-old.css">
+      <link rel="stylesheet" href="/assessment/two/css/styles.css">
+	   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="three/script3.js"></script>
+      <style>
+         a {word-break: break-word;}
+         .form-control {border: 1px solid #ccc;}
+         .hero2 .col-md-4 {margin-bottom: 30px;}	         		 
+         .box {overflow: hidden; border-radius: 5px; padding: 20px; box-sizing: border-box; }
+         .box2 {font-size: 1rem;}	
+         .box2 img {width: 40px; opacity: .3;}
+         .footerList a {text-decoration: none; }
+         .footerList a:focus {border-bottom: 1px solid rgba(255, 255, 255, .3); outline: 0; color: #fff;}
+         .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+         outline: 0;}
+         .btn-primary {text-decoration: none;}
+	
+}
+  @media only screen and (max-width: 320px){
+  
+.container-fluid {
+    width: 100%;
+}
+
+.main-content, .right-bar {padding: 0 1rem;}
+
+		footer .col-md-4 {overflow-x: scroll;}
+		.box {
+		  width: 450px;
+		  overflow-x: scroll;
+		}	
+}
+         @media only screen and (max-width: 320px) {
+         .overlap-container {
+            height: 150px;
+            }
+         }
+
+         @media only screen and (orientation: portrait) {
+         .iframe-container {
+         display: none;
+         }
+         }
+
+footer {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.1);
+}	
+
+footer a, footer a:hover {color: rgba(0, 0, 0, 0.9);} 
+	 
+.btn-secondary, .btn-secondary:hover{
+    color: #000 ;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.btn-i {width: 200px; overflow: hidden;}
+
+.luna-stars {
+    color: transparent;
+    display: inline-block;
+    font-size: 1.25rem;
+    position: relative;
+    text-shadow: 0 1px 0;
+    white-space: nowrap;
+}
+
+.luna-stars::before {
+    color: #a8b0b7;
+    content: '\2605\2605\2605\2605\2605';
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.luna-stars__fill--100::after {
+    width: 100%;
+}
+
+.luna-stars__fill--100::after {
+    width: 100%;
+}
+.luna-stars--yellow::after {
+    color: #ffcd05;
+}
+
+.luna-stars::after {
+    content: '\2605\2605\2605\2605\2605';
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+
+blockquote {
+    padding: 0 20px;
+    margin: 0;
+	border-left: 5px solid #ccc;
+}
+
+.navbar-nav .drop-link a:before {
+    opacity: .5;
+}
+
+.social-media .fa {
+    font-size: 24px;
+    background: #9BC6FA;
+    padding: 8px 0;
+    width: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media li ~ li {
+    margin-left: 5px;
+}
+
+.social-media .fa {
+    font-size: 24px;
+    background: #999;
+    padding: 7px 0;
+    width: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.btn-i {
+   border: 1px solid #000;
+}
+
+.btn-i:focus {
+   outline: 3px solid yellow; 
+   outline-offset: 1px;
+}
+
+input[type=text] {
+    background: #f7f7f7;
+    border: 0;
+    border-bottom: 1px solid #999;
+}
+
+.btn-info {text-decoration: none;}
+
+.btn-info:focus {
+   outline: 2px solid yellow;
+   outline-offset: -5px;
+    }
+
+@media only screen and (orientation:portrait) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
+
+
+/* Accordion Code Start Here */
+.accordion {
+  margin: 0;
+  padding: 0;
+  border: 2px solid hsl(0deg 0% 52%);
+  border-radius: 7px;
+  width: auto;
+}
+
+.accordion h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion > * + * {
+  border-top: 1px solid hsl(0deg 0% 52%);
+}
+
+.accordion-trigger {
+  background: none;
+  color: hsl(0deg 0% 13%);
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:hover {
+  background: hsl(216deg 94% 94%);
+}
+
+.accordion-trigger:focus {
+  outline: 4px solid transparent;
+}
+
+.accordion > *:first-child .accordion-trigger,
+.accordion > *:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.accordion > *:last-child .accordion-trigger,
+.accordion > *:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion button {
+  border-style: none;
+}
+
+.accordion button::-moz-focus-inner {
+  border: 0;
+}
+
+.accordion-title {
+  display: block;
+  pointer-events: none;
+  border: transparent 2px solid;
+  border-radius: 5px;
+  padding: 0.25em;
+  outline: none;
+}
+
+.accordion-trigger:focus .accordion-title {
+  border-color: hsl(216deg 94% 43%);
+}
+
+.accordion-icon {
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  height: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+  width: 0.5rem;
+}
+
+.accordion-trigger:focus .accordion-icon,
+.accordion-trigger:hover .accordion-icon {
+  border-color: hsl(216deg 94% 43%);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.accordion-panel {
+  margin: 0;
+  padding: 1em 1.5em;
+}
+
+.hidden-visually {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+label, blockquote {letter-spacing:normal !important; word-spacing: normal !important;}
+
+
+@media only screen and (max-width: 320px) {
+.box {
+    width: 450px;
+    overflow-x: scroll;
+}
+.card-i {
+    height: 1200px;
+    overflow: hidden;
+}
+}
+.accordion-trigger:focus, .accordion-trigger:hover {
+    background: hsl(216deg 94% 94%);
+    color: #000 !important;
+}
+</style>
+   </head>
+   <body class="blog">
+      <div id="skiptocontent"><a href="#maincontent" target="_self">Skip to main content</a></div>
+      <a class="maincontent"></a>
+      <header class="header header-style-2 sl-header-1">
+         <div class="container-fluid">
+            <nav class="navbar">               
+               <button id="opennav" class="navbar-toggler pull-xs-right mobile-menu col-style-1" type="button"
+                  data-toggle="collapse" data-target="#mainNavbarCollapse" aria-expanded="false"
+                  aria-label="Site Navigation Menu">
+               <i class="vertical-align" aria-hidden="true"></i>
+               </button>
+               <div class="nav-list" id="mainNavbarCollapse">
+                  <img src="https://www.barrierbreak.com/wp-content/uploads/2018/10/barrierbreak-logo.png" alt=""
+                     class="logoSidebar" style="display:none;">
+                  <ul id="menu-main-menu" class="nav navbar-nav pull-lg-right sl-main-menu">
+                     <li class="nav-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1707 current_page_item">
+                        <a href="https://www.barrierbreak.com/" class="active nav-link" aria-current="page"><span>Home</span></a>
+                     </li>
+                     <li
+                        class="nav-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop-link ">
+                        <a href="#" class=" nav-link" aria-expanded="false"><span>About Us</span></a>
+                        <i class="fa fa-angle-down icon" tabindex="-1" aria-hidden="true"></i>
+                        <ul class="dropdown-menu childrens  menu-depth-0">
+                           <li class="nav-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1707 current_page_item">
+                            <a href="https://www.barrierbreak.com/" class="active nav-link" aria-current="page"><span>Home</span></a>
+                        </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/accessibility-barrierbreak/"
+                                 class=" "><span>About
+                              BarrierBreak</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/work-with-barrierbreak/" class=" "><span>Work
+                              with
+                              BarrierBreak</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/csr-initiatives/" class=" "><span>CSR
+                              Initiatives</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li
+                        class="nav-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop-link ">
+                        <a href="#" class=" nav-link" aria-expanded="false"><span>Accessibility Testing</span></a>
+                        <i class="fa fa-angle-down icon" tabindex="-1" aria-hidden="true"></i>
+                        <ul class="dropdown-menu childrens  menu-depth-0">
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/accessibility-people-first-approach/"
+                                 class=" "><span>People First Approach</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/web-accessibility-testing/"
+                                 class=" "><span>Web
+                              Accessibility Testing</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/section-508-testing/" class=" "><span>Section
+                              508
+                              Testing</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/mobile-accessibility-testing/"
+                                 class=" "><span>Mobile
+                              Accessibility Testing</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/ada-testing/" class=" "><span>ADA
+                              Testing</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/accessibility-procurement/"
+                                 class=" "><span>Accessibility Procurement</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/en-301-549-testing/" class=" "><span>EN 301
+                              549
+                              Testing</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li
+                        class="nav-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop-link ">
+                        <a href="#" class=" nav-link" aria-expanded="false"><span>Accessibility Documents</span></a>
+                        <i class="fa fa-angle-down icon" tabindex="-1" aria-hidden="true"></i>
+                        <ul class="dropdown-menu childrens  menu-depth-0">
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/accessible-pdf/" class=" "><span>Accessible
+                              PDF</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/accessible-epub3/" class=" "><span>Accessible
+                              EPUB3</span></a>
+                           </li>
+                           <li
+                              class="notclicked menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                              <a href="https://www.barrierbreak.com/image-description/" class=" "><span>Image
+                              Description</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="https://www.barrierbreak.com/accessibility-consulting/"
+                           class=" nav-link"><span>Accessibility Consulting</span></a>
+                     </li>
+                     <li class="nav-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="https://www.barrierbreak.com/vpat-creation/" class=" nav-link"><span>VPAT
+                        Creation</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <a aria-label="BarrierBreak - creating a limitless future logo"
+                  class="navbar-brand vertical-align logo-top" href="https://www.barrierbreak.com/">
+               <img src="https://www.barrierbreak.com/wp-content/uploads/2021/07/barrierbreak_logo_169x103_new.png"
+                  alt="BarrierBreak - creating a limitless future logo">
+               </a>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <section class="section overflow-content">
+            <div class="container-fluid">
+               <a id="maincontent"></a>
+               <h1 class="caption-1 color-2">BarrierBreak Blog</h1>
+               <!-- MAIN CONTENT BLOCK -->
+               <div class="row">
+                  <div class="col-lg-8 col-md-12 col-xs-12 main-content">
+                     <div class="border-box">
+                        <a href="https://www.barrierbreak.com/category/vpat-creation/" class="btn btn-secondary btn-i">VPAT Creation</a>
+                        <div class="empty-sp-sm-25 empty-sp-xs-25"></div>
+                        <div class="text">
+                           <div class="post-time">
+                              <span class="date-post">24 May, 2022</span>
+                              <a href="https://www.barrierbreak.com/author/bblogshilpi/" class="date-post">Shilpi Kapoor</a>
+                           </div>
+                           <div class="empty-sp-sm-25 empty-sp-xs-25"></div>
+                           <div class="col-md-12">
+                              <h2><a href="https://www.barrierbreak.com/digital-assessment-tools-are-the-future-but-should-they-be-inclusive-and-accessible-to-people-with-disabilities/" class="title caption-3">Digital Assessment Tools are the future – but should they be inclusive &amp; accessible to people with disabilities?</a></h2>
+                              <div class="empty-sp-sm-20 empty-sp-xs-20"></div>
+                              <div class="simple-text size-1 color-3">
+                                 <p>The answer is YES! Assessments are used to evaluate the knowledge of the learner and therefore if the learner has a disability, then even they should be able to use the digital assessment tools seamlessly. But can they? People with disabilities may need some accommodation and often due to this accommodation they were often told…</p>
+                              </div>
+                           </div>
+                           <!---------------Tags---------------------->
+                           <div class="empty-sp-sm-50 empty-sp-xs-30"></div>
+                           <div class="tag-post-bar">
+                              <div class="link fl">
+                                 <a href="https://www.barrierbreak.com/tag/accessible-digital-assessment-tools/">#Accessible Digital Assessment Tools</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/accessible-learning/">#Accessible Learning</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/edtech-accessibility/">#Edtech Accessibility</a>&nbsp;
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="border-box">
+                        <a href="https://www.barrierbreak.com/category/accessibility-events/" class="btn btn-secondary btn-i">Accessibility Events</a>
+                        <div class="empty-sp-sm-25 empty-sp-xs-25"></div>
+                        <div class="text">
+                           <div class="post-time">
+                              <span class="date-post">13 May, 2022</span>
+                              <a href="https://www.barrierbreak.com/author/bblogramya/" class="date-post">Ramya Venkitesh</a>
+                           </div>
+                           <div class="empty-sp-sm-25 empty-sp-xs-25"></div>
+                           <div class="col-md-12">
+                              <h2><a href="https://www.barrierbreak.com/inspire-others-to-implement-accessibility-spotlightaccessibility/" class="title caption-3">Inspire others to implement accessibility – #SpotlightAccessibility</a></h2>
+                              <div class="empty-sp-sm-20 empty-sp-xs-20"></div>
+                              <div class="simple-text size-1 color-3">
+                                 <p>Marking the 11th anniversary of the Global Accessibility Awareness Day (GAAD) 2022, BarrierBreak is launching the&nbsp;#SpotlightAccessibility&nbsp;campaign with the aim of highlighting accessibility features that can inspire people and organizations to adopt &amp; implement accessibility. Come join us from May 16th to May 22nd&nbsp;and help spread positivity around accessibility. What? As we move into the digital…</p>
+                              </div>
+                           </div>
+                           <!---------------Tags---------------------->
+                           <div class="empty-sp-sm-50 empty-sp-xs-30"></div>
+                           <div class="tag-post-bar">
+                              <div class="link fl">
+                                 <a href="https://www.barrierbreak.com/tag/accessibility-best-features/">#Accessibility Best Features</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/gaad/">#GAAD</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/global-accessibility-awareness-day/">#Global Accessibility Awareness Day</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/inclusion/">#Inclusion</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/spotlight-accessibility/">#Spotlight Accessibility</a>&nbsp;
+                              </div>
+                              <!--<div class="like fr on-white">
+                                 <a href="" class="info-icon"><span></span><i class="icon-comment-empty"></i></a>
+                                 </div>-->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="border-box">
+                        <a href="https://www.barrierbreak.com/category/web-accessibility-testing/" class="btn btn-secondary btn-i">Web Accessibility Testing</a>
+                        <div class="empty-sp-sm-25 empty-sp-xs-25"></div>
+                        <div class="text">
+                           <div class="post-time">
+                              <span class="date-post">18 April, 2022</span>
+                              <a href="https://www.barrierbreak.com/author/bblogshilpi/" class="date-post">Shilpi Kapoor</a>
+                           </div>
+                           <div class="empty-sp-sm-25 empty-sp-xs-25"></div>
+                           <div class="col-md-12">
+                              <h2><a href="https://www.barrierbreak.com/wondering-what-is-the-in-house-accessibility-team-strength-in-organizations-accessibility-insights/" class="title caption-3">Wondering what is the in-house accessibility team strength in organizations? – Accessibility Insights</a></h2>
+                              <div class="empty-sp-sm-20 empty-sp-xs-20"></div>
+                              <div class="simple-text size-1 color-3">
+                                 <p>After 20+ years in Accessibility, I knew the answer to this but wanted to see what my LinkedIn network told me about the size of In-house Accessibility Teams in organizations. Accessibility Drivers We all know that Accessibility is a relatively nascent area of focus. There is this great article by WebAIM – The crisis is…</p>
+                              </div>
+                           </div>
+                           <!---------------Tags---------------------->
+                           <div class="empty-sp-sm-50 empty-sp-xs-30"></div>
+                           <div class="tag-post-bar">
+                              <div class="link fl">
+                                 <a href="https://www.barrierbreak.com/tag/accessibility-testing/">#accessibility testing</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/in-house-accessibility/">#in house accessibility</a>&nbsp;
+                                 <a href="https://www.barrierbreak.com/tag/testing-team/">#testing team</a>&nbsp;
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+					 <div class="border-box">
+                        <h2>Frequently Asked Questions</h2>
+						<div id="accordionGroup" class="accordion">
+							
+						  <h3>
+							<button type="button" tabindex="0" aria-expanded="false" class="accordion-trigger" aria-controls="sect1" id="accordion1id">
+							  <span class="accordion-title">What services do you offer at Schweiger Dermatology Group?<span class="accordion-icon"></span></span>
+							</button>
+						  </h3>
+						  <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel" hidden="" tabindex="0">
+							<div>
+							  <p>The Schweiger Dermatology Group is a dermatology care provider offering treatment and services to address all your skincare needs. The prevention and treatment of skin cancer is at the heart of what we do. Other dermatological conditions we treat include herpes, psoriasis, rosacea, eczema, acne, genital warts, melanoma, skin cancer, keratosis pilaris, cold sores, warts, skin tags, rashes, and mole removal.</p>
+							</div>
+						  </div>
+						  
+						  <h3>
+							<button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2" id="accordion2id" aria-label="expandable section">
+							  <span class="accordion-title">What kind of skin conditions do you treat at Schweiger Dermatology Group?<span class="accordion-icon"></span></span>
+							</button>
+						  </h3>
+						  <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+							<div>
+							  <p>Skin conditions treated at Schweiger Dermatology Group include herpes, psoriasis, rosacea, eczema, acne, genital warts, melanoma, skin cancer, keratosis pilaris, cold sores, warts, skin tags, rashes, and mole removal. However, this is not an exhaustive list. If you have a skin condition that you need looking at, schedule an appointment today.</p>
+							</div>
+						  </div>
+						  
+						  <h3>
+							<button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3" id="accordion3id">
+							  <span class="accordion-title">Do you offer Botox® treatments at Schweiger Dermatology Group?<span class="accordion-icon"></span></span>
+							</button>
+						  </h3>
+						  <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden="">
+							<div>
+							  <p>Yes, we offer Botox® treatment for patients who are looking to minimize or reverse wrinkle formation. Only four types of neuromodulators have been approved by the FDA for cosmetic use: Botox®, Dysport®, Jeuveau, or Xeomin.</p>
+							</div>
+						  </div>
+						  
+						  <h3>
+							<button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect4" id="accordion4id">
+							  <span class="accordion-title">Do you offer dermal fillers and injectables at Schweiger Dermatology Group?<span class="accordion-icon"></span></span>
+							</button>
+						  </h3>
+						  <div id="sect4" role="region" aria-labelledby="accordion4id" class="accordion-panel hidden-visually">
+							<div>
+							  <p>We can help patients achieve a natural look with treatment for <a href="https://www.schweigerderm.com/cosmetic-dermatology/facial-rejuvenation/" target="_blank" rel="noopener">facial rejuvenation</a> using a combination of the most advanced forms of <a href="https://www.schweigerderm.com/cosmetic-dermatology/dermal-fillers/" target="_blank" rel="noopener">dermal fillers and injectables</a>.</p>
+							</div>
+						  </div>
+						  
+						  <div>
+							<button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect5" id="accordion5id">
+							  <span class="accordion-title">What body contouring services do you offer?<span class="accordion-icon"></span></span>
+							</button>
+						  </div>
+						  <div id="sect5" role="region" aria-labelledby="accordion5id" class="accordion-panel" hidden="">
+							<div>
+							  <p>At Schweiger Dermatology Group, we offer patients a variety of non-surgical body contouring techniques. Treatment is designed to target specific areas to provide skin tightening and lifting options for those dealing with sagging skin. Our providers can also recommend the best body toning treatments (TruSculpt and CoolSculpting) to help tighten, tone, and contour areas of the body that have not adequately responded to diet and exercise.</p>
+							</div>
+						  </div>
+						  
+						  <h3>
+							<span class="accordion-trigger" aria-controls="sect6" id="accordion6id" data-state="false" tabindex="0">
+							  <span class="accordion-title">What is Skin Cancer and Medical Dermatology Specialists?<span class="accordion-icon"></span></span>
+							</span>
+						  </h3>
+						  <div id="sect6" role="region" aria-labelledby="accordion6id" class="accordion-panel" hidden="">
+							<div>
+							  <p>The prevention and treatment of skin cancer is at the core of what we do. Early detection through annual skin cancer screenings as well as biopsies and advanced surgical services, such as Mohs Surgery, help keep our patients skin cancer-free.</p>
+							</div>
+						  </div>
+						  
+						</div>
+                     </div>
+                     <div class="border-box card-i">
+                        <form method="POST" onsubmit="return frm_get_quote(this);" id="get-quote" autocomplete="off" style="padding: 1rem 2rem;">
+                           <input type="hidden" value="VPAT Creation" name="page_title">
+                           <h2>Submit an Accessibility Feature</h2>
+                           <div id="status">
+                           </div>
+                           <div class="row">
+                              <p>Let's start spreading positivity around accessibility! Look around you and share <strong>accessibility features</strong> that you like the most of any Product, Service, Digital - Web or Mobile, Built Environment, or Gaming.</p>
+                              <h3><span data-expanded="false" aria-controls="id_long_desc" id="inst_heading">Instructions</span></h3>
+                              <div id="id_long_desc" style="display: none;">
+                                 <p>Though we have kept the form fairly simple, just some housekeeping.</p>
+                                 <ol>
+                                    <li>Category – Select the category of the Accessibility Feature.</li>
+                                    <li>Spotlight Name – Give a short title of the accessibility feature that you want to share eg: Braille Menu Card.</li>
+                                    <li>Description – Give a description of the accessibility feature. This is optional.</li>
+                                    <li>Organization – Name of the organization that has implemented the Accessibility Feature.</li>
+                                    <li>Country of origin – The country of origin /headquarters of the company whose accessibility feature you are mentioning.</li>
+                                    <li>Reference Image – If you would like to share a screenshot or photograph it can be .jpg, jpeg, or png. Also, remember to provide the image description.</li>
+                                    <li>Reference link – Provide a link to know more about the feature - remember to provide the link with http:// or https://</li>
+                                    <li>Contributor Name &amp; Email id – Do share your information, so we can recognize your contribution. We will also be recognizing Top Contributors! Don’t worry, we won’t share your email information on the website.</li>
+                                 </ol>
+                              </div>
+                              <p>Happy GAAD &amp; the <a href="https://www.barrierbreak.com/" target="_blank" class="dark-orange">BarrierBreak</a> team would like to thank you for sharing accessibility features around you and help people realize the importance of accessibility &amp; inclusion.</p>
+                              <br />
+                           </div>
+                           <div class="row">
+                              <p><strong>Fields marked with asterisk (*) are mandatory.</strong></p>
+                              <br />
+                           </div>
+                           <div class="row">
+                              <div class="col-md-4 text-right"><label for="last_name">Username:<strong>*</strong></label></div>
+                              <div class="col-md-8"><input maxlength="100" type="text" id="last_name" name="last_name" class="form-control" aria-required="true" value=""></div>
+                           </div>
+                           <br />
+                           <div class="row">
+                              <div class="col-md-4 text-right"><label for="email1">Email:<strong>*</strong></label>
+                              </div>
+                              <div class="col-md-8"><input type="text" id="email1" name="email1" autocomplete="email1" class="form-control" aria-required="true" value="">
+                              </div>
+                           </div>
+                           <br />
+                           <div class="row">
+                              <div class="col-md-4 text-right"><label for="current-password">Password:<strong>*</strong></label>
+                              </div>
+                              <div class="col-md-8"><input type="password" id="current-password" autocomplete="current-password" name="current-password" aria-required="true" class="form-control"></div>
+                           </div>
+                           <br />
+                           <div class="row">
+                              <div class="col-md-4 text-right"><label for="new-password">Confirm Password:<strong>*</strong></label>
+                              </div>
+                              <div class="col-md-8"><input type="password" id="new-password" autocomplete="off" name="new-password" aria-required="true" class="form-control"></div>
+                           </div>
+                           <br />
+                           <div class="row">
+                              <div class="col-md-4 text-right">
+                                 <label for="captchaImg"><span style="display:block">Security Check:<strong>*</strong></span></label>
+                              </div>
+                              <div class="col-md-8">
+                                 <img src="three/captcha.gif" id="captchaImg"/>
+                              </div>
+                           </div>
+                           <br />
+                           <div class="row">
+                              <div class="col-md-4 text-right"> <label for="captcha"><span style="display:block">Enter the text shown above:<strong>*</strong></span></label></div>
+                              <div class="col-md-8"><input class="form-control" type="text" name="captcha" id="captcha" aria-required="true">
+                                 <input type="hidden" id="cap" name="cap" value="wyquy">
+                              </div>
+                           </div>
+                           <br />
+                           <div class="row">
+                              <div class="col-md-4"></div>
+                              <div class="col-md-8"><input type="submit" name="submit_btn" value="Submit" class="btn btn-primary btn-lg"></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <!----------------Sidebar---------------------->
+                  <div class="col-lg-4 col-md-12 col-xs-12 right-bar">
+                        <div>
+                           <div class="textwidget">
+                              <h2 class="hidden">Accessibility Sounding Board</h2>
+                           </div>
+                        </div>
+                        <div style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
+                           <div><img src="https://www.barrierbreak.com/wp-content/uploads/2020/04/accessibility_sounding_board.jpg" class="image wp-image-13352  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://www.barrierbreak.com/wp-content/uploads/2020/04/accessibility_sounding_board.jpg 690w, https://www.barrierbreak.com/wp-content/uploads/2020/04/accessibility_sounding_board-300x150.jpg 300w" sizes="(max-width: 690px) 100vw, 690px" width="690" height="345"></div>
+                           <div>
+                              <div class="textwidget">
+                                 <div class="overlap-container">
+                                    <br>
+                                    <p>Personalised advice to forward your organisations accessibility journey.</p>
+                                    <p><strong>Meet Shilpi Kapoor for a 1 hour tête-à-tête focused discussion on accessibility.</strong></p>   
+                                    <div>
+									   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Book Now!</button>
+									   <div id="myModal" class="modal fade" role="dialog">
+										<div class="modal-dialog">
+										<div class="modal-content">
+                                       <!-- Modal Header -->
+                                       <div class="modal-header">
+                                          <h2 class="modal-title">Book Now!</h>
+                                       </div>
+                                       <!-- Modal body -->
+                                       <div class="modal-body">
+                                          <p>An email will be sent with a link to download the SAAS Accessibility Toolkit. So do share your corporate email address.</p>
+                                          <p><strong>Inclusive technology will be a key driver of growth for SAAS companies. SAAS accessibility should be put at the forefront of the business.</strong></p>
+                                       </div>
+                                       <!-- Modal footer -->
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-info" data-dismiss="modal"><i class="fa fa-close" style="font-size:36px" aria-hidden="true"></i></button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+									   
+									   <a class="btn btn-info" href="https://www.barrierbreak.com/" target="_blank" rel="noopener">Know More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <br />			
+                        <div style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
+                           <h2 class="title caption-2">Recent Posts</h2>
+                           <div class="empty-sp-sm-30 empty-sp-xs-20"></div>
+                           <ul class="sl-list sl-list-2 list-img type-1">
+                              <li>
+                                 <a href="https://www.barrierbreak.com/digital-assessment-tools-are-the-future-but-should-they-be-inclusive-and-accessible-to-people-with-disabilities/">Digital Assessment Tools are the future – but should they be inclusive &amp; accessible to people with disabilities?</a>
+                                 <span>May 24, 2022</span>
+                              </li>
+                              <li>
+                                 <a href="https://www.barrierbreak.com/inspire-others-to-implement-accessibility-spotlightaccessibility/">Inspire others to implement accessibility – #SpotlightAccessibility</a>
+                                 <span>May 13, 2022</span>
+                              </li>
+                              <li>
+                                 <a href="https://www.barrierbreak.com/barrierbreak-completes-the-soc-2-type-1-assessment/">BarrierBreak completes the SOC 2 Type 1 Assessment</a>
+                                 <span>April 21, 2022</span>
+                              </li>
+                           </ul>
+                           <div class="empty-sp-lg-50 empty-sp-sm-30 empty-sp-xs-30"></div>
+                        </div>
+                        <br />
+                        <div style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem;" class="iframe-container wp-image-55">
+                           <h2 class="rounded">Newz Hook Timelines</h2>
+                           <div class="textwidget custom-html-widget"><iframe src="https://newzhook.com/?iframe1=pictorial_nhtimeline" title="Newz Hook stories" style="position: static; visibility: visible; display: inline-block; height: 350px; padding: 0px; border: none; width: 100%; margin-top: 0px; margin-bottom: 0px; min-height: 200px;"></iframe></div>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+<section style="background: #f7f7f7;" class="border-box">
+<div class="container-fluid"><div class="row"><h2>Testimonials</h2>
+						<div class="col-md-4"><p><span class="luna-stars luna-stars__fill--100 luna-stars--yellow"> ★★★★★ </span></p>
+						<blockquote style="letter-spacing: normal !important; word-spacing: normal !important;">Excellent experience. Seamless, professional service with excellent communication regarding order status.</blockquote><br>- KIMCO</div> 
+						<div class="col-md-4"><p><span class="luna-stars luna-stars__fill--100 luna-stars--yellow"> ★★★★★ </span></p>
+						<blockquote>Ausgezeichnete Erfahrung. Reibungsloser …</blockquote><br>- Essentia Health</div> 
+						<div class="col-md-4"><p><span class="luna-stars luna-stars__fill--100 luna-stars--yellow"> ★★★★★ </span></p>
+						<blockquote>Absolutely delightful! I am continuously impressed that each project is treated with the same care and concern, no matter how small or large.</blockquote><br>- Ilumino</div> 					
+</div>
+<br>
+<br>
+<div class="row">
+   <div class="col-md-9">
+   <p>For more Testimonials, Press the green button on the right side.</p>
+   </div>
+   <div class="col-md-3">
+   <p style="text-align: right;"><a href="https://www.barrierbreak.com/" style="display:inline-block;"><i class="fa fa-arrow-circle-right" style="font-size:48px;color:green"></i></a></p></div>
+   
+   </div>
+</div>
+</section> 
+<section>
+<div class="container-fluid">
+                        <div class="row">
+						<div class="col-md-12"> 
+						<h2 style="margin-bottom: 1rem; display: inline-block;"><span>Contact Us</span></h2>
+                        <p style="display: inline; font-size: 1.5em;"> – We’d be happy to respond</p>
+                        <p class="box2"><img src="/three/phone_icon.svg" role="img" alt="Call" /> +91 (22) 2686 0485-87, +91 (22) 2686 0489-90</p>
+                        <p class="box2"><img src="/three/email_icon.svg" role="img" alt="Email" /> <a href="mailto:info@barrierbreak.com" class="is-lowercase">info@barrierbreak.com</a></p>
+						</div> </div></div>
+
+</section>  
+  
+
+
+
+
+
+      </main>
+      <footer id="colophon" class="site-footer">
+      <div class="footer-widgets-area regular-footer-area">
+<div class="container-fluid">
+                           <div class="row">  
+						   
+						   
+                              <div class="col-md-4 col-md-12 col-xs-12">
+                                 <div class="box">
+                                    <h2>Call Us</h2>
+                                    <p>Accessibility testing company based in India with a team of people who have experienced the impact of accessibility. 50% of the accessibility testing team being people with disabilities.</p>
+                                    <ul>
+                                       <li>+91 (22) 2686 0485-87</li>
+                                       <li>+91 (22) 2686 0489-90</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 col-md-12 col-xs-12">
+                                 <div class="box">
+                                    <h2>E-mail US</h2>
+                                    <p>The success of our organization lies on our people who are provided innovative training and development programmes that help them excel. The team has expertise in Section 508, WCAG 2.0, WCAG 2.1 & ADA.</p>
+                                    <ul class="emailList">
+                                       <li><a href="mailto:sales@barrierbreak.com">sales@barrierbreak.com</a></li>
+                                       <li><a href="mailto:info@barrierbreak.com">info@barrierbreak.com</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 col-md-12 col-xs-12">
+                                 <div class="box">
+                                    <h2 id="follow-us">Follow Us</h2>
+                                    <p>We believe innovation is a strategic necessity for every organization. Our team consists of passionate multidisciplinary people who believe in harnessing new technology and innovation to make a difference.</p>
+                                    <div>
+                                       <ul class="social-media" style="margin: 0 auto; padding: 0;">
+                                          <li><a target="_blank" href="https://www.linkedin.com/company/barrierbreak-technologies" title="BarrierBreak on Linkedin" aria-label="BarrierBreak on Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><li><a target="_blank" href="https://twitter.com/Barrierbreak" title="BarrierBreak on Twitter" aria-label="BarrierBreak on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><li><a target="_blank" href="https://www.facebook.com/pages/Barrierbreak-Technologies/376356745751111" title="BarrierBreak on Facebook" aria-label="BarrierBreak on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><li><a target="_blank" href="https://www.slideshare.net/BarrierBreak" title="BarrierBreak on Slideshare" aria-label="BarrierBreak on Slideshare"><i class="fa fa-slideshare" aria-hidden="true"></i></a></li><li><a target="_blank" href="https://www.youtube.com/user/BarrierBreakTech" title="BarrierBreak on Youtube" aria-label="BarrierBreak on Youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+         </div>
+         <!--Return to top-->
+      </footer>
+      
+      <script>
+		function validateSignUp(frmTransaction) {
+			//alert(55);
+			var filter_url = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
+			var i = 0;
+			var error = "";
+			document.querySelectorAll('.errText').forEach(function(a){
+				a.remove();
+			});
+			
+			if(frmTransaction['signup_username'].value == "") {
+				var span_field = document.createElement('span');
+				span_field.setAttribute('class','errText');
+				span_field.setAttribute('id','err_'+i);
+				span_field.innerHTML = 'Please enter a username.';
+				var elem_event_name = document.getElementById('signup_username');
+				elem_event_name.setAttribute('aria-describedby','err_'+i);
+				elem_event_name.parentNode.insertBefore( span_field, elem_event_name.nextSibling );
+				i++;
+			}
+			
+			if(frmTransaction['field_1'].value == "") {
+				var span_field = document.createElement('span');
+				span_field.setAttribute('class','errText');
+				span_field.setAttribute('id','err_'+i);
+				span_field.innerHTML = 'Please fill out this field.';
+				var elem_event_name = document.getElementById('field_1');
+				elem_event_name.setAttribute('aria-describedby','err_'+i);
+				elem_event_name.parentNode.insertBefore( span_field, elem_event_name.nextSibling );
+				i++;
+			}
+			
+			
+			if(frmTransaction['signup_email'].value == "") {
+				var span_field = document.createElement('span');
+				span_field.setAttribute('class','errText');
+				span_field.setAttribute('id','err_'+i);
+				span_field.innerHTML = 'Please enter you email id.';
+				var elem_event_name = document.getElementById('signup_email');
+				//elem_event_name.setAttribute('aria-describedby','err_'+i);
+				elem_event_name.parentNode.insertBefore( span_field, elem_event_name.nextSibling );
+				i++;
+			}else {
+				var invalidcheck = 0;
+				var str = frmTransaction['signup_email'].value;
+				var filter =/^(\w+(?:\.\w+)*)@((?:\w+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+				var tmpmsg = "";
+				if (filter.test(str)) {
+				} else {
+					var span_field = document.createElement('span');
+					span_field.setAttribute('class','errText');
+					span_field.setAttribute('id','err_'+i);
+					span_field.innerHTML = 'Please enter you email id.';
+					var elem_event_name = document.getElementById('signup_email');
+					//elem_event_name.setAttribute('aria-describedby','err_'+i);
+					elem_event_name.parentNode.insertBefore( span_field, elem_event_name.nextSibling );
+					i++;
+				}
+				
+				
+			}
+			
+			if(frmTransaction['signup_password'].value == "") {
+				var span_field = document.createElement('span');
+				span_field.setAttribute('class','errText');
+				span_field.setAttribute('id','err_'+i);
+				span_field.innerHTML = 'Please fill out this field.';
+				var elem_event_name = document.getElementById('signup_password');
+				//elem_event_name.setAttribute('aria-describedby','err_'+i);
+				elem_event_name.parentNode.insertBefore( span_field, elem_event_name.nextSibling );
+				i++;
+			}
+			
+			if(frmTransaction['signup_password_confirm'].value == "") {
+				var span_field = document.createElement('span');
+				span_field.setAttribute('class','errText');
+				span_field.setAttribute('id','err_'+i);
+				span_field.innerHTML = 'Please enter valid password.';
+				var elem_event_name = document.getElementById('signup_password_confirm');
+				//elem_event_name.setAttribute('aria-describedby','err_'+i);
+				elem_event_name.parentNode.insertBefore( span_field, elem_event_name.nextSibling );
+				i++;
+			}
+			
+			var check = error.match(/<li>/gi); 
+			var k = 0;
+			//if(check != null){
+			if(i != 0) {
+				document.getElementById('error2').innerHTML =  "<p>Following "+ i +" error(s) were found in form below:</p><ol class='errorol'>" + error + "</ol>";
+				document.getElementById('error2').style.display = 'block';
+				document.getElementById('signup_submit').focus();
+				//window.location.hash = '#error2';
+				return false;
+			}else {
+				var email = frmTransaction['signup_email'].value;
+				//alert("email is - " +email);
+				var state = check_email_exists(email);
+				//alert('state value is - '+state);
+				if(state == 3) {
+					
+				}else if(state == 5) {
+					
+				}else{
+					return false;
+				}
+				return false;
+			}	
+		}
+
+		$(document).ready(function() {
+			$('#pdfa').keydown(function(objEvent) {
+				if (objEvent.keyCode == 9) {  //tab pressed
+					objEvent.preventDefault(); // stops its action
+				}
+			});
+			$('.closebtn').click(function(){
+				$('#sideNavigation').css({"width": "0px", "display": "none"});
+				$('.menu-category').focus();
+			});
+			
+			$(".a11y-toolbar-link").bind("keydown", function (e) {  
+				if (e.keyCode === 13) {  
+					return false;  
+				}  
+				if(e.keyCode === 32) {
+					return false;
+				}
+			}); 
+			
+			function focusFunction() {
+				var href = 'https://www.shaadi.com/';
+				var text = 'Shaadi';
+				window.open(href, text);
+			}
+			
+			$('#pdfa').keydown(function(objEvent) {
+				if (objEvent.keyCode == 9) {  //tab pressed
+					objEvent.preventDefault(); // stops its action
+				}
+			});
+			
+			
+			// Accordion Code Start Here
+			$('#accordion2id').click(function () {
+				event.preventDefault();
+				accToogle(this);
+			});
+			$('#accordion4id').click(function () {
+				event.preventDefault();
+				let getState = this.getAttribute('aria-expanded');
+				let getID = this.getAttribute('aria-controls');
+				if(getState === 'true') {
+					this.setAttribute('aria-expanded','false');
+					$('#'+getID).addClass('hidden-visually');
+				} else {
+					this.setAttribute('aria-expanded','true');
+					$('#'+getID).removeClass('hidden-visually');
+				}
+			});
+			$('#accordion5id').click(function () {
+				event.preventDefault();
+				accToogle(this);
+			});
+			$('#accordion6id').click(function () {
+				event.preventDefault();
+				let getState = this.getAttribute('data-state');
+				let getID = this.getAttribute('aria-controls');
+				if(getState === 'true') {
+					this.setAttribute('data-state','false');
+					$('#'+getID).attr('hidden','');
+				} else {
+					this.setAttribute('data-state','true');
+					$('#'+getID).removeAttr('hidden');
+				}
+			});
+			$('#accordion6id').keypress(function () {
+				event.preventDefault();
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if(keycode == '13' || keycode == '32') {
+					let getState = this.getAttribute('data-state');
+					let getID = this.getAttribute('aria-controls');
+					if(getState === 'true') {
+						this.setAttribute('data-state','false');
+						$('#'+getID).attr('hidden','');
+					} else {
+						this.setAttribute('data-state','true');
+						$('#'+getID).removeAttr('hidden');
+					}
+				}
+			});
+			function accToogle(element) {
+				let getState = element.getAttribute('aria-expanded');
+				let getID = element.getAttribute('aria-controls');
+				if(getState === 'true') {
+					element.setAttribute('aria-expanded','false');
+					$('#'+getID).attr('hidden','');
+				} else {
+					element.setAttribute('aria-expanded','true');
+					$('#'+getID).removeAttr('hidden');
+				}
+			}
+			$('#accordion1id').click(function () {
+				event.preventDefault();
+				accToogle(this);
+			});
+			$('#accordion3id').click(function () {
+				event.preventDefault();
+				accToogle(this);
+			});
+			// Accordion Code End Here
+		});
+		
+	</script>  
+   </body>
+</html>
