@@ -302,15 +302,27 @@
           >Demo SVG
         </a>
       </li>
+      <li>
+        <a
+          class="links-padding"
+          href="https://greasy-monk.github.io/pagesnow/Demo/Demo_home.html"
+          target="_blank"
+          >Demo SVG
+        </a>
+      </li>
     </ul>
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      let subdomain = window.location.hostname.split('.')[0]; // Get subdomain
+      let subdomain = window.location.hostname.split(".")[0]; // Get subdomain
       if (subdomain !== "example" && subdomain !== "www") {
-        document.getElementById("welcome-message").innerText = `Welcome to ${subdomain}!`;
+        document.getElementById(
+          "welcome-message"
+        ).innerText = `Welcome to ${subdomain}!`;
       } else {
-        document.getElementById("welcome-message").innerText = `Welcome to Example.net!`;
+        document.getElementById(
+          "welcome-message"
+        ).innerText = `Welcome to Example.net!`;
       }
     });
   </script>
